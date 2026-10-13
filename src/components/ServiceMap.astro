@@ -1,0 +1,51 @@
+---
+import ResponsiveImage from './ResponsiveImage.astro';
+interface Props { areaName?: string; postcode?: string; compact?: boolean; }
+const { areaName = 'Ryde', postcode = '2112', compact = false } = Astro.props;
+const location = `${areaName} NSW ${postcode}`;
+const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(location)}&z=${compact ? 14 : 12}&output=embed`;
+const externalUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+const mapTitle = `Map showing the ${areaName}, NSW ${postcode} service area`;
+const previewSlug = compact ? areaName.toLowerCase().replaceAll(' ', '-') : 'ryde-surrounds';
+---
+<service-map class:list={['service-map', { 'service-map--compact': compact }]} data-map-url={mapUrl} data-map-title={mapTitle}>
+  <ResponsiveImage class="service-map__preview" src={`/images/map-preview-${previewSlug}.png`} alt="" aria-hidden="true" widths={[480, 768, 1000]} sizes={compact ? '(max-width: 760px) calc(100vw - 70px), 45vw' : '(max-width: 760px) calc(100vw - 32px), 60vw'} loading="lazy" quality={65} />
+  <button class="service-map__load" type="button" aria-label={`Load interactive Google map of ${areaName} service area`}>
+    <strong>{compact ? `${areaName}, NSW ${postcode}` : 'Ryde & Surrounding Suburbs'}</strong>
+    {!compact && <span>Ryde · North Ryde · West Ryde<br />Eastwood · Gladesville · Meadowbank</span>}
+    <span class="service-map__action">Load Interactive Map</span>
+  </button>
+  <a class="service-map__credit" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer" aria-label="Map preview copyright OpenStreetMap contributors (opens in a new tab)">© OpenStreetMap contributors</a>
+  <noscript><a href={externalUrl}>View {areaName} on Google Maps</a></noscript>
+</service-map>
+<script>
+  class ServiceMap extends HTMLElement {
+    connectedCallback() {
+      this.querySelector('button')?.addEventListener('click', () => {
+        const frame = document.createElement('iframe');
+        frame.src = this.dataset.mapUrl!;
+        frame.title = this.dataset.mapTitle!;
+        frame.width = '700';
+        frame.height = '430';
+        frame.referrerPolicy = 'no-referrer-when-downgrade';
+        this.replaceChildren(frame);
+        frame.focus();
+      }, { once: true });
+    }
+  }
+  if (!customElements.get('service-map')) customElements.define('service-map', ServiceMap);
+</script>
+<style>
+  .service-map { position: relative; display: block; width: 100%; height: 100%; min-height: inherit; isolation: isolate; overflow: hidden; }
+  .service-map__preview { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(1px); transform: scale(1.015); pointer-events: none; z-index: -1; }
+  .service-map__load { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; width: 100%; min-height: inherit; padding: 2rem 1rem 8rem; border: 0; background: rgb(255 255 255 / 55%); color: #081939; font: inherit; cursor: pointer; }
+  .service-map__credit { position: absolute; right: .4rem; top: .4rem; padding: .15rem .35rem; background: #fff; color: #081939; font-size: .65rem; line-height: 1.4; text-underline-offset: 2px; z-index: 2; }
+  .service-map__load strong { font-size: 1.25rem; }
+  .service-map__load > span { text-align: center; }
+  .service-map__action { padding: .75rem 1rem; background: #0869f7; color: #fff; border-radius: .3rem; font-weight: 700; }
+  .service-map__load:hover .service-map__action { background: #0755c6; }
+  .service-map__load:focus-visible { outline: 3px solid #081939; outline-offset: -4px; }
+  .service-map--compact { height: 220px; min-height: 220px; overflow: hidden; border-radius: .45rem; }
+  .service-map--compact .service-map__load { height: 100%; padding: 2rem 1rem; }
+  .service-map--compact :global(iframe) { display: block; width: 100%; height: 220px; border: 0; }
+</style>

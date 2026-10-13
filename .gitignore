@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.chrome-qa/
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/surfaces/
+.env
+.env.*
+!.env.example

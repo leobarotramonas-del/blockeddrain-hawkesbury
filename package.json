@@ -1,0 +1,28 @@
+{
+  "name": "antons-blocked-drains-hawkesbury",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build && node scripts/generate-canonical-redirects.mjs && npm run check:site && npm run check:links",
+    "images": "node scripts/optimize-images.mjs",
+    "capture": "node scripts/capture.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "check:site": "node scripts/check-site.mjs",
+    "check:performance": "node scripts/check-performance.mjs",
+    "check:links": "node scripts/check-internal-links.mjs",
+    "check:live": "node scripts/check-live-seo.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@fontsource/barlow": "^5.2.6",
+    "@fontsource/saira-extra-condensed": "^5.2.6",
+    "astro": "^5.13.7",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}

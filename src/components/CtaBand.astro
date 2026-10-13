@@ -1,0 +1,11 @@
+---
+import { site } from '../data/site';
+interface Props { title?: string; text?: string; }
+const { title = 'Need a Hawkesbury Drain Specialist?', text = 'Tell us what is blocked, where the water is backing up and your suburb. We’ll help with the next practical step.' } = Astro.props;
+---
+<section class="cta-band">
+  <div class="cta-band__inner">
+    <div><h2>{title}</h2><p>{text}</p></div>
+    <a class="call-button" href={site.phoneHref}><span>Call Now</span><strong>{site.phoneDisplay}</strong></a>
+  </div>
+</section>

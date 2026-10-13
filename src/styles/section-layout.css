@@ -1,0 +1,48 @@
+/* Full heading wording, wider measures and a restrained section rhythm. */
+main :is(h1, h2) { text-wrap: balance; }
+/* Keep all heading levels uppercase, including shared footer headings. */
+body :is(h1, h2, h3, h4, h5, h6) { text-transform: uppercase !important; }
+.home-page :is(h1, h2), .inner-page :is(h1, h2) { max-width: none; }
+.home-page .home-hero h1 { width: 100%; font-size: clamp(3.15rem, 5.95vw, 5.6rem); line-height: 1.05; text-transform: uppercase; }
+.home-page .home-hero h1 em { display: block; }
+.home-page .home-heading { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.home-page .home-heading > div { width: 100%; }
+.home-page .home-heading > p { max-width: 65ch; }
+.home-page h2, .inner-page :is(.detail-grid h2, .area-about__copy h2, .slim-section > h2, .local-faq__heading h2) { font-size: clamp(1.75rem, 3.5vw, 3rem); line-height: 1.05; }
+.home-page .home-process__heading h2 { width: 100%; max-width: 36ch; margin-inline: auto; }
+.inner-page .page-hero { min-height: 0; align-items: center; }
+.inner-page .page-hero h1 { font-size: clamp(2.5rem, 4vw, 3.75rem); line-height: 1.05; }
+.inner-page .page-hero__copy { padding-block: 2.5rem; }
+.inner-page .page-hero > img { height: 32rem; min-height: 0; max-height: 32rem; }
+.inner-page .local-faq__heading { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.inner-page .local-faq__heading h2 { width: 100%; }
+.inner-page .local-faq__heading p { max-width: 65ch; }
+.inner-page > :is(.section, .local-faq, .contact-panel) { padding: 3rem 2.75rem; border-radius: .65rem; background: #fff; }
+.inner-page > :is(.section, .local-faq, .contact-panel):nth-of-type(odd) { background: #edf1f5; }
+.home-page .home-about, .home-page .home-process { background: #edf1f5; }
+.home-page .home-process { padding: 3.5rem 2rem; border-radius: .65rem; }
+.home-page .home-process__steps article { background: #fff; }
+.home-page .home-area-layout, .home-page .home-area-list { min-width: 0; }
+.home-page .home-area-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home-page .home-area-layout > *, .home-page .home-area-list > a { min-width: 0; overflow-wrap: anywhere; }
+.inner-page > .operator-gallery { padding-block: 1.5rem; }
+.inner-page > .cta-band { margin-top: 1.5rem; }
+.inner-page .legal-page h1, .inner-page .not-found h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.05; }
+@media (min-width: 761px) and (max-width: 1050px) {
+  .inner-page > :is(.section, .local-faq, .contact-panel) { padding: 2.5rem 1.5rem; }
+  .inner-page .page-hero h1 { font-size: 2.7rem; }
+  .inner-page .area-about { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); }
+  .inner-page .area-about__copy h2 { font-size: 2rem; }
+}
+@media (max-width: 760px) {
+  .home-page .home-area-layout { grid-template-columns: minmax(0, 1fr); }
+  .home-page .home-hero h1 { font-size: clamp(2.7125rem, 11.55vw, 5.075rem); }
+  .home-page h2, .inner-page :is(.detail-grid h2, .area-about__copy h2, .slim-section > h2, .local-faq__heading h2) { font-size: clamp(1.5rem, 6.4vw, 2.5rem); }
+  .home-page .home-process { padding: 2.5rem 1rem; }
+  .home-page .home-process__heading h2 { font-size: clamp(1.35rem, 5.6vw, 2.5rem); }
+  .inner-page .page-hero h1 { font-size: clamp(1.8rem, 7.5vw, 3rem); }
+  .inner-page .page-hero > img { height: 18rem; max-height: 18rem; }
+  .inner-page > :is(.section, .local-faq, .contact-panel) { padding: 2.5rem 1.25rem; }
+  .inner-page .area-about__copy h2 { font-size: clamp(1.35rem, 5.8vw, 2.25rem); }
+  .inner-page .cta-band h2, .cta-band h2 { font-size: clamp(1.75rem, 7vw, 3rem); }
+}

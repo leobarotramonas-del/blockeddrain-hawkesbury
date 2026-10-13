@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import HonestReviews from '../../components/HonestReviews.astro';
+import { services } from '../../data/site';
+import { faqSchema, pageFaqs } from '../../data/faqs';
+---
+<BaseLayout title="Blocked Drain Services Hawkesbury" description="Explore professional Hawkesbury blocked-drain clearing, CCTV inspection, water jetting, tree-root removal, stormwater work and drain repairs." schema={faqSchema(pageFaqs.services)}>
+  <PageHero label="Blocked Drain Services" title="Diagnose. Clear. Repair when needed." intro="Professional help for sewer, stormwater and fixture blockages using equipment selected for the pipe, access and actual cause." image="/images/cctv-drain-camera.jpeg" imageAlt="Antons technician preparing a CCTV drain camera" />
+  <section class="section service-directory">
+    <p>Check our <a href="/service-areas">Hawkesbury coverage</a>, or <a href="/contact">call about the symptoms</a> if you are unsure which service fits.</p>
+    {services.map((service) => <article><h2>{service.name}</h2><p>{service.summary}</p><ul>{service.details.map((detail) => <li>{detail}</li>)}</ul><a class="text-link" href={`/services/${service.slug}`}>Explore {service.name}</a></article>)}
+  </section>
+  <FaqSection title="Blocked-Drain Service Questions" intro="A practical overview of diagnosis, equipment, clearing and repair." items={pageFaqs.services} />
+  <HonestReviews intro="Customer feedback about the licensed Antons team behind this Hawkesbury drain service." />
+  <CtaBand />
+</BaseLayout>

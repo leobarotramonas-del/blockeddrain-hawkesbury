@@ -1,0 +1,107 @@
+---
+import '@fontsource/barlow/latin-400.css';
+import '@fontsource/barlow/latin-600.css';
+import '@fontsource/barlow/latin-700.css';
+import '@fontsource/saira-extra-condensed/latin-700.css';
+import bodyFont from '@fontsource/barlow/files/barlow-latin-400-normal.woff2?url';
+import headingFont from '@fontsource/saira-extra-condensed/files/saira-extra-condensed-latin-700-normal.woff2?url';
+import '../styles/global.css';
+import '../styles/inner-pages.css';
+import '../styles/section-layout.css';
+import '../styles/hawkesbury.css';
+import Header from '../components/Header.astro';
+import CallBar from '../components/CallBar.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+import { pageSchema } from '../data/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  showFooter?: boolean;
+  noindex?: boolean;
+}
+
+const { title, description, canonicalPath = Astro.url.pathname, schema, showFooter = true, noindex = false } = Astro.props;
+const baseUrl = Astro.site!.href;
+const allowIndexing = import.meta.env.PROD && import.meta.env.PUBLIC_ALLOW_INDEXING !== 'false' && !noindex;
+const enableAnalytics = import.meta.env.PROD && Boolean(site.analyticsId);
+const canonical = new URL(canonicalPath, baseUrl).toString();
+const socialImage = new URL('/images/antons-drain-service-vehicle.jpeg', baseUrl).href;
+const pageTitle = title.includes(site.shortName) ? title : `${title} | ${site.shortName}`;
+const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description, schema);
+---
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={allowIndexing ? 'index,follow,max-image-preview:large' : 'noindex,nofollow'} />
+    <meta name="theme-color" content="#081939" />
+    <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={headingFont} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/png" sizes="150x150" href="/favicon-antons.png" />
+    <link rel="apple-touch-icon" sizes="300x300" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Antons blocked drain service vehicle ready for a drainage call" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content="Antons blocked drain service vehicle ready for a drainage call" />
+    {!noindex && <link rel="canonical" href={canonical} />}
+    {enableAnalytics && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}`}></script>
+        <script is:inline define:vars={{ analyticsId: site.analyticsId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', analyticsId);
+        </script>
+      </>
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+    <Header />
+    <main id="main" class:list={{ 'inner-page': canonicalPath !== '/' }}><slot /></main>
+    {showFooter && <Footer />}
+    <CallBar />
+    {enableAnalytics && (
+      <script is:inline>
+        document.addEventListener('click', (event) => {
+          const target = event.target;
+          const link = target instanceof Element ? target.closest('a[href^="tel:"]') : null;
+          if (!link || typeof window.gtag !== 'function') return;
+
+          const callDetails = {
+            method: 'phone',
+            link_url: link.getAttribute('href'),
+            link_text: link.textContent?.trim() || 'Call',
+            page_location: window.location.href,
+            transport_type: 'beacon',
+          };
+
+          // Dedicated event for reporting and key-event tracking of phone CTA clicks.
+          window.gtag('event', 'phone_call_click', callDetails);
+
+          // Retain GA4's recommended lead event for lead-acquisition reporting.
+          window.gtag('event', 'generate_lead', callDetails);
+        });
+      </script>
+    )}
+  </body>
+</html>

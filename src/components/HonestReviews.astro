@@ -1,0 +1,31 @@
+---
+import { reviews } from '../data/site';
+import { reviewContexts } from '../data/review-context';
+interface Props { context?: string; intro?: string; }
+const { context = '', intro } = Astro.props;
+const content = reviewContexts[context];
+const selected = (content?.selection ?? [0, 1, 2]).map((index) => reviews[index]);
+---
+<section class="honest-reviews" id="reviews" aria-labelledby="reviews-title">
+  <div class="honest-reviews__inner">
+    <header>
+      <h2 id="reviews-title">Honest Reviews</h2>
+      <p>{intro ?? content?.intro ?? 'Read customer feedback about the licensed Antons team behind this Hawkesbury blocked-drain service.'}</p>
+    </header>
+    <div class="honest-reviews__quotes">
+      {selected.map((review) => <figure><blockquote>“{review.text}”</blockquote><figcaption><strong>{review.name}</strong></figcaption></figure>)}
+    </div>
+  </div>
+</section>
+<style>
+  .honest-reviews { padding: 4rem 1.25rem; background: #081939; color: #fff; }
+  .honest-reviews__inner { max-width: 75rem; margin-inline: auto; }
+  header { max-width: 46rem; margin-bottom: 2.5rem; }
+  h2 { margin: 0 0 1rem; font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; text-transform: none; }
+  header p { margin: 0; color: #c8d5ed; }
+  .honest-reviews__quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  figure { display: flex; flex-direction: column; margin: 0; padding-top: 1.5rem; border-top: 1px solid #8298bd; }
+  blockquote { margin: 0 0 1.5rem; font-size: 1rem; line-height: 1.65; }
+  figcaption { display: grid; gap: .25rem; margin-top: auto; }
+  @media (max-width: 760px) { .honest-reviews__quotes { grid-template-columns: 1fr; } .honest-reviews { padding-block: 3rem; } }
+</style>

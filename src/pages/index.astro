@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { areas, faqs, services, site } from '../data/site';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176', areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}` })), knowsAbout: services.map((service) => service.name) },
+    { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
+  ],
+};
+
+const steps = [
+  ['Describe the symptoms', 'Tell us what is slow, gurgling or overflowing, how many fixtures are affected and your Hawkesbury address.'],
+  ['Diagnose before forcing a fix', 'We assess suitable access and the likely location. CCTV may follow clearing when the pipe is not yet visible.'],
+  ['Clear with the right equipment', 'Jetting, mechanical tools or root-cutting equipment are selected for the obstruction and pipe condition.'],
+  ['Check, explain and plan', 'We check flow, show useful findings and explain whether maintenance or an agreed pipe repair is the sensible next step.'],
+];
+---
+<BaseLayout title="Blocked Drains Hawkesbury — Urgent Calls 24/7" description="Blocked drain plumber for Hawkesbury homes, acreage and businesses. CCTV inspection, water jetting, root removal and drain repairs. Urgent calls are taken 24/7." schema={schema}>
+  <div class="drain-home">
+    <section class="drain-hero" aria-labelledby="hero-title">
+      <div class="drain-hero__copy">
+        <h1 id="hero-title">Clear the blockage. <em>Find the cause.</em></h1>
+        <p class="drain-hero__lead">For blocked sewer and stormwater drains, overflowing toilets, tree roots and recurring problems across the Hawkesbury. Professional diagnosis, serious equipment and a clear repair plan when cleaning alone is not enough. Urgent drain calls are taken 24/7.</p>
+        <div class="drain-hero__actions">
+          <a class="call-button" href={site.phoneHref}><span>Urgent calls 24/7</span><strong>{site.phoneDisplay}</strong></a>
+          <a class="plain-action" href="#diagnosis">See how we solve it</a>
+        </div>
+        <p class="operator-line">A specialist local service operated by Antons Enterprises Pty Ltd · NSW contractor licence {site.licence}</p>
+      </div>
+      <div class="drain-hero__media">
+        <ResponsiveImage src="/images/drain-jetting-team.jpeg" alt="Antons blocked drain technician operating professional jetting equipment" widths={[480, 768, 1080, 1440]} sizes="(max-width: 760px) 100vw, 52vw" loading="eager" fetchpriority="high" quality={68} />
+        <div class="hero-equipment"><strong>Professional drain clearing</strong><span>Jetting · CCTV · locating · repairs</span></div>
+      </div>
+    </section>
+
+    <section class="decision-strip" aria-label="Blocked drain warning signs">
+      <strong>Stop using the drain and call if:</strong>
+      <span>Sewage is overflowing</span><span>Multiple fixtures back up</span><span>The only toilet is unusable</span><span>Water threatens the building</span>
+    </section>
+
+    <section class="drain-section service-index" aria-labelledby="services-heading">
+      <header class="split-heading"><h2 id="services-heading">Blocked-drain help built around the actual fault</h2><p>A plunger may move a soft local blockage. It cannot show a cracked joint, cut established roots, locate a collapse or tell sewer from stormwater. That is where trained diagnosis and the right equipment matter.</p></header>
+      <div class="service-index__list">
+        {services.map((service) => <a href={`/services/${service.slug}`}><div><h3>{service.name}</h3><p>{service.summary}</p></div><span>View service</span></a>)}
+      </div>
+    </section>
+
+    <section class="diagnosis-panel" id="diagnosis" aria-labelledby="diagnosis-title">
+      <div class="diagnosis-panel__photo"><ResponsiveImage src="/images/cctv-root-intrusion.jpeg" alt="Drain camera view showing root intrusion inside a pipe" widths={[480, 768, 1100]} sizes="(max-width: 760px) 100vw, 45vw" loading="lazy" /><span>Actual CCTV evidence: roots restricting the line</span></div>
+      <div class="diagnosis-panel__copy"><h2 id="diagnosis-title">Recurring blockage? The pipe is telling you something.</h2><p>When flow returns and fails again, the obstruction may be a symptom of roots, an open joint, a displaced section or a low point holding waste. We use the clearing stage to create access, then inspect where useful so the recommendation follows the evidence.</p><ul><li><strong>Roots:</strong> cut and clear, then identify where they entered.</li><li><strong>Grease or deposits:</strong> clean the pipe wall with a suitable jetting nozzle.</li><li><strong>Broken or collapsed pipe:</strong> locate the defect and scope repair rather than repeatedly forcing the line.</li><li><strong>Stormwater silt:</strong> clear accessible pits and lines, then assess damage or capacity separately.</li></ul><a class="plain-action" href="/services/cctv-drain-inspections">How CCTV inspection helps</a></div>
+    </section>
+
+    <section class="drain-section process-section" aria-labelledby="process-title">
+      <header class="split-heading"><h2 id="process-title">From first call to a drain that makes sense again</h2><p>You do not need to diagnose it before calling. Clear symptoms, a safe work area and honest access information help us prepare the right first response.</p></header>
+      <ol>{steps.map(([title, text], index) => <li><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+    </section>
+
+    <section class="equipment-section" aria-labelledby="equipment-title">
+      <div class="equipment-section__copy"><h2 id="equipment-title">Equipment is only useful in experienced hands</h2><p>Pressure, nozzle, access point and camera timing all matter. Our plumbers choose tools for the pipe and obstruction rather than applying one aggressive method to every drain.</p><dl><div><dt>High-pressure water jetter</dt><dd>Flushes grease, sludge, silt and suitable root growth with task-specific nozzles.</dd></div><div><dt>CCTV camera and locator</dt><dd>Shows accessible pipe condition and helps mark a defect or repair point from above ground.</dd></div><div><dt>Mechanical clearing tools</dt><dd>Useful for selected fixture, trap and branch-line obstructions where jetting is not the first choice.</dd></div><div><dt>Drainage repair materials</dt><dd>Drainage-grade PVC, connectors, bedding and access fittings for agreed replacement work.</dd></div></dl></div>
+      <ResponsiveImage src="/images/cctv-drain-camera.jpeg" alt="Antons plumber preparing a professional CCTV drain camera and locator" widths={[480, 768, 1080]} sizes="(max-width: 760px) 100vw, 46vw" loading="lazy" />
+    </section>
+
+    <section class="field-proof" id="proof" aria-labelledby="proof-title">
+      <header><h2 id="proof-title">Real drain work. Real causes. Real repairs.</h2><p>Supplied field footage from Antons jobs shows the difference between clearing a symptom and working through the underlying drainage problem.</p></header>
+      <div class="field-proof__grid">
+        <figure><ResponsiveImage src="/images/drain-repair-excavation.jpeg" alt="Excavated underground drain being replaced with drainage-grade pipe" widths={[480, 720]} sizes="(max-width: 760px) 100vw, 33vw" loading="lazy" /><figcaption>Damaged section exposed for targeted pipe replacement</figcaption></figure>
+        <figure><ResponsiveImage src="/images/drain-repair-finished.jpeg" alt="Finished yard after an underground drain repair was backfilled" widths={[480, 720]} sizes="(max-width: 760px) 100vw, 33vw" loading="lazy" /><figcaption>Work area backfilled and left ready for the next surface stage</figcaption></figure>
+        <figure class="field-video"><video controls preload="none" poster="/images/cctv-root-intrusion.jpeg" aria-label="Video of blocked drain work in Kurrajong"><source src="/videos/kurrajong-blocked-drain.mp4" type="video/mp4" /></video><figcaption>Drain diagnosis and clearing footage from Kurrajong</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="drain-section areas-section" aria-labelledby="areas-title">
+      <header class="split-heading"><h2 id="areas-title">Blocked drain plumbers across the Hawkesbury</h2><p>Our service-area pages explain the property types, access realities and common drainage risks that can shape work in each locality. They are coverage guides—not claims of a separate office in every suburb.</p></header>
+      <div class="area-cloud">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>NSW {area.postcode}</span></a>)}</div>
+    </section>
+
+    <section class="drain-section faq-section" aria-labelledby="faq-title">
+      <header class="split-heading"><h2 id="faq-title">What to know before you call</h2><p>Useful, direct answers for the first few minutes of a blocked-drain problem.</p></header>
+      <div class="faq-lines">{faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
+    </section>
+  </div>
+  <CtaBand title="Blocked drain in the Hawkesbury?" text="Call with your suburb, the affected fixtures and whether water or sewage is overflowing." />
+</BaseLayout>

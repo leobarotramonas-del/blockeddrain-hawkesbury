@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Privacy Policy" description="Read the privacy policy for Antons Blocked Drains Hawkesbury, including how contact, service-address and drainage-enquiry information may be handled.">
+  <article class="legal-page"><h1>Privacy Policy</h1><p>Last updated 12 October 2026.</p><h2>Who We Are</h2><p>Antons Blocked Drains Hawkesbury is operated by {site.operator}.</p><h2>Information You Provide</h2><p>If you call, we may collect the contact and job information needed to respond, quote or provide drainage services. This may include your name, phone number, service address and details about the drainage issue.</p><h2>How Information Is Used</h2><p>Information is used to respond to enquiries, arrange attendance, perform services, maintain business records and meet legal obligations. We do not claim to sell personal information.</p><h2>Website Data</h2><p>Hosting and security providers may process basic technical information required to deliver and protect this website. Analytics will not be enabled until a property is deliberately configured for this domain.</p><h2>Contact</h2><p>For privacy questions, call <a href={site.phoneHref}>{site.phoneDisplay}</a>.</p></article>
+</BaseLayout>

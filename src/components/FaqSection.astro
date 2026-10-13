@@ -1,0 +1,26 @@
+---
+import type { FaqItem } from '../data/faqs';
+
+interface Props {
+  title: string;
+  intro?: string;
+  items: readonly FaqItem[];
+  id?: string;
+}
+
+const { title, intro, items, id = 'page-faq-title' } = Astro.props;
+---
+<section class="local-faq" aria-labelledby={id}>
+  <div class="local-faq__heading">
+    <h2 id={id}>{title}</h2>
+    {intro && <p>{intro}</p>}
+  </div>
+  <div class="local-faq__list">
+    {items.map((item) => (
+      <details>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))}
+  </div>
+</section>

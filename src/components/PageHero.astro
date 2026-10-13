@@ -1,0 +1,30 @@
+---
+import { site } from '../data/site';
+import ResponsiveImage from './ResponsiveImage.astro';
+interface Props { title: string; intro: string; label: string; image?: string; imageAlt?: string; }
+const { title, intro, label, image = '/images/antons-drain-service-vehicle.jpeg', imageAlt = 'Antons blocked-drain service vehicle' } = Astro.props;
+const focalPoints: Record<string, string> = {
+  '/images/ryde-hot-water-plumber.webp': '50% 45%',
+  '/images/ryde-emergency-plumber-drain.webp': '50% 65%',
+  '/images/ryde-gas-cooktop.jpeg': '50% 48%',
+  '/images/north-ryde-plumbing-excavation.webp': '50% 68%',
+  '/images/ryde-drainage-installation.webp': '50% 70%',
+  '/images/west-ryde-drainage-trench.webp': '50% 65%',
+  '/images/blocked-drain-excavation.webp': '50% 65%',
+  '/images/bathroom-drain-repair.webp': '50% 65%',
+  '/images/vanity-plumbing-repair.webp': '50% 55%',
+  '/images/shower-installation.webp': '50% 45%',
+  '/images/hot-water-technician.webp': '50% 55%',
+  '/images/rinnai-hot-water-installation.webp': '50% 40%',
+  '/images/water-pressure-test.webp': '50% 40%',
+};
+---
+<section class="page-hero">
+  <div class="page-hero__copy">
+    <p class="page-label">{label}</p>
+    <h1>{title}</h1>
+    <p>{intro}</p>
+    <a class="call-button" href={site.phoneHref}><span>Call Now</span><strong>{site.phoneDisplay}</strong></a>
+  </div>
+  <ResponsiveImage src={image} alt={imageAlt} sizes="(max-width: 760px) calc(100vw - 32px), 50vw" loading="eager" fetchpriority="high" style={{ objectPosition: focalPoints[image] ?? '50% 50%' }} />
+</section>

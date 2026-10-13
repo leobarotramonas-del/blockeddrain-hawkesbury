@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import HonestReviews from '../../components/HonestReviews.astro';
+import { areas } from '../../data/site';
+import { faqSchema, pageFaqs } from '../../data/faqs';
+---
+<BaseLayout title="Blocked Drain Service Areas Hawkesbury" description="Find professional blocked-drain service across Richmond, Windsor, Kurrajong, North Richmond, Bligh Park and wider Hawkesbury communities, with local guidance for each area." schema={faqSchema(pageFaqs.serviceAreas)}>
+  <PageHero label="Hawkesbury Service Areas" title="Drain help across town, acreage and foothills." intro="Local property types change access, pipe runs and blockage risks. Browse substantial locality guidance for Hawkesbury homes, acreage, rentals and businesses." image="/images/antons-drain-service-vehicle.jpeg" imageAlt="Antons blocked drain service vehicle" />
+  <section class="section area-directory"><p>Browse our <a href="/services">blocked-drain services</a> or <a href="/contact">call to confirm your exact address</a>. These pages describe mobile service coverage and do not represent separate offices.</p>{areas.map((area) => <article><p>NSW {area.postcode}</p><h2>{area.name}</h2><p>{area.intro}</p><a class="text-link" href={`/service-areas/${area.slug}`}>Blocked drains {area.name}</a></article>)}</section>
+  <FaqSection title="Hawkesbury Coverage Questions" intro="How coverage, urgent calls and access work across the region." items={pageFaqs.serviceAreas} />
+  <HonestReviews intro="Customer feedback about the licensed Antons team behind this Hawkesbury drainage service." />
+  <CtaBand />
+</BaseLayout>

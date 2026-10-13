@@ -1,0 +1,12 @@
+# Keep alternate deployment hosts out of search, including version previews.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow

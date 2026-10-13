@@ -1,0 +1,73 @@
+/* Share the homepage's outer edges while retaining each page's content. */
+.inner-page {
+  width: min(var(--page-width), calc(100% - 2 * var(--page-gutter)));
+  margin: 1.5rem auto 4rem;
+}
+.inner-page > *, .inner-page :is(.detail-grid, .area-about, .contact-panel, .page-hero) > * { min-width: 0; }
+.inner-page :is(h1, h2, h3, p, a, summary) { overflow-wrap: anywhere; }
+.inner-page .section, .inner-page .local-faq { padding: 3.5rem 0; }
+.inner-page .page-hero { min-height: 30rem; grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: .65rem; overflow: hidden; }
+.inner-page .page-hero__copy { padding: 3rem 2.75rem; }
+.inner-page .page-hero h1 { font-size: clamp(3.5rem, 5.6vw, 5.2rem); line-height: .9; }
+.inner-page .page-hero > img { min-height: 100%; max-height: none; }
+.inner-page .detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; }
+.inner-page :is(.detail-grid h2, .slim-section > h2, .local-faq__heading h2, .area-about__copy h2) { font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1; }
+.inner-page .slim-section > h2 { margin-bottom: 1.5rem; }
+.inner-page :is(.service-directory, .area-directory) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.inner-page :is(.service-directory, .area-directory) article { padding: 2rem; }
+.inner-page :is(.service-directory, .area-directory) article:nth-child(2n) { border-right: 0; }
+.inner-page .area-about-shell { padding: 3rem 2.75rem; border-radius: .65rem; }
+.inner-page .area-about { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: 2.5rem; }
+.inner-page .service-row { grid-template-columns: 2rem minmax(0, .8fr) minmax(0, 1.2fr); gap: 1.25rem; min-height: 7rem; }
+.inner-page .service-row h3 { font-size: clamp(2rem, 3vw, 2.75rem); }
+.inner-page .service-row:hover { transform: none; }
+.inner-page .area-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.inner-page .area-links a { padding: 1.5rem; border-bottom: 1px solid var(--line); }
+.inner-page .area-links a:nth-child(3n) { border-right: 0; }
+.inner-page .local-faq__heading { grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); gap: 2rem; margin-bottom: 2rem; }
+.inner-page .local-faq__list { max-width: none; }
+.inner-page .operator-gallery { gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.inner-page .operator-gallery img { height: 26rem; border-radius: .65rem; }
+.inner-page .contact-panel { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 3rem 0 0; }
+.inner-page .contact-panel > div { min-height: 0; padding: 2rem; }
+.inner-page .contact-panel > div > a { font-size: clamp(2rem, 3vw, 3rem); }
+.inner-page .cta-band { padding: 2.75rem; border-radius: .65rem; }
+.inner-page .cta-band__inner { min-height: 0; flex-wrap: wrap; }
+.inner-page .cta-band__inner > div { flex: 1 1 24rem; min-width: 0; }
+.inner-page .cta-band h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1; }
+.inner-page .cta-band .call-button { flex-shrink: 0; }
+.inner-page .honest-reviews { border-radius: .65rem; padding: 3rem 2.75rem; }
+.inner-page .legal-page { padding: 3rem 0; }
+.inner-page .not-found { padding-inline: 0; }
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .inner-page .page-hero__copy { padding: 2.5rem 1.5rem; }
+  .inner-page .area-about-shell, .inner-page .honest-reviews { padding: 2.5rem 1.5rem; }
+  .inner-page .detail-grid, .inner-page .area-about { gap: 2rem; }
+  .inner-page .contact-panel > div { padding: 1.25rem; }
+}
+@media (max-width: 760px) {
+  .inner-page { width: calc(100% - 2rem); margin: 1rem auto 3rem; }
+  .inner-page .section, .inner-page .local-faq { padding: 2.5rem 0; }
+  .inner-page :is(.page-hero, .detail-grid, .area-about, .service-directory, .area-directory, .operator-gallery, .contact-panel, .local-faq__heading) { grid-template-columns: minmax(0, 1fr); }
+  .inner-page .page-hero { min-height: 0; }
+  .inner-page .page-hero__copy { padding: 2.5rem 1.25rem; }
+  .inner-page .page-hero h1 { font-size: clamp(2.75rem, 12vw, 4rem); }
+  .inner-page .page-hero > img { min-height: 0; height: 20rem; }
+  .inner-page .detail-grid { gap: 2rem; }
+  .inner-page :is(.service-directory, .area-directory) article { padding: 1.75rem 0; border-right: 0; }
+  .inner-page .area-about-shell, .inner-page .honest-reviews { padding: 2.5rem 1.25rem; }
+  .inner-page .area-about { gap: 1.75rem; }
+  .inner-page .service-row { grid-template-columns: 1.5rem minmax(0, 1fr); gap: .75rem; }
+  .inner-page .service-row p { grid-column: 2; }
+  .inner-page .area-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .inner-page .area-links a { padding: 1.25rem .75rem; border-right: 1px solid var(--line); }
+  .inner-page .area-links a:nth-child(2n) { border-right: 0; }
+  .inner-page .operator-gallery img { height: 22rem; }
+  .inner-page .contact-panel { padding: 1rem 0 0; }
+  .inner-page .contact-panel > div { padding: 1.5rem 0; }
+  .inner-page .cta-band { padding: 2.5rem 1.25rem; }
+  .inner-page .cta-band__inner { padding: 0; gap: 1.5rem; }
+  .inner-page .cta-band__inner > div { flex: 0 1 auto; }
+  .inner-page .call-button { max-width: 100%; flex-wrap: wrap; }
+}

@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+import ResponsiveImage from './ResponsiveImage.astro';
+
+interface AreaAboutContent {
+  heading: string;
+  lead: string;
+  detail: string;
+  expertise: readonly string[];
+  image: string;
+  imageAlt: string;
+  fact: string;
+}
+
+interface Props {
+  areaName: string;
+  slug: string;
+  content: AreaAboutContent;
+}
+
+const { areaName, slug, content } = Astro.props;
+const headingId = `about-${slug}-title`;
+---
+
+<section class="section area-about-shell" aria-labelledby={headingId}>
+  <div class="area-about">
+    <div class="area-about__media">
+      <ResponsiveImage src={content.image} alt={content.imageAlt} sizes="(max-width: 760px) calc(100vw - 64px), 45vw" loading="lazy" />
+      <div class="area-about__facts">
+        <p><strong>{site.licence}</strong><span>NSW Contractor Licence</span></p>
+        <p><strong>24/7</strong><span>{content.fact}</span></p>
+      </div>
+    </div>
+    <div class="area-about__copy">
+      <h2 id={headingId}>{content.heading}</h2>
+      <p>{content.lead}</p>
+      <p>{content.detail}</p>
+      <ul class="area-about__expertise" aria-label={`Plumbing expertise in ${areaName}`}>
+        {content.expertise.map((item) => <li>{item}</li>)}
+      </ul>
+      <div class="area-about__actions">
+        <a class="call-button" href={site.phoneHref} aria-label={`Call Antons Blocked Drains Hawkesbury for drainage help in ${areaName}`}><span>Call Now</span><strong>{site.phoneDisplay}</strong></a>
+        <a class="text-link" href="/about">About the Antons Team</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+---
+interface Props { compact?: boolean; }
+import { Image } from 'astro:assets';
+import googleWordmark from '../../public/images/google-wordmark.png';
+const { compact = false } = Astro.props;
+const reviewUrl = 'https://www.google.com/search?q=Antons+Plumbing+%26+Gas&stick=H4sIAAAAAAAA_-NgU1I1qDBKtEw1sjBKTUtKMzcwtDC3MqhIsTSxMDROSTRLNUxNSzNNXcQq6phXkp9XrBCQU5qblJmXrqCm4J5YDACGGaiBQQAAAA&hl=en-GB&mat=Cd4V-FBGaG8IElcBzAmVZqBybpJ0RDQyDaS1fexwuIlvWen1A02gXui7q6VqUwUBGITIHRbOsD-jM5xx3vaYoeF54TR8h_3EeUA7829-2tKvnZHWOLMrGx3BKSZYzYwrULQ&authuser=0&ved=1t:350944#';
+---
+<a class:list={['google-review-badge', { 'google-review-badge--compact': compact }]} href={reviewUrl} target="_blank" rel="noopener noreferrer" aria-label="Read five-star Google reviews for Antons Plumbing & Gas (opens in a new tab)" title="Antons Plumbing & Gas Google reviews">
+  <Image class="google-review-badge__logo" src={googleWordmark} alt="Google" width={72} widths={[72, 144]} sizes={compact ? '(max-width: 760px) 52px, 62px' : '72px'} format="webp" quality={80} />
+  <span class="google-review-badge__rating">
+  <span class="google-review-badge__label">5 Star Rated</span>
+  <span class="google-review-badge__stars" aria-hidden="true">
+    {Array.from({ length: 5 }, () => <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01Z" /></svg>)}
+  </span>
+  </span>
+</a>
+
+<style>
+  .google-review-badge { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; padding: .25rem 0; background: transparent; color: #fff; text-decoration: none; line-height: 1.2; }
+  .google-review-badge:hover .google-review-badge__label { text-decoration: underline; text-underline-offset: .2em; }
+  .google-review-badge__logo { width: 72px; height: auto; flex-shrink: 0; }
+  .google-review-badge__rating { display: flex; flex-direction: column; gap: .15rem; }
+  .google-review-badge__label { font-size: .75rem; font-weight: 500; white-space: nowrap; }
+  .google-review-badge__stars { display: flex; gap: 0; color: #ffbf00; }
+  .google-review-badge--compact { gap: .4rem; flex-shrink: 0; }
+  .google-review-badge__stars svg { width: 14px; height: 14px; }
+  .google-review-badge--compact .google-review-badge__logo { width: 62px; }
+  .google-review-badge--compact .google-review-badge__label { font-size: .75rem; }
+  .google-review-badge--compact svg { width: 14px; height: 14px; }
+  @media (max-width: 760px) {
+    .google-review-badge--compact { flex-direction: column; gap: .2rem; }
+    .google-review-badge--compact .google-review-badge__logo { width: 52px; }
+    .google-review-badge--compact .google-review-badge__rating { align-items: center; gap: .1rem; }
+    .google-review-badge--compact .google-review-badge__label { font-size: .65rem; }
+    .google-review-badge--compact svg { width: 12px; height: 12px; }
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'img'> {
+  src: string;
+  alt: string;
+  widths?: number[];
+  quality?: number;
+}
+const { src, alt, widths = [240, 480, 768, 1200], quality = 72, ...attributes } = Astro.props;
+const sources = import.meta.glob<{ default: ImageMetadata }>('../../public/images/*.{webp,png,jpg,jpeg}', { eager: true });
+const source = sources[`../../public${src}`]?.default;
+if (!source) throw new Error(`Missing responsive image source: ${src}`);
+const candidates = [...new Set(widths.map((width) => Math.min(width, source.width)))];
+---
+<Image src={source} alt={alt} widths={candidates} format="webp" quality={quality} data-source={src} {...attributes} width={Math.max(...candidates)} height={Math.round(Math.max(...candidates) * source.height / source.width)} />

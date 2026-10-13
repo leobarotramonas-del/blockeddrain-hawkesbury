@@ -1,0 +1,57 @@
+---
+import { site } from '../data/site';
+---
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="drain-brand" href="/" aria-label="Antons Blocked Drains Hawkesbury home"><strong>ANTONS</strong><span>BLOCKED DRAINS</span><small>HAWKESBURY</small></a>
+    <nav class="desktop-nav" aria-label="Primary Navigation">
+      <a href="/services">Services</a>
+      <a href="/service-areas">Areas</a>
+      <a href="/about">About</a>
+      <a href="/#proof">Our Work</a>
+    </nav>
+    <span class="header-licence">NSW LIC. {site.licence}</span>
+    <a class="call-button call-button--header" href={site.phoneHref} aria-label={`Call ${site.name} on ${site.phoneDisplay}`}>
+      <span>Call Now</span><strong>{site.phoneDisplay}</strong>
+    </a>
+    <details class="mobile-menu">
+      <summary aria-label="Open Navigation Menu">
+        <span class="mobile-menu__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="mobile-menu__label">Menu</span>
+      </summary>
+      <nav class="mobile-menu__panel" aria-label="Mobile Navigation">
+        <a href="/services">Services</a>
+        <a href="/service-areas">Service Areas</a>
+        <a href="/about">About</a>
+        <a href="/#proof">Our Work</a>
+        <span>NSW contractor licence {site.licence}</span>
+        <a class="mobile-menu__call" href={site.phoneHref}><small>Call Now</small><strong>{site.phoneDisplay}</strong></a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+
+  if (menu) {
+    const summary = menu.querySelector<HTMLElement>('summary');
+    const updateMenuLabel = () => {
+      summary?.setAttribute('aria-expanded', String(menu.open));
+      summary?.setAttribute('aria-label', menu.open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+
+    menu.addEventListener('toggle', updateMenuLabel);
+    updateMenuLabel();
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => menu.removeAttribute('open')));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        menu.removeAttribute('open');
+        summary?.focus();
+      }
+    });
+    document.addEventListener('click', (event) => {
+      if (menu.open && event.target instanceof Node && !menu.contains(event.target)) menu.removeAttribute('open');
+    });
+  }
+</script>

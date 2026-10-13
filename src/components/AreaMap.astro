@@ -1,0 +1,23 @@
+---
+import ServiceMap from './ServiceMap.astro';
+interface Props { areaName: string; postcode: string; }
+const { areaName, postcode } = Astro.props;
+const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${areaName} NSW ${postcode}`)}`;
+---
+<section class="area-map" id="area-map" aria-labelledby="area-map-title">
+  <div class="area-map__copy">
+    <h2 id="area-map-title">Our {areaName} Service Area</h2>
+    <p>Plumbing services across {areaName}, NSW {postcode}. Explore the suburb on the map.</p>
+    <a href={mapLink} target="_blank" rel="noopener noreferrer" aria-label={`Open ${areaName} in Google Maps (opens in a new tab)`}>Open {areaName} in Google Maps</a>
+  </div>
+  <ServiceMap areaName={areaName} postcode={postcode} compact />
+</section>
+<style>
+  .area-map { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding: 2rem clamp(1.15rem, 3.5vw, 2.75rem); background: #fff; }
+  .area-map__copy { min-width: 0; }
+  h2 { margin: 0 0 .75rem; font-family: var(--display); font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.1; }
+  p { margin: 0 0 1rem; max-width: 48ch; }
+  a { color: var(--navy); font-weight: 700; text-underline-offset: .2em; }
+  a:hover { color: var(--blue); }
+  @media (max-width: 760px) { .area-map { grid-template-columns: 1fr; gap: 1.25rem; } }
+</style>

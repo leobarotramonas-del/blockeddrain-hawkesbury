@@ -1,0 +1,14 @@
+---
+import { areas, services, site } from '../data/site';
+---
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-brand">
+      <a class="drain-brand drain-brand--footer" href="/" aria-label="Antons Blocked Drains Hawkesbury home"><strong>ANTONS</strong><span>BLOCKED DRAINS</span><small>HAWKESBURY</small></a>
+      <p>Antons Blocked Drains Hawkesbury is operated by Antons Enterprises Pty Ltd. NSW contractor licence {site.licence}. Urgent drain calls are taken 24/7.</p>
+    </div>
+    <div><h2>Services</h2>{services.map((item) => <a href={`/services/${item.slug}`}>{item.name}</a>)}</div>
+    <div><h2>Service Areas</h2>{areas.map((area) => <a href={`/service-areas/${area.slug}`}>{area.name}</a>)}</div>
+    <div><h2>Contact</h2><a href={site.phoneHref}>{site.phoneDisplay}</a><a href="/contact">Contact Us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+  </div>
+</footer>
