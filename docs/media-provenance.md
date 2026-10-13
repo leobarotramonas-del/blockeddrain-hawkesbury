@@ -5,7 +5,7 @@ These files were supplied directly by the user for this website on 12 October 20
 | Website file | Supplied source | Use |
 |---|---|---|
 | `public/videos/kurrajong-blocked-drain.mp4` | `Kurrajong blocked.mp4` | Homepage field-proof video; the supplied filename supports the Kurrajong locality caption. |
-| `public/videos/kurrajong-field-reel.mp4` | `Kurrajong Facebook Reel  Anton’s Plumbing & Gas.mp4` | Kurrajong locality page field reel; the supplied filename supports the Kurrajong locality caption. |
+| `public/videos/kurrajong-field-reel.mp4` | `Kurrajong Facebook Reel  Anton’s Plumbing & Gas.mp4` | Kurrajong locality page field reel; web-optimised to 720×1280 H.264 for Cloudflare's asset limit. The supplied filename supports the Kurrajong locality caption. |
 | `public/images/drain-repair-excavation.jpeg` | `WhatsApp Image 2026-09-29 at 1.50.06 PM.jpeg` | Drain excavation and pipe-replacement evidence; no unverified suburb is assigned. |
 | `public/images/drain-repair-finished.jpeg` | `WhatsApp Image 2026-09-29 at 1.49.48 PM.jpeg` | Reinstated work-area evidence; no unverified suburb is assigned. |
 | `public/images/cctv-root-intrusion.jpeg` | `WhatsApp Image 2026-09-28 at 3.00.40 PM.jpeg` | Actual CCTV root-intrusion evidence; no unverified suburb is assigned outside the supplied Kurrajong video context. |
