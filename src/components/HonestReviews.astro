@@ -19,7 +19,7 @@ const selected = (content?.selection ?? [0, 1, 2]).map((index) => reviews[index]
 </section>
 <style>
   .honest-reviews { padding: 4rem 1.25rem; background: #081939; color: #fff; }
-  .honest-reviews__inner { max-width: 75rem; margin-inline: auto; }
+  .honest-reviews__inner { max-width: var(--page-width); margin-inline: auto; }
   header { max-width: 46rem; margin-bottom: 2.5rem; }
   h2 { margin: 0 0 1rem; font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; text-transform: none; }
   header p { margin: 0; color: #c8d5ed; }
