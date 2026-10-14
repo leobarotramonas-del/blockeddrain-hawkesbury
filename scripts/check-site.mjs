@@ -18,6 +18,9 @@ const preview = process.env.PUBLIC_ALLOW_INDEXING === 'false';
 const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 const expectedUrls = [];
+const pageSchemaIds = new Map();
+const pageSchemaSignatures = new Map();
+const serviceSchemaIds = new Map();
 const robots = fs.readFileSync(path.join(root, 'robots.txt'), 'utf8');
 if (preview ? !robots.includes('Disallow: /') : (!robots.includes('Allow: /') || robots.includes('Disallow: /') || !robots.includes(`Sitemap: ${origin}/sitemap.xml`))) errors.push('robots.txt: incorrect production/preview rules');
 const usSpellings = /\b(color|center|organization|organize|organized|analyze|analyzed|behavior|favor|neighbor|neighborhood)\b/gi;
@@ -55,14 +58,24 @@ for (const file of htmlFiles) {
     const ids = nodes.map((node) => node['@id']);
     if (ids.some((id) => !id || !/^https:\/\//.test(id)) || new Set(ids).size !== ids.length) errors.push(`${relative}: schema IDs must be unique absolute URLs`);
     const business = typed('Plumber')[0];
-    if (business?.['@id'] !== `${origin}/#business` || typed('WebSite')[0]?.url !== `${origin}/` || typed('WebPage')[0]?.url !== expectedUrl) errors.push(`${relative}: incorrect production schema URLs`);
+    const webPage = typed('WebPage')[0];
+    if (business?.['@id'] !== `${origin}/#business` || typed('WebSite')[0]?.url !== `${origin}/` || webPage?.url !== expectedUrl) errors.push(`${relative}: incorrect production schema URLs`);
+    const pageSignature = JSON.stringify({ name: webPage?.name, description: webPage?.description, url: webPage?.url });
+    if (pageSchemaIds.has(webPage?.['@id'])) errors.push(`${relative}: WebPage schema ID duplicates ${pageSchemaIds.get(webPage?.['@id'])}`);
+    if (pageSchemaSignatures.has(pageSignature)) errors.push(`${relative}: page-specific schema duplicates ${pageSchemaSignatures.get(pageSignature)}`);
+    pageSchemaIds.set(webPage?.['@id'], relative);
+    pageSchemaSignatures.set(pageSignature, relative);
     if (business?.identifier?.value !== '210933C') errors.push(`${relative}: missing business licence`);
     if (route !== 'index.html' && typed('BreadcrumbList').length !== 1) errors.push(`${relative}: missing breadcrumbs`);
     for (const crumb of typed('BreadcrumbList').flatMap((node) => node.itemListElement)) {
       if (!/^https:\/\//.test(crumb.item)) errors.push(`${relative}: breadcrumb URL must be absolute`);
     }
     if (/^(services|service-areas)\/(?!index\.html)[^/]+\/index\.html$/.test(route)) {
-      if (typed('Service').length !== 1 || typed('Service')[0]?.provider?.['@id'] !== business?.['@id']) errors.push(`${relative}: service must reference shared business`);
+      const service = typed('Service')[0];
+      if (typed('Service').length !== 1 || service?.provider?.['@id'] !== business?.['@id']) errors.push(`${relative}: service must reference shared business`);
+      if (serviceSchemaIds.has(service?.['@id'])) errors.push(`${relative}: Service schema ID duplicates ${serviceSchemaIds.get(service?.['@id'])}`);
+      serviceSchemaIds.set(service?.['@id'], relative);
+      if (!service?.description || !service?.serviceType || !service?.serviceOutput || !service?.areaServed) errors.push(`${relative}: service schema lacks page-specific detail`);
       if (count(/id="reviews-title"/g) !== 1 || !visibleReviewHeading(html)) errors.push(`${relative}: missing Honest Reviews section`);
     }
     if (typed('AggregateRating').length || typed('Review').length) errors.push(`${relative}: unexpected review rating schema`);

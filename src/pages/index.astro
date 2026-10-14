@@ -74,8 +74,8 @@ const steps = [
     </section>
 
     <section class="drain-section areas-section" aria-labelledby="areas-title">
-      <header class="split-heading"><h2 id="areas-title">Blocked drain plumbers across the Hawkesbury</h2><p>Our service-area pages explain the property types, access realities and common drainage risks that can shape work in each locality. They are coverage guides—not claims of a separate office in every suburb.</p></header>
-      <div class="area-cloud">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>NSW {area.postcode}</span></a>)}</div>
+      <header class="split-heading"><h2 id="areas-title">Blocked drain plumbers across the Hawkesbury</h2><p>Our service-area pages explain local access, familiar landmarks, drainage risks and indicative travel after a technician is assigned. They are coverage guides—not offices or guaranteed arrival-time promises.</p></header>
+      <div class="area-cloud">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>NSW {area.postcode} · {area.dispatchMinutes}</span></a>)}</div>
     </section>
 
     <section class="drain-section faq-section" aria-labelledby="faq-title">

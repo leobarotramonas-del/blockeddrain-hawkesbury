@@ -9,7 +9,15 @@ import { faqSchema, serviceFaqs } from '../../data/faqs';
 export function getStaticPaths() { return services.map((service) => ({ params: { slug: service.slug }, props: { service } })); }
 const { service } = Astro.props;
 const faqs = serviceFaqs[service.slug];
-const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: `${service.name} Hawkesbury`, serviceType: service.name, provider: { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176' }, areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}` })) }, faqSchema(faqs)];
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'Service',
+  name: `${service.name} across the Hawkesbury`, description: service.summary,
+  serviceType: service.name, category: `Professional ${service.name.toLowerCase()}`,
+  provider: { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176' },
+  areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}`, address: { '@type': 'PostalAddress', addressLocality: area.name, addressRegion: 'NSW', postalCode: area.postcode, addressCountry: 'AU' } })),
+  audience: { '@type': 'Audience', audienceType: 'Hawkesbury property owners, residents and property managers' },
+  serviceOutput: `${service.name} assessment, suitable clearing and evidence-led next-step advice`,
+}, faqSchema(faqs)];
 ---
 <BaseLayout title={`${service.name} Hawkesbury NSW`} description={`${service.summary} Professional blocked-drain service across the Hawkesbury. Urgent calls are taken 24/7 on ${site.phoneDisplay}.`} schema={schema}>
   <PageHero label="Hawkesbury Drain Service" title={`${service.name} in the Hawkesbury`} intro={service.summary} image={service.image} imageAlt={service.imageAlt} />
@@ -19,7 +27,7 @@ const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: `$
     <div><h2>What We Handle</h2><ul class="check-list">{service.details.map((item) => <li>{item}</li>)}</ul></div>
   </section>
   <section class="section service-method"><div class="detail-grid"><div><h2>How a Professional Approaches It</h2><p>{service.method}</p><p>A do-it-yourself attempt can sometimes move a soft local obstruction, but it cannot safely confirm the condition of buried drainage. Repeated chemicals or uncontrolled pressure may add risk without addressing roots, structural damage or poor alignment.</p></div><div><h2>Tools, Materials & Equipment</h2><ul class="check-list">{service.equipment.map((item) => <li>{item}</li>)}</ul></div></div></section>
-  <section class="section slim-section"><h2>{service.name} Across Hawkesbury</h2><p>Review all <a href="/services">blocked-drain services</a>, browse our <a href="/service-areas">Hawkesbury coverage</a>, learn <a href="/about">about the licensed team</a>, or <a href="/contact">contact us</a> with the full address so access and attendance can be confirmed.</p><div class="area-links">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>{area.postcode}</span></a>)}</div></section>
+  <section class="section slim-section"><h2>{service.name} Across Hawkesbury</h2><p>Review all <a href="/services">blocked-drain services</a>, browse our <a href="/service-areas">Hawkesbury coverage</a>, learn <a href="/about">about the licensed team</a>, or <a href="/contact">contact us</a> with the full address so access and attendance can be confirmed. The times below are travel guides after assignment, not guaranteed arrival times.</p><div class="area-links">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>NSW {area.postcode} · about {area.dispatchMinutes} after dispatch</span></a>)}</div></section>
   <HonestReviews intro="Customer feedback about the licensed team behind this Hawkesbury blocked-drain service." />
   <FaqSection title={`${service.name} Questions`} intro="Straight answers about diagnosis, clearing, equipment and repair decisions." items={faqs} />
   <CtaBand title={`Need ${service.name}?`} />

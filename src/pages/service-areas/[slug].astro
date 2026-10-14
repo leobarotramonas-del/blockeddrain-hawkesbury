@@ -10,11 +10,21 @@ import { faqSchema } from '../../data/faqs';
 export function getStaticPaths() { return areas.map((area) => ({ params: { slug: area.slug }, props: { area } })); }
 const { area } = Astro.props;
 const faqs = areaFaqs[area.slug];
-const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: `Blocked Drains ${area.name}`, serviceType: 'Blocked drain diagnosis, clearing and repair', provider: { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176' }, areaServed: { '@type': 'Place', name: `${area.name}, NSW ${area.postcode}` } }, faqSchema(faqs)];
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'Service',
+  name: `Blocked Drain Plumber in ${area.name} NSW ${area.postcode}`,
+  description: `${area.intro} ${area.context}`,
+  serviceType: `Blocked drain diagnosis, clearing and repair in ${area.name}`,
+  category: ['Blocked drains', 'Drain inspection', 'Drain clearing', 'Drain repairs'],
+  provider: { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176' },
+  areaServed: { '@type': 'Place', name: `${area.name}, NSW ${area.postcode}, Australia`, address: { '@type': 'PostalAddress', addressLocality: area.name, addressRegion: 'NSW', postalCode: area.postcode, addressCountry: 'AU' } },
+  audience: { '@type': 'Audience', audienceType: `${area.name} property owners, residents and property managers` },
+  serviceOutput: `Assessed and cleared drainage where suitable, with findings and repair options explained for ${area.name} properties`,
+}, faqSchema(faqs)];
 ---
 <BaseLayout title={`Blocked Drains ${area.name} NSW ${area.postcode}`} description={`Blocked drain plumber for ${area.name} NSW ${area.postcode}. CCTV inspection, drain jetting, root removal and pipe repair options. Urgent calls are taken 24/7.`} schema={schema}>
   <PageHero label={`${area.name} NSW ${area.postcode}`} title={`Blocked Drains ${area.name}`} intro={area.intro} image={area.slug === 'kurrajong' ? '/images/cctv-root-intrusion.jpeg' : area.image} imageAlt={area.imageAlt} />
-  <section class="section local-causes"><div><h2>Drainage in {area.name}</h2><p>{area.context}</p><p>{area.coverage}</p><p>{area.urgentCopy}</p></div><div><h2>Problems We Look For</h2><ul class="check-list">{area.causes.map((cause) => <li>{cause}</li>)}</ul><h2>Local Service Capability</h2><ul class="check-list">{area.expertise.map((item) => <li>{item}</li>)}</ul></div></section>
+  <section class="section local-causes"><div><h2>Drainage in {area.name}</h2><p>{area.context}</p><p>{area.access}</p><p>{area.coverage}</p><h2>Response Planning</h2><p>{area.responseGuide}</p><p>{area.urgentCopy}</p></div><div><h2>Problems We Look For</h2><ul class="check-list">{area.causes.map((cause) => <li>{cause}</li>)}</ul><h2>Local Service Capability</h2><ul class="check-list">{area.expertise.map((item) => <li>{item}</li>)}</ul></div></section>
   {area.slug === 'kurrajong' && <section class="field-proof"><header><h2>Blocked-drain work in Kurrajong</h2><p>Supplied Antons field media from Kurrajong shows the work behind diagnosis, clearing and a professional next step.</p></header><div class="field-proof__grid"><figure><ResponsiveImage src="/images/cctv-root-intrusion.jpeg" alt="CCTV view of roots inside a blocked drain" widths={[480,720]} sizes="(max-width:760px) 100vw, 33vw" loading="lazy" /><figcaption>Roots visible inside the pipe during camera inspection</figcaption></figure><figure class="field-video"><video controls preload="none" poster="/images/drain-jetting-team.jpeg" aria-label="Kurrajong blocked drain field video"><source src="/videos/kurrajong-field-reel.mp4" type="video/mp4" /></video><figcaption>Antons blocked-drain field reel from Kurrajong</figcaption></figure></div></section>}
   <section class="section slim-section"><h2>Blocked-Drain Services in {area.name}</h2><p>Compare all <a href="/services">blocked-drain services</a>, see our wider <a href="/service-areas">Hawkesbury service area</a>, read <a href="/about">about the licensed team</a>, or <a href="/contact">call about your address</a>.</p><div class="service-list">{services.map((service, index) => <a class="service-row" href={`/services/${service.slug}`}><span>{String(index + 1).padStart(2, '0')}</span><h3>{service.name}</h3><p>{service.summary}</p></a>)}</div></section>
   <HonestReviews intro={`Customer feedback about the licensed team providing drainage help across ${area.name} and the wider Hawkesbury.`} />
