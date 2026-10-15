@@ -29,7 +29,7 @@ const baseUrl = Astro.site!.href;
 const allowIndexing = import.meta.env.PROD && import.meta.env.PUBLIC_ALLOW_INDEXING !== 'false' && !noindex;
 const enableAnalytics = import.meta.env.PROD && Boolean(site.analyticsId);
 const canonical = new URL(canonicalPath, baseUrl).toString();
-const socialImage = new URL('/images/antons-drain-service-vehicle.jpeg', baseUrl).href;
+const socialImage = new URL('/images/antons-drain-service-og.webp', baseUrl).href;
 const pageTitle = title.includes(site.shortName) ? title : `${title} | ${site.shortName}`;
 const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description, schema);
 ---

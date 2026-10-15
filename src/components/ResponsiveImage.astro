@@ -9,7 +9,7 @@ interface Props extends HTMLAttributes<'img'> {
   widths?: number[];
   quality?: number;
 }
-const { src, alt, widths = [240, 480, 768, 1200], quality = 72, ...attributes } = Astro.props;
+const { src, alt, widths = [240, 480, 672, 960, 1200], quality = 72, ...attributes } = Astro.props;
 const sources = import.meta.glob<{ default: ImageMetadata }>('../../public/images/*.{webp,png,jpg,jpeg}', { eager: true });
 const source = sources[`../../public${src}`]?.default;
 if (!source) throw new Error(`Missing responsive image source: ${src}`);

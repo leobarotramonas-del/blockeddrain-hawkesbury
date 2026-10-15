@@ -6,7 +6,7 @@ const browser = await chromium.launch({
   headless: true,
 });
 
-for (const [name, width, height] of [['desktop', 1440, 900], ['mobile', 390, 844]]) {
+for (const [name, width, height] of [['desktop', 1440, 900], ['tablet', 768, 1024], ['mobile', 390, 844]]) {
   const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
   await page.goto(process.env.CAPTURE_URL ?? 'http://127.0.0.1:4321/', { waitUntil: 'networkidle' });
   await page.emulateMedia({ reducedMotion: 'reduce' });

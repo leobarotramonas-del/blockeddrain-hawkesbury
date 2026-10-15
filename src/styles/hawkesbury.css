@@ -78,8 +78,8 @@
 .area-cloud a { min-height: 7.5rem; display: flex; flex-direction: column; justify-content: center; padding: 1rem; border-right: 1px solid var(--drain-rule); border-bottom: 1px solid var(--drain-rule); text-decoration: none; }
 .area-cloud a:hover { color: #fff; background: #0870bb; }
 .area-cloud strong { font-family: var(--display); font-size: 1.75rem; line-height: 1; text-transform: uppercase; }
-.area-cloud span { margin-top: .35rem; color: #0870bb; font-size: .7rem; font-weight: 700; }
-.area-cloud a:hover span { color: #cfeaff; }
+.area-cloud span { margin-top: .4rem; color: #004f8b; font-size: .76rem; font-weight: 700; letter-spacing: .01em; line-height: 1.4; }
+.area-cloud a:hover span { color: #fff; }
 .faq-lines { border-top: 1px solid var(--drain-rule); }
 .faq-lines details { border-bottom: 1px solid var(--drain-rule); }
 .faq-lines summary { padding: 1.25rem .25rem; cursor: pointer; font-weight: 700; }
@@ -98,6 +98,10 @@
 @media (max-width: 980px) {
   .desktop-nav { display: none; }
   .mobile-menu { display: block; }
+  .drain-hero, .diagnosis-panel, .equipment-section { grid-template-columns: minmax(0, 1fr); }
+  .drain-hero { min-height: 0; }
+  .drain-hero__media, .diagnosis-panel__photo { min-height: 28rem; }
+  .equipment-section > img { min-height: 28rem; max-height: 34rem; }
   .decision-strip { grid-template-columns: 1fr 1fr; }
   .decision-strip strong { grid-column: 1 / -1; }
   .area-cloud { grid-template-columns: repeat(3, 1fr); }
@@ -110,8 +114,6 @@
   .drain-brand span { font-size: .62rem; }
   .drain-brand small { font-size: .52rem; }
   .mobile-call-bar { border-radius: 0; }
-  .drain-hero, .diagnosis-panel, .equipment-section { grid-template-columns: 1fr; }
-  .drain-hero { min-height: 0; }
   .drain-home { margin-block: 1rem 2.5rem; }
   .drain-hero__copy { padding: 2.75rem 1.25rem 2.5rem; }
   .drain-hero h1 { font-size: clamp(3.4rem, 17vw, 4.65rem); }

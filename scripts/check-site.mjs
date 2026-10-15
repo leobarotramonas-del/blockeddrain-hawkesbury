@@ -48,6 +48,11 @@ for (const file of htmlFiles) {
     if (!/\balt(?:="[^"]*"|(?=\s|>))/.test(image[0])) errors.push(`${relative}: image lacks alt attribute`);
     if (/src="\/images\/(?!the-ryde-plumber-logo)[^"]+"/.test(image[0]) && /\balt=""/.test(image[0])) errors.push(`${relative}: work photograph needs descriptive alt text`);
   }
+  for (const video of html.matchAll(/<video\b[^>]*>[\s\S]*?<\/video>/gi)) {
+    const track = video[0].match(/<track\b[^>]*kind="captions"[^>]*src="([^"]+\.vtt)"[^>]*>/i);
+    if (!track) errors.push(`${relative}: video needs a captions track`);
+    else if (!fs.existsSync(path.join(root, track[1].replace(/^\//, '')))) errors.push(`${relative}: missing captions file ${track[1]}`);
+  }
   const scripts = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
   try {
     const nodes = scripts.flatMap((match) => { const data = JSON.parse(match[1]); return data['@graph'] ?? [data]; });

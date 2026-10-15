@@ -26,5 +26,5 @@ const focalPoints: Record<string, string> = {
     <p>{intro}</p>
     <a class="call-button" href={site.phoneHref}><span>Call Now</span><strong>{site.phoneDisplay}</strong></a>
   </div>
-  <ResponsiveImage src={image} alt={imageAlt} sizes="(max-width: 760px) calc(100vw - 32px), 50vw" loading="eager" fetchpriority="high" style={{ objectPosition: focalPoints[image] ?? '50% 50%' }} />
+  <ResponsiveImage src={image} alt={imageAlt} widths={[480, 672, 960, 1200]} sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 900px) calc(100vw - 4rem), 560px" loading="eager" fetchpriority="high" quality={68} style={{ objectPosition: focalPoints[image] ?? '50% 50%' }} />
 </section>

@@ -46,6 +46,10 @@
   .inner-page .detail-grid, .inner-page .area-about { gap: 2rem; }
   .inner-page .contact-panel > div { padding: 1.25rem; }
 }
+@media (min-width: 761px) and (max-width: 900px) {
+  .inner-page .page-hero { grid-template-columns: minmax(0, 1fr); }
+  .inner-page .page-hero > img { min-height: 0; height: 26rem; max-height: 26rem; }
+}
 @media (max-width: 760px) {
   .inner-page { width: calc(100% - 2rem); margin: 1rem auto 2.5rem; }
   .inner-page .section, .inner-page .local-faq { padding: 2rem 0; }

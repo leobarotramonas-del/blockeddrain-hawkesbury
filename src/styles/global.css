@@ -116,7 +116,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .service-list { border-top: 2px solid var(--navy); }
 .service-row { display: grid; grid-template-columns: 4rem minmax(12rem, .65fr) minmax(20rem, 1fr) 2.5rem; gap: 1.5rem; align-items: center; min-height: 8.5rem; padding: 1.4rem .35rem; text-decoration: none; border-bottom: 1px solid var(--line); transition: color .18s ease-out, background-color .18s ease-out, transform .18s ease-out; }
 .service-row:hover { color: #fff; background: var(--blue); transform: translateX(.35rem); }
-.service-row > span { color: var(--blue); font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
+.service-row > span { color: #0755c6; font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
 .service-row:hover > span { color: #fff; }
 .service-row h3 { margin: 0; font-family: var(--display); font-size: clamp(2rem, 3.2vw, 3.4rem); line-height: .9; text-transform: none; }
 .service-row p { max-width: 58ch; margin: 0; color: var(--muted); }
@@ -161,10 +161,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .faq-interview__item h3 span, .faq-interview__item p span { display: block; margin-bottom: .75rem; color: var(--blue); font-family: var(--body); font-size: .68rem; font-weight: 700; letter-spacing: .12em; line-height: 1.2; text-transform: none; }
 .faq-interview__item p { max-width: 62ch; margin: 1.5rem 0 0; color: var(--muted); }
 .faq-interview__item p span { color: var(--muted); }
-.cta-band { padding: 0 var(--page-gutter); color: #fff; background: var(--blue); }
+.cta-band { padding: 0 var(--page-gutter); color: #fff; background: #0057c7; }
 .cta-band__inner { width: 100%; max-width: var(--page-width); min-height: 11rem; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
 .cta-band h2 { font-size: clamp(2.8rem, 5vw, 5.2rem); }
-.cta-band p { margin-bottom: 0; color: #e1eeff; }
+.cta-band p { margin-bottom: 0; color: #fff; }
 
 /* Compact homepage layout */
 .home-page { padding: 1.5rem clamp(1rem, 3vw, 2rem) 5rem; background: #fff; }
