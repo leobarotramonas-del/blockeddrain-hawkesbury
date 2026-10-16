@@ -7,7 +7,7 @@ import { areas, faqs, services, site } from '../data/site';
 const schema = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Plumber', name: site.name, legalName: site.operator, telephone: '+61 493 824 176', areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}` })), knowsAbout: services.map((service) => service.name) },
+    { '@type': 'Plumber', name: site.name, alternateName: site.operator, telephone: '+61 493 824 176', areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}` })), knowsAbout: services.map((service) => service.name) },
     { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
   ],
 };
@@ -23,13 +23,13 @@ const steps = [
   <div class="drain-home">
     <section class="drain-hero" aria-labelledby="hero-title">
       <div class="drain-hero__copy">
-        <h1 id="hero-title">Clear the blockage. <em>Find the cause.</em></h1>
+        <h1 id="hero-title">Clear the blocked drain. <em>Find the cause.</em></h1>
         <p class="drain-hero__lead">For blocked sewer and stormwater drains, overflowing toilets, tree roots and recurring problems across the Hawkesbury. Professional diagnosis, serious equipment and a clear repair plan when cleaning alone is not enough. Urgent drain calls are taken 24/7.</p>
         <div class="drain-hero__actions">
           <a class="call-button" href={site.phoneHref}><span>Urgent calls 24/7</span><strong>{site.phoneDisplay}</strong></a>
           <a class="plain-action" href="#diagnosis">See how we solve it</a>
         </div>
-        <p class="operator-line">A specialist local service operated by Antons Enterprises Pty Ltd · NSW contractor licence {site.licence}</p>
+        <p class="operator-line">A specialist Hawkesbury blocked-drain service by {site.operator} · NSW contractor licence {site.licence}</p>
       </div>
       <div class="drain-hero__media">
         <ResponsiveImage src="/images/drain-jetting-team.jpeg" alt="Antons blocked drain technician operating professional jetting equipment" widths={[360, 480, 672, 960, 1200]} sizes="(max-width: 760px) calc(100vw - 2rem), (max-width: 1180px) 54vw, 605px" loading="eager" fetchpriority="high" quality={64} />
@@ -55,17 +55,17 @@ const steps = [
     </section>
 
     <section class="drain-section process-section" aria-labelledby="process-title">
-      <header class="split-heading"><h2 id="process-title">From first call to a drain that makes sense again</h2><p>You do not need to diagnose it before calling. Clear symptoms, a safe work area and honest access information help us prepare the right first response.</p></header>
+      <header class="split-heading"><h2 id="process-title">From first call to a clear, checked drain</h2><p>You do not need to diagnose it before calling. Clear symptoms, a safe work area and honest access information help us prepare the right first response.</p></header>
       <ol>{steps.map(([title, text], index) => <li><span>{String(index + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
     </section>
 
     <section class="equipment-section" aria-labelledby="equipment-title">
-      <div class="equipment-section__copy"><h2 id="equipment-title">Equipment is only useful in experienced hands</h2><p>Pressure, nozzle, access point and camera timing all matter. Our plumbers choose tools for the pipe and obstruction rather than applying one aggressive method to every drain.</p><dl><div><dt>High-pressure water jetter</dt><dd>Flushes grease, sludge, silt and suitable root growth with task-specific nozzles.</dd></div><div><dt>CCTV camera and locator</dt><dd>Shows accessible pipe condition and helps mark a defect or repair point from above ground.</dd></div><div><dt>Mechanical clearing tools</dt><dd>Useful for selected fixture, trap and branch-line obstructions where jetting is not the first choice.</dd></div><div><dt>Drainage repair materials</dt><dd>Drainage-grade PVC, connectors, bedding and access fittings for agreed replacement work.</dd></div></dl></div>
-      <ResponsiveImage src="/images/cctv-drain-camera.jpeg" alt="Antons plumber preparing a professional CCTV drain camera and locator" widths={[480, 768, 1080]} sizes="(max-width: 760px) 100vw, 46vw" loading="lazy" />
+      <div class="equipment-section__copy"><h2 id="equipment-title">Professional blocked-drain equipment, used with judgement</h2><p>Pressure, nozzle, access point and camera timing all matter. Our plumbers choose tools for the pipe and obstruction rather than applying one aggressive method to every drain.</p><dl><div><dt>High-pressure water jetter</dt><dd>Flushes grease, sludge, silt and suitable root growth with task-specific nozzles.</dd></div><div><dt>CCTV camera and locator</dt><dd>Shows accessible pipe condition and helps mark a defect or repair point from above ground.</dd></div><div><dt>Mechanical clearing tools</dt><dd>Useful for selected fixture, trap and branch-line obstructions where jetting is not the first choice.</dd></div><div><dt>Drainage repair materials</dt><dd>Drainage-grade PVC, connectors, bedding and access fittings for agreed replacement work.</dd></div></dl></div>
+      <ResponsiveImage src="/images/cctv-drain-camera.jpeg" alt="Licensed plumber preparing a professional CCTV drain camera and locator" widths={[480, 768, 1080]} sizes="(max-width: 760px) 100vw, 46vw" loading="lazy" />
     </section>
 
     <section class="field-proof" id="proof" aria-labelledby="proof-title">
-      <header><h2 id="proof-title">Real drain work. Real causes. Real repairs.</h2><p>Supplied field footage from Antons jobs shows the difference between clearing a symptom and working through the underlying drainage problem.</p></header>
+      <header><h2 id="proof-title">Real drain work. Real causes. Real repairs.</h2><p>Supplied field footage from Hawkesbury blocked-drain work shows the difference between clearing a symptom and working through the underlying drainage problem.</p></header>
       <div class="field-proof__grid">
         <figure><ResponsiveImage src="/images/drain-repair-excavation.jpeg" alt="Excavated underground drain being replaced with drainage-grade pipe" widths={[480, 720]} sizes="(max-width: 760px) 100vw, 33vw" loading="lazy" /><figcaption>Damaged section exposed for targeted pipe replacement</figcaption></figure>
         <figure><ResponsiveImage src="/images/drain-repair-finished.jpeg" alt="Finished yard after an underground drain repair was backfilled" widths={[480, 720]} sizes="(max-width: 760px) 100vw, 33vw" loading="lazy" /><figcaption>Work area backfilled and left ready for the next surface stage</figcaption></figure>

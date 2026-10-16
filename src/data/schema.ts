@@ -25,7 +25,7 @@ export function pageSchema(baseUrl: string, path: string, title: string, descrip
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Plumber', '@id': businessId, name: site.name, legalName: site.operator, url: root, telephone: '+61 493 824 176',
+      { '@type': 'Plumber', '@id': businessId, name: site.name, alternateName: site.operator, url: root, telephone: '+61 493 824 176',
         identifier: { '@type': 'PropertyValue', propertyID: 'NSW contractor licence', value: site.licence },
         areaServed: areas.map((area) => ({ '@type': 'Place', name: `${area.name}, NSW ${area.postcode}, Australia` })),
         knowsAbout: services.map((service) => service.name) },

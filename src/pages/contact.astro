@@ -5,8 +5,8 @@ import FaqSection from '../components/FaqSection.astro';
 import { areas, site } from '../data/site';
 import { faqSchema, pageFaqs } from '../data/faqs';
 ---
-<BaseLayout title="Contact Antons Blocked Drains Hawkesbury" description={`Call ${site.phoneDisplay} for blocked-drain diagnosis, clearing and repair across the Hawkesbury. Urgent drain calls are taken 24 hours a day, 7 days a week.`} schema={faqSchema(pageFaqs.contact)}>
-  <PageHero label="Contact" title="Tell us what the drain is doing." intro="Share the address, affected fixtures and whether water or sewage is escaping. You do not need to know the cause before you call." image="/images/drain-jetting-team.jpeg" imageAlt="Antons blocked drain technician with professional drain-clearing equipment" />
+<BaseLayout title="Contact a Blocked Drain Plumber Hawkesbury" description={`Call ${site.phoneDisplay} for blocked-drain diagnosis, clearing and repair across the Hawkesbury. Urgent drain calls are taken 24 hours a day, 7 days a week.`} schema={faqSchema(pageFaqs.contact)}>
+  <PageHero label="Contact" title="Call a blocked-drain plumber in the Hawkesbury" intro="Share the address, affected fixtures and whether water or sewage is escaping. You do not need to know the cause before you call." image="/images/drain-jetting-team.jpeg" imageAlt="Blocked-drain technician with professional drain-clearing equipment" />
   <section class="contact-panel"><div><h2>Urgent calls taken 24/7</h2><a href={site.phoneHref}>{site.phoneDisplay}</a><p>For urgent overflows, unusable toilets and blocked sewer or stormwater drains.</p></div><div><h2>Have Ready</h2><p>Full address, property type, affected fixtures, when it started, what has already been tried and any access limitations.</p></div><div><h2>Coverage</h2><p>{areas.map((area) => area.name).join(', ')} and surrounding Hawkesbury communities. Exact attendance is confirmed by address.</p></div></section>
   <FaqSection title="Before You Call" intro="The details that help us understand the first practical step." items={pageFaqs.contact} />
 </BaseLayout>

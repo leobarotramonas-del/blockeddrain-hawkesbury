@@ -12,7 +12,7 @@ Generate qualified calls to 0493 824 176 by answering the customer journey: what
 
 - Public brand: Antons Blocked Drains Hawkesbury.
 - Domain: https://blockeddrainshawkesbury.com.au.
-- Operator: Antons Enterprises Pty Ltd, stated on important trust and legal surfaces rather than repeated through ordinary copy.
+- Service provider: Antons Plumbing & Gas, stated on important trust and legal surfaces rather than repeated through ordinary copy.
 - NSW contractor licence: 210933C.
 - Urgent drain calls: 24 hours, 7 days a week; no fixed arrival-time promise.
 - Real supplied Antons drain-camera, jetting, excavation, repair and vehicle media.

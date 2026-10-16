@@ -12,6 +12,6 @@ The project is prepared for a Git-connected Cloudflare static deployment. Produc
 
 ## Business details
 
-Public brand: Antons Blocked Drains Hawkesbury. Operator: Antons Enterprises Pty Ltd. Phone: 0493 824 176. NSW contractor licence: 210933C. Urgent calls are taken 24/7.
+Public brand: Antons Blocked Drains Hawkesbury. Service provider: Antons Plumbing & Gas. Phone: 0493 824 176. NSW contractor licence: 210933C. Urgent calls are taken 24/7.
 
 Local pages represent mobile service coverage, not separate offices. Do not invent prices, job locations, guarantees or response times.

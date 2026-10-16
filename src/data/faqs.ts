@@ -30,9 +30,9 @@ export const pageFaqs = {
     { question: 'How do I confirm my address?', answer: `Call ${site.phoneDisplay} with the full street address, property type and symptoms.` },
   ],
   about: [
-    { question: 'Who operates Antons Blocked Drains Hawkesbury?', answer: `${site.operator} operates the service under NSW contractor licence ${site.licence}.` },
+    { question: 'Who provides the Hawkesbury blocked-drain service?', answer: `${site.name} is a dedicated blocked-drain service from ${site.operator}. Regulated work is performed under NSW contractor licence ${site.licence}.` },
     { question: 'What makes the service drainage-focused?', answer: 'The website and service journey centre on blocked-drain symptoms, professional diagnosis, jetting, CCTV inspection, root problems and repair planning.' },
-    { question: 'Are the photos real work?', answer: 'Yes. The site uses supplied Antons vehicle, technician, camera, jetting, excavation and drainage-repair images rather than stock tradie photography.' },
+    { question: 'Are the photos real work?', answer: 'Yes. The site uses supplied vehicle, technician, camera, jetting, excavation and drainage-repair images from real work rather than stock tradie photography.' },
     { question: 'Can I call outside business hours?', answer: 'Yes. Urgent drain calls are taken 24 hours a day, 7 days a week.' },
   ],
   contact: [

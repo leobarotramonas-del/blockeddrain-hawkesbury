@@ -10,7 +10,7 @@ const selected = (content?.selection ?? [0, 1, 2]).map((index) => reviews[index]
   <div class="honest-reviews__inner">
     <header>
       <h2 id="reviews-title">Honest Reviews</h2>
-      <p>{intro ?? content?.intro ?? 'Read customer feedback about the licensed Antons team behind this Hawkesbury blocked-drain service.'}</p>
+      <p>{intro ?? content?.intro ?? 'Read customer feedback about the licensed team providing this Hawkesbury blocked-drain service.'}</p>
     </header>
     <div class="honest-reviews__quotes">
       {selected.map((review) => <figure><blockquote>“{review.text}”</blockquote><figcaption><strong>{review.name}</strong></figcaption></figure>)}
