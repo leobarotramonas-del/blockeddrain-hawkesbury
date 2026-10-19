@@ -2,7 +2,7 @@
 import { site } from '../data/site';
 import ResponsiveImage from './ResponsiveImage.astro';
 interface Props { title: string; intro: string; label: string; image?: string; imageAlt?: string; }
-const { title, intro, label, image = '/images/antons-drain-service-vehicle.jpeg', imageAlt = 'Antons blocked-drain service vehicle' } = Astro.props;
+const { title, intro, label, image = '/images/antons-drain-service-vehicle.jpeg', imageAlt = 'Blocked-drain service vehicle equipped for Hawkesbury callouts' } = Astro.props;
 const focalPoints: Record<string, string> = {
   '/images/ryde-hot-water-plumber.webp': '50% 45%',
   '/images/ryde-emergency-plumber-drain.webp': '50% 65%',

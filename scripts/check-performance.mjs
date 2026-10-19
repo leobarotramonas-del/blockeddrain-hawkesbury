@@ -30,7 +30,7 @@ for (const file of htmlFiles) {
 const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const hero = [...home.matchAll(/<img\b[^>]*>/g)]
   .map(([tag]) => tag)
-  .find((tag) => tag.includes('professional jetting equipment'));
+  .find((tag) => tag.includes('data-source="/images/drain-jetting-team.jpeg"'));
 assert.ok(hero, 'Homepage hero image must be discoverable in initial HTML');
 assert.match(hero, /fetchpriority="high"/);
 assert.match(hero, /loading="eager"/);
