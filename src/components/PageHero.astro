@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site';
+import GoogleReviewBadge from './GoogleReviewBadge.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
 interface Props { title: string; intro: string; label: string; image?: string; imageAlt?: string; }
 const { title, intro, label, image = '/images/antons-drain-service-vehicle.jpeg', imageAlt = 'Blocked-drain service vehicle equipped for Hawkesbury callouts' } = Astro.props;
@@ -22,6 +23,7 @@ const focalPoints: Record<string, string> = {
 <section class="page-hero">
   <div class="page-hero__copy">
     <p class="page-label">{label}</p>
+    <div class="page-hero__review"><GoogleReviewBadge /></div>
     <h1>{title}</h1>
     <p>{intro}</p>
     <a class="call-button" href={site.phoneHref}><span>Call Now</span><strong>{site.phoneDisplay}</strong></a>

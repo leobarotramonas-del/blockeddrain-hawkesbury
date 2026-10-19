@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import GoogleReviewBadge from '../components/GoogleReviewBadge.astro';
 import ResponsiveImage from '../components/ResponsiveImage.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { areas, faqs, services, site } from '../data/site';
@@ -23,6 +24,7 @@ const steps = [
   <div class="drain-home">
     <section class="drain-hero" aria-labelledby="hero-title">
       <div class="drain-hero__copy">
+        <div class="drain-hero__review"><GoogleReviewBadge /></div>
         <h1 id="hero-title">Clear the blocked drain. <em>Find the cause.</em></h1>
         <p class="drain-hero__lead">For blocked sewer and stormwater drains, overflowing toilets, tree roots and recurring problems across the Hawkesbury. Professional diagnosis, serious equipment and a clear repair plan when cleaning alone is not enough. Urgent drain calls are taken 24/7.</p>
         <div class="drain-hero__actions">
