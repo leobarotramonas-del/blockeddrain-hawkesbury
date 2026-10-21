@@ -1,7 +1,7 @@
 export const site = {
   name: 'Antons Blocked Drains Hawkesbury', shortName: 'Antons Blocked Drains Hawkesbury',
   operator: 'Antons Plumbing & Gas', licence: '210933C', phoneDisplay: '0493 824 176',
-  phoneHref: 'tel:+61493824176', analyticsId: '', hours: '24 hours, 7 days a week', region: 'Hawkesbury, NSW',
+  phoneHref: 'tel:+61493824176', analyticsId: 'G-6DHHXN7XWP', hours: '24 hours, 7 days a week', region: 'Hawkesbury, NSW',
 };
 
 export const services = [
