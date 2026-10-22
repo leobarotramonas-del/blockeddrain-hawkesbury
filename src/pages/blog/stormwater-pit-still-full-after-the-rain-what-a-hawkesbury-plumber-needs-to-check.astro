@@ -1,0 +1,6 @@
+---
+import WeekOneArticle from '../../components/WeekOneArticle.astro';
+import posts from '../../data/week-one-articles.json';
+const post = posts.find(p=>p.id==="W01-05-1")!;
+---
+<WeekOneArticle post={post} />

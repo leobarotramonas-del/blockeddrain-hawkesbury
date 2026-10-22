@@ -1,0 +1,7 @@
+---
+import posts from '../data/week-one-articles.json';
+import '../styles/week-one-blog.css';
+const { service, title = 'Latest practical guides' } = Astro.props;
+const selected = service ? posts.filter(p=>p.service===service.replace(/[/]$/,'')) : posts;
+---
+{selected.length > 0 && <section class="w1-guides"><h2>{title}</h2><div class="w1-guide-grid">{selected.map(p=><article><p class="w1-meta">22 October 2026 · {p.category}</p><h3><a href={p.path}>{p.title}</a></h3><p>{p.description}</p></article>)}</div></section>}

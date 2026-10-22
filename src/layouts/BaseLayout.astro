@@ -16,6 +16,9 @@ import { site } from '../data/site';
 import { pageSchema } from '../data/schema';
 
 interface Props {
+  article?: boolean;
+  articleImage?: string;
+  articleImageAlt?: string;
   title: string;
   description: string;
   canonicalPath?: string;
@@ -24,13 +27,13 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, canonicalPath = Astro.url.pathname, schema, showFooter = true, noindex = false } = Astro.props;
+const { article = false, articleImage, articleImageAlt, title, description, canonicalPath = Astro.url.pathname, schema, showFooter = true, noindex = false } = Astro.props;
 const baseUrl = Astro.site!.href;
 const allowIndexing = import.meta.env.PROD && import.meta.env.PUBLIC_ALLOW_INDEXING !== 'false' && !noindex;
 const enableAnalytics = import.meta.env.PROD && Boolean(site.analyticsId);
 const canonical = new URL(canonicalPath, baseUrl).toString();
-const socialImage = new URL('/images/antons-drain-service-og.webp', baseUrl).href;
-const pageTitle = title.includes(site.shortName) ? title : `${title} | ${site.shortName}`;
+const socialImage = articleImage ? new URL(articleImage, Astro.site).href : new URL('/images/antons-drain-service-og.webp', baseUrl).href;
+const pageTitle = article ? title : title.includes(site.shortName) ? title : `${title} | ${site.shortName}`;
 const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description, schema);
 ---
 <!doctype html>
@@ -46,14 +49,14 @@ const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description
     <link rel="preload" href={headingFont} as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/png" sizes="150x150" href="/favicon-antons.png" />
     <link rel="apple-touch-icon" sizes="300x300" href="/apple-touch-icon.png" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={article ? "article" : "website"} />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:image:alt" content="Blocked-drain service vehicle equipped for Hawkesbury drainage callouts" />
+    <meta property="og:image:alt" content={articleImageAlt ?? "Blocked-drain service vehicle equipped for Hawkesbury drainage callouts"} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />

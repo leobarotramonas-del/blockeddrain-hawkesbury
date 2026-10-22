@@ -1,8 +1,9 @@
+import weekOne from '../data/week-one-articles.json';
 import type { APIRoute } from 'astro';
 import { areas, services } from '../data/site';
 
 export const GET: APIRoute = ({ site }) => {
-  const paths = ['/', '/about', '/contact', '/services', '/service-areas', '/privacy', '/terms',
+  const paths = ["/blog", ...weekOne.map(p=>p.path),'/', '/about', '/contact', '/services', '/service-areas', '/privacy', '/terms',
     ...services.map(({ slug }) => `/services/${slug}`),
     ...areas.map(({ slug }) => `/service-areas/${slug}`)];
   const entries = paths.map((path) => `<url><loc>${new URL(path, site).href}</loc></url>`).join('\n');

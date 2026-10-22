@@ -14,7 +14,7 @@ export function pageSchema(baseUrl: string, path: string, title: string, descrip
     if (node['@type'] === 'FAQPage') return { ...detail, '@id': `${url}#faq`, isPartOf: { '@id': pageId } };
     return detail;
   });
-  const labels: Record<string, string> = { services: 'Services', 'service-areas': 'Service areas', about: 'About us', contact: 'Contact', privacy: 'Privacy policy', terms: 'Website terms', '404': 'Page not found' };
+  const labels: Record<string, string> = { blog: "Plumbing advice", services: 'Services', 'service-areas': 'Service areas', about: 'About us', contact: 'Contact', privacy: 'Privacy policy', terms: 'Website terms', '404': 'Page not found' };
   const segments = path.split('/').filter(Boolean);
   const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Home', item: root }, ...segments.map((segment, index) => ({
     '@type': 'ListItem', position: index + 2,

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import posts from '../data/week-one-articles.json';
+import '../styles/week-one-blog.css';
+interface Props { post: (typeof posts)[number] }
+const { post } = Astro.props;
+const origin = Astro.site!.href.replace(/[/]$/,'');
+const url = new URL(post.path, origin).href;
+const related = posts.filter(p=>p.id!==post.id);
+const schema = [
+ {'@type':'BlogPosting','@id':url+'#article',url,headline:post.title,description:post.description,inLanguage:'en-AU',datePublished:post.date,dateModified:post.date,wordCount:post.words,image:new URL(post.image,origin).href,author:{'@type':'Organization','@id':origin+'/#business',name:site.name},publisher:{'@id':origin+'/#business'},mainEntityOfPage:{'@id':url+'#webpage'}},
+ {'@type':'FAQPage','@id':url+'#faq',mainEntity:post.faqs.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))}
+];
+---
+<BaseLayout title={post.seoTitle} description={post.description} canonicalPath={post.path} schema={schema} article={true} articleImage={post.image} articleImageAlt={post.imageAlt}>
+<article class="w1-article">
+<nav class="w1-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href={post.indexPath}>Plumbing advice</a> / <span aria-current="page">{post.title}</span></nav>
+<header><p class="w1-category">{post.category}</p><h1>{post.title}</h1><p class="w1-meta">By {site.name} · <time datetime={post.date}>22 October 2026</time></p></header>
+<div class="w1-body" set:html={post.body} />
+<section><h2>Quick check</h2><details class="w1-check"><summary>{post.check[0]}</summary><p>{post.check[1]}</p></details></section>
+<figure><img src={post.image} srcset={post.image+' '+post.width+'w'} sizes="(max-width: 800px) 92vw, 760px" width={post.width} height={post.height} alt={post.imageAlt} loading="lazy" decoding="async" /><figcaption>{post.caption}</figcaption></figure>
+<section><h2>Frequently asked questions</h2>{post.faqs.map(([q,a])=><div><h3>{q}</h3><p>{a}</p></div>)}</section>
+<section class="w1-next"><h2>Discuss your property</h2><p><a href={post.service}>Explore the relevant local service</a> or <a href="/contact">contact the team</a> with your suburb, symptoms and access details.</p><p><a href="/">{site.name}</a></p></section>
+<aside class="w1-related"><h2>Related local guides</h2><ul>{related.map(p=><li><a href={p.path}>{p.title}</a></li>)}</ul></aside>
+</article>
+</BaseLayout>
