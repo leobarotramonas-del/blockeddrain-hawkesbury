@@ -8,7 +8,7 @@
     "path": "/blog/stormwater-pit-still-full-after-the-rain-what-a-hawkesbury-plumber-needs-to-check",
     "indexPath": "/blog",
     "date": "2026-10-22",
-    "body": "<p>A stormwater pit that remains full after rain may have a restricted outlet, a blockage further along the pipe or another drainage problem. The water level alone does not tell you which. Arrange an assessment that follows the outlet and checks what happens downstream before deciding the pit itself needs replacement.</p>\n<p>For a Hawkesbury property, the useful starting point is the timing. Tell the plumber whether the pit drains slowly after every shower or whether the problem appeared during one unusually heavy downpour.</p>\n<h2>Look from a safe position</h2>\n<p>Keep away from moving water, unstable edges and flooded electrical equipment. Do not lift heavy covers or enter a pit to investigate. A clear photo from firm ground can still show the water level, surrounding surface and any visible debris.</p>\n<p>The <a href=\"https://www.ses.nsw.gov.au/during-emergency/during-storm\">NSW SES storm advice</a> warns people to keep clear of storm drains during dangerous conditions. Wait for safe access rather than trying to clear a flooded system while water is moving through it.</p>\n<h2>Three observations that help the assessment</h2>\n<h3>How long the water stays</h3>\n<p>Record when the rain stopped and whether the level changed afterwards. A photograph at a later safe time can show the difference. Do not add water to a full pit to test it; that adds to the problem without locating the restriction.</p>\n<h3>Which areas feed the pit</h3>\n<p>Describe the visible connections or surrounding areas, such as a driveway, paved courtyard or downpipe. If the route is unknown, say so. Guessing that every downpipe joins the same line can send the investigation in the wrong direction.</p>\n<h3>Where water goes when it overflows</h3>\n<p>Note whether it runs towards a building, neighbouring land or another drain. That information helps prioritise the work and explain the immediate risk. It does not establish who owns the affected pipe or who must pay for repairs.</p>\n<h2>Clearing the inlet may not clear the outlet</h2>\n<p>Leaves at the grate can be one part of the issue. Removing visible material does not demonstrate that the underground pipe is open. If the pit quickly fills again, the outlet and downstream route need consideration.</p>\n<p>A plumber may recommend clearing, camera inspection or further investigation depending on access and conditions. Ask what each step is intended to establish. Not every full pit needs the same equipment, and a camera view may be limited while the line is submerged or obstructed.</p>\n<h2>Ask what the result actually proves</h2>\n<p>After the work, ask which section was checked and how drainage was assessed. A line that flows during a controlled test has been checked under those conditions; that is not a guarantee against flooding in every future storm.</p>\n<p>If the finding suggests a layout or capacity issue, separate that from a blockage-clearing quote. Changing drainage design can involve a different scope from removing an obstruction. You should understand which problem the proposed work addresses.</p>\n<h2>Arrange a useful booking</h2>\n<p>Our <a href=\"/services/blocked-stormwater-drains\">Hawkesbury stormwater drain service</a> is the relevant starting point. Send safe photos, the approximate timing and any records of earlier drainage work.</p>\n<p>If you manage a separate property nearer Castle Hill, <a href=\"https://blockeddrainshillsdistrict.com.au/\">Blocked Drains Hills District</a> can help with that local enquiry. Keep the drainage history for each address separate rather than assuming the same symptoms have the same cause.</p>\n<h2>Key takeaways</h2>\n<ul><li>A full pit is a symptom, not a diagnosis.</li><li>Record water levels and timing without entering the drainage system.</li><li>Ask which outlet and downstream sections were assessed.</li><li>Separate blockage clearing from any proposed drainage redesign.</li></ul>",
+    "body": "<h2 id=\"look-from-a-safe-position\">Look from a safe position</h2>\n<p>Keep away from moving water, unstable edges and flooded electrical equipment. Do not lift heavy covers or enter a pit to investigate. A clear photo from firm ground can still show the water level, surrounding surface and any visible debris.</p>\n<p>The <a href=\"https://www.ses.nsw.gov.au/during-emergency/during-storm\">NSW SES storm advice</a> warns people to keep clear of storm drains during dangerous conditions. Wait for safe access rather than trying to clear a flooded system while water is moving through it.</p>\n<h2 id=\"three-observations-that-help-the-assessment\">Three observations that help the assessment</h2>\n<h3 id=\"how-long-the-water-stays\">How long the water stays</h3>\n<p>Record when the rain stopped and whether the level changed afterwards. A photograph at a later safe time can show the difference. Do not add water to a full pit to test it; that adds to the problem without locating the restriction.</p>\n<h3 id=\"which-areas-feed-the-pit\">Which areas feed the pit</h3>\n<p>Describe the visible connections or surrounding areas, such as a driveway, paved courtyard or downpipe. If the route is unknown, say so. Guessing that every downpipe joins the same line can send the investigation in the wrong direction.</p>\n<h3 id=\"where-water-goes-when-it-overflows\">Where water goes when it overflows</h3>\n<p>Note whether it runs towards a building, neighbouring land or another drain. That information helps prioritise the work and explain the immediate risk. It does not establish who owns the affected pipe or who must pay for repairs.</p>\n<h2 id=\"clearing-the-inlet-may-not-clear-the-outlet\">Clearing the inlet may not clear the outlet</h2>\n<p>Leaves at the grate can be one part of the issue. Removing visible material does not demonstrate that the underground pipe is open. If the pit quickly fills again, the outlet and downstream route need consideration.</p>\n<p>A plumber may recommend clearing, camera inspection or further investigation depending on access and conditions. Ask what each step is intended to establish. Not every full pit needs the same equipment, and a camera view may be limited while the line is submerged or obstructed.</p>\n<h2 id=\"ask-what-the-result-actually-proves\">Ask what the result actually proves</h2>\n<p>After the work, ask which section was checked and how drainage was assessed. A line that flows during a controlled test has been checked under those conditions; that is not a guarantee against flooding in every future storm.</p>\n<p>If the finding suggests a layout or capacity issue, separate that from a blockage-clearing quote. Changing drainage design can involve a different scope from removing an obstruction. You should understand which problem the proposed work addresses.</p>\n<h2 id=\"arrange-a-useful-booking\">Arrange a useful booking</h2>\n<p>Our <a href=\"/services/blocked-stormwater-drains\">Hawkesbury stormwater drain service</a> is the relevant starting point. Send safe photos, the approximate timing and any records of earlier drainage work.</p>\n<p>If you manage a separate property nearer Castle Hill, <a href=\"https://blockeddrainshillsdistrict.com.au/\">Blocked Drains Hills District</a> can help with that local enquiry. Keep the drainage history for each address separate rather than assuming the same symptoms have the same cause.</p>",
     "faqs": [
       [
         "Should a pit be completely dry after rain?",
@@ -30,7 +30,62 @@
     "caption": "Company image illustrating this type of plumbing work.",
     "service": "/services/blocked-stormwater-drains",
     "category": "Stormwater investigation and clearing",
-    "words": 655
+    "words": 731,
+    "introduction": "<p>A stormwater pit that remains full after rain may have a restricted outlet, a blockage further along the pipe or another drainage problem. The water level alone does not tell you which. Arrange an assessment that follows the outlet and checks what happens downstream before deciding the pit itself needs replacement. For a Hawkesbury property, the useful starting point is the timing. Tell the plumber whether the pit drains slowly after every shower or whether the problem appeared during one unusually heavy downpour.</p>",
+    "takeaways": [
+      "A full pit is a symptom, not a diagnosis.",
+      "Record water levels and timing without entering the drainage system.",
+      "Ask which outlet and downstream sections were assessed.",
+      "Separate blockage clearing from any proposed drainage redesign."
+    ],
+    "headings": [
+      {
+        "depth": 2,
+        "id": "look-from-a-safe-position",
+        "label": "Look from a safe position"
+      },
+      {
+        "depth": 2,
+        "id": "three-observations-that-help-the-assessment",
+        "label": "Three observations that help the assessment"
+      },
+      {
+        "depth": 3,
+        "id": "how-long-the-water-stays",
+        "label": "How long the water stays"
+      },
+      {
+        "depth": 3,
+        "id": "which-areas-feed-the-pit",
+        "label": "Which areas feed the pit"
+      },
+      {
+        "depth": 3,
+        "id": "where-water-goes-when-it-overflows",
+        "label": "Where water goes when it overflows"
+      },
+      {
+        "depth": 2,
+        "id": "clearing-the-inlet-may-not-clear-the-outlet",
+        "label": "Clearing the inlet may not clear the outlet"
+      },
+      {
+        "depth": 2,
+        "id": "ask-what-the-result-actually-proves",
+        "label": "Ask what the result actually proves"
+      },
+      {
+        "depth": 2,
+        "id": "arrange-a-useful-booking",
+        "label": "Arrange a useful booking"
+      }
+    ],
+    "conclusion": "A stormwater pit that stays full needs its outlet and downstream route checked. Keep safe observations of the water level and ask whether the problem is a blockage, damage or another drainage limitation.",
+    "ctaAnchor": "blocked stormwater drain services in Hawkesbury",
+    "ctaTail": "Describe how long the pit stays full after rain so we can discuss a suitable inspection and clearing scope.",
+    "ctaButton": "Call now for advice",
+    "updatedDate": "2026-10-22",
+    "serviceURL": "/services/blocked-stormwater-drains"
   },
   {
     "id": "W01-05-2",
@@ -41,7 +96,7 @@
     "path": "/blog/silt-keeps-coming-back-into-your-stormwater-drain-clearing-alone-may-not-explain-it",
     "indexPath": "/blog",
     "date": "2026-10-22",
-    "body": "<p>If silt returns soon after stormwater drain cleaning, ask where the material is entering and where it is settling. Removing the deposit restores space in the line, but it does not necessarily explain the source or prevent another build-up.</p>\n<p>At a Hawkesbury property, the next useful step is to compare the affected drain with the areas feeding it. Recent earthworks, exposed soil and changes around an inlet are worth reporting, without assuming any one of them caused the problem.</p>\n<h2>Separate the deposit from its source</h2>\n<h3>What was actually removed?</h3>\n<p>Ask the person who cleared the drain to describe the material and the section involved. Fine sediment, leaves and other debris can behave differently. A vague note saying drain cleared gives you little to compare if the issue returns.</p>\n<h3>How quickly did it return?</h3>\n<p>Record whether the repeat blockage followed the next rainfall, several storms or a longer period. Keep the previous invoice and any photos together. The interval is useful evidence, even though it does not by itself prove that the earlier clearing was inadequate.</p>\n<h3>Has the surrounding area changed?</h3>\n<p>Mention landscaping, driveway work or other changes near the drain. Photograph the visible surface from a safe position. Do not alter levels or direct water elsewhere as an experiment; that can create a different drainage problem.</p>\n<h2>What should the next inspection establish?</h2>\n<p>The assessment should consider the accessible inlets, the affected pipe section and the condition of the drainage route. Ask whether clearing is needed before a useful camera inspection can be made. A camera cannot reliably show every pipe surface through an unresolved obstruction.</p>\n<p>If a defect or low section is suspected, ask what evidence supports that conclusion and what further investigation is needed. Avoid agreeing to excavation merely because silt was present. The repair recommendation should identify a location and a reason.</p>\n<h2>Keep stormwater protection practical</h2>\n<p>The NSW EPA’s <a href=\"https://www.epa.nsw.gov.au/Your-environment/Litter/Targeted-programs/Operation-Clean-Sweep/Best-practice-stormwater-management\">stormwater management advice</a> emphasises preventing pollutants from entering stormwater. Do not wash loose material, oils or chemicals into a drain as a way of cleaning the surrounding area.</p>\n<p>A suitable inlet-maintenance routine may help, but it should reflect the actual arrangement. Ask what can safely be maintained at surface level and what needs professional access. Adding a homemade screen can introduce another restriction if it is unsuitable or neglected.</p>\n<h2>Compare the next two options clearly</h2>\n<p>One option may be a defined clearing visit with the known limitations explained. Another may include inspection or a targeted repair to address the identified source of recurrence. Ask for the purpose and scope of each option, rather than treating every follow-up as the same drain-cleaning job.</p>\n<p>If repair work is proposed, clarify access, reinstatement and whether any approvals need checking. A quote for pipe work may not include restoring a paved surface or landscaping to its previous finish.</p>\n<p>Our <a href=\"/services/high-pressure-water-jetting\">Hawkesbury high-pressure water-jetting service</a> can be discussed as part of the assessment. Let us know that the problem is recurring and provide the previous findings, so the enquiry begins with the drainage history.</p>\n<h2>Key takeaways</h2>\n<ul><li>Ask what was removed and from which section.</li><li>Record when the deposit returned and what happened beforehand.</li><li>Establish the cause before accepting a permanent repair recommendation.</li><li>Keep surface maintenance separate from underground investigation.</li></ul>",
+    "body": "<h2 id=\"separate-the-deposit-from-its-source\">Separate the deposit from its source</h2>\n<h3 id=\"what-was-actually-removed\">What was actually removed?</h3>\n<p>Ask the person who cleared the drain to describe the material and the section involved. Fine sediment, leaves and other debris can behave differently. A vague note saying drain cleared gives you little to compare if the issue returns.</p>\n<h3 id=\"how-quickly-did-it-return\">How quickly did it return?</h3>\n<p>Record whether the repeat blockage followed the next rainfall, several storms or a longer period. Keep the previous invoice and any photos together. The interval is useful evidence, even though it does not by itself prove that the earlier clearing was inadequate.</p>\n<h3 id=\"has-the-surrounding-area-changed\">Has the surrounding area changed?</h3>\n<p>Mention landscaping, driveway work or other changes near the drain. Photograph the visible surface from a safe position. Do not alter levels or direct water elsewhere as an experiment; that can create a different drainage problem.</p>\n<h2 id=\"what-should-the-next-inspection-establish\">What should the next inspection establish?</h2>\n<p>The assessment should consider the accessible inlets, the affected pipe section and the condition of the drainage route. Ask whether clearing is needed before a useful camera inspection can be made. A camera cannot reliably show every pipe surface through an unresolved obstruction.</p>\n<p>If a defect or low section is suspected, ask what evidence supports that conclusion and what further investigation is needed. Avoid agreeing to excavation merely because silt was present. The repair recommendation should identify a location and a reason.</p>\n<h2 id=\"keep-stormwater-protection-practical\">Keep stormwater protection practical</h2>\n<p>The NSW EPA’s <a href=\"https://www.epa.nsw.gov.au/Your-environment/Litter/Targeted-programs/Operation-Clean-Sweep/Best-practice-stormwater-management\">stormwater management advice</a> emphasises preventing pollutants from entering stormwater. Do not wash loose material, oils or chemicals into a drain as a way of cleaning the surrounding area.</p>\n<p>A suitable inlet-maintenance routine may help, but it should reflect the actual arrangement. Ask what can safely be maintained at surface level and what needs professional access. Adding a homemade screen can introduce another restriction if it is unsuitable or neglected.</p>\n<h2 id=\"compare-the-next-two-options-clearly\">Compare the next two options clearly</h2>\n<p>One option may be a defined clearing visit with the known limitations explained. Another may include inspection or a targeted repair to address the identified source of recurrence. Ask for the purpose and scope of each option, rather than treating every follow-up as the same drain-cleaning job.</p>\n<p>If repair work is proposed, clarify access, reinstatement and whether any approvals need checking. A quote for pipe work may not include restoring a paved surface or landscaping to its previous finish.</p>\n<p>Our <a href=\"/services/high-pressure-water-jetting\">Hawkesbury high-pressure water-jetting service</a> can be discussed as part of the assessment. Let us know that the problem is recurring and provide the previous findings, so the enquiry begins with the drainage history.</p>",
     "faqs": [
       [
         "Does recurring silt prove the pipe has collapsed?",
@@ -63,7 +118,57 @@
     "caption": "Company image illustrating this type of plumbing work.",
     "service": "/services/high-pressure-water-jetting",
     "category": "Stormwater investigation and clearing",
-    "words": 624
+    "words": 693,
+    "introduction": "<p>If silt returns soon after stormwater drain cleaning, ask where the material is entering and where it is settling. Removing the deposit restores space in the line, but it does not necessarily explain the source or prevent another build-up. At a Hawkesbury property, the next useful step is to compare the affected drain with the areas feeding it. Recent earthworks, exposed soil and changes around an inlet are worth reporting, without assuming any one of them caused the problem.</p>",
+    "takeaways": [
+      "Ask what was removed and from which section.",
+      "Record when the deposit returned and what happened beforehand.",
+      "Establish the cause before accepting a permanent repair recommendation.",
+      "Keep surface maintenance separate from underground investigation."
+    ],
+    "headings": [
+      {
+        "depth": 2,
+        "id": "separate-the-deposit-from-its-source",
+        "label": "Separate the deposit from its source"
+      },
+      {
+        "depth": 3,
+        "id": "what-was-actually-removed",
+        "label": "What was actually removed?"
+      },
+      {
+        "depth": 3,
+        "id": "how-quickly-did-it-return",
+        "label": "How quickly did it return?"
+      },
+      {
+        "depth": 3,
+        "id": "has-the-surrounding-area-changed",
+        "label": "Has the surrounding area changed?"
+      },
+      {
+        "depth": 2,
+        "id": "what-should-the-next-inspection-establish",
+        "label": "What should the next inspection establish?"
+      },
+      {
+        "depth": 2,
+        "id": "keep-stormwater-protection-practical",
+        "label": "Keep stormwater protection practical"
+      },
+      {
+        "depth": 2,
+        "id": "compare-the-next-two-options-clearly",
+        "label": "Compare the next two options clearly"
+      }
+    ],
+    "conclusion": "Repeated silt build-up deserves more than another assumption about dirty drains. Record when it returns and ask how the source, pipe condition and result of clearing will be assessed.",
+    "ctaAnchor": "high-pressure water jetting in Hawkesbury",
+    "ctaTail": "Tell us about previous clearing and recurring deposits so we can discuss whether jetting suits the line.",
+    "ctaButton": "Call now for advice",
+    "updatedDate": "2026-10-22",
+    "serviceURL": "/services/high-pressure-water-jetting"
   },
   {
     "id": "W01-05-3",
@@ -74,7 +179,7 @@
     "path": "/blog/an-unknown-stormwater-pipe-crosses-your-hawkesbury-property-check-the-route-before-digging",
     "indexPath": "/blog",
     "date": "2026-10-22",
-    "body": "<p>Before repairing or altering an unfamiliar stormwater pipe, establish its route, what it serves and what permissions or ownership arrangements apply. A pipe crossing your yard is not enough information to decide that it is yours to change or that somebody else must maintain it.</p>\n<p>The practical first step is to gather the available plans and arrange an assessment of the accessible drainage. Keep the physical investigation separate from the question of legal responsibility; one helps inform the other but does not automatically settle it.</p>\n<h2>Gather the records you already have</h2>\n<p>Look for drainage plans, previous repair reports and property documents relevant to the affected area. If you have none, say so when booking. An old sketch can be useful as a lead, but the existing installation may not match it exactly.</p>\n<p>Ask whether an easement, shared arrangement or public connection needs clarification through the relevant authority or a suitable property adviser. Do not rely on a neighbour’s recollection as the only record before committing to excavation.</p>\n<h2>Describe the actual problem</h2>\n<h3>Is water failing to leave your property?</h3>\n<p>Record which inlet backs up and under what conditions. Include photos taken safely after rain. Avoid guessing where the pipe ends simply because it points towards the street.</p>\n<h3>Is water entering from elsewhere?</h3>\n<p>Describe the visible flow and timing without assuming the upstream owner has done something wrong. A useful report distinguishes what can be seen from what still needs investigation.</p>\n<h3>Is the pipe damaged during other work?</h3>\n<p>Stop the relevant work and make the area safe. Provide the contractor with the information available and arrange assessment before covering the pipe again. A buried problem is harder to document once the surface is restored.</p>\n<h2>What a drainage inspection can establish</h2>\n<p>A plumber can assess accessible sections and may recommend camera work or location methods suited to the conditions. Ask which parts can be traced and what remains uncertain. An inspection that reaches one junction may not establish the complete route to the final discharge point.</p>\n<p>Request a report that identifies the investigated section, access points and findings. If the route cannot be confirmed, that limitation should be stated. It is better to have an honest partial result than a confident drawing based on assumptions.</p>\n<h2>What the report cannot decide alone</h2>\n<p>Physical evidence of a blockage does not settle every question about ownership, access or payment. Before non-urgent alterations, clarify who can authorise the work and whether another party needs to be involved. Do not redirect water towards a boundary as a temporary workaround.</p>\n<p>Hawkesbury Council’s <a href=\"https://www.hawkesbury.nsw.gov.au/your-spaces/tree-removal/trees-in-parks-or-on-public-land/specific-issues\">information on trees and private services</a> is relevant when roots and private drainage are involved. It is not a substitute for checking the particular pipe, property records and proposed work.</p>\n<h2>Book investigation before pricing an assumed repair</h2>\n<p>Use our <a href=\"/services/cctv-drain-inspections\">Hawkesbury CCTV drain-inspection service</a> to discuss the known access points and the question you need answered. Send existing plans and previous findings with the enquiry.</p>\n<p>If the outcome is a repair recommendation, ask for the location, scope, access requirements and surface restoration to be identified. That makes the next decision concrete and gives the relevant property contacts something useful to review.</p>\n<h2>Key takeaways</h2>\n<ul><li>Trace and identify the pipe before deciding how to alter it.</li><li>Separate inspection findings from ownership and approval questions.</li><li>Record uncertainty rather than filling gaps with guesses.</li><li>Agree access and reinstatement before excavation begins.</li></ul>",
+    "body": "<h2 id=\"gather-the-records-you-already-have\">Gather the records you already have</h2>\n<p>Look for drainage plans, previous repair reports and property documents relevant to the affected area. If you have none, say so when booking. An old sketch can be useful as a lead, but the existing installation may not match it exactly.</p>\n<p>Ask whether an easement, shared arrangement or public connection needs clarification through the relevant authority or a suitable property adviser. Do not rely on a neighbour’s recollection as the only record before committing to excavation.</p>\n<h2 id=\"describe-the-actual-problem\">Describe the actual problem</h2>\n<h3 id=\"is-water-failing-to-leave-your-property\">Is water failing to leave your property?</h3>\n<p>Record which inlet backs up and under what conditions. Include photos taken safely after rain. Avoid guessing where the pipe ends simply because it points towards the street.</p>\n<h3 id=\"is-water-entering-from-elsewhere\">Is water entering from elsewhere?</h3>\n<p>Describe the visible flow and timing without assuming the upstream owner has done something wrong. A useful report distinguishes what can be seen from what still needs investigation.</p>\n<h3 id=\"is-the-pipe-damaged-during-other-work\">Is the pipe damaged during other work?</h3>\n<p>Stop the relevant work and make the area safe. Provide the contractor with the information available and arrange assessment before covering the pipe again. A buried problem is harder to document once the surface is restored.</p>\n<h2 id=\"what-a-drainage-inspection-can-establish\">What a drainage inspection can establish</h2>\n<p>A plumber can assess accessible sections and may recommend camera work or location methods suited to the conditions. Ask which parts can be traced and what remains uncertain. An inspection that reaches one junction may not establish the complete route to the final discharge point.</p>\n<p>Request a report that identifies the investigated section, access points and findings. If the route cannot be confirmed, that limitation should be stated. It is better to have an honest partial result than a confident drawing based on assumptions.</p>\n<h2 id=\"what-the-report-cannot-decide-alone\">What the report cannot decide alone</h2>\n<p>Physical evidence of a blockage does not settle every question about ownership, access or payment. Before non-urgent alterations, clarify who can authorise the work and whether another party needs to be involved. Do not redirect water towards a boundary as a temporary workaround.</p>\n<p>Hawkesbury Council’s <a href=\"https://www.hawkesbury.nsw.gov.au/your-spaces/tree-removal/trees-in-parks-or-on-public-land/specific-issues\">information on trees and private services</a> is relevant when roots and private drainage are involved. It is not a substitute for checking the particular pipe, property records and proposed work.</p>\n<h2 id=\"book-investigation-before-pricing-an-assumed-repair\">Book investigation before pricing an assumed repair</h2>\n<p>Use our <a href=\"/services/cctv-drain-inspections\">Hawkesbury CCTV drain-inspection service</a> to discuss the known access points and the question you need answered. Send existing plans and previous findings with the enquiry.</p>\n<p>If the outcome is a repair recommendation, ask for the location, scope, access requirements and surface restoration to be identified. That makes the next decision concrete and gives the relevant property contacts something useful to review.</p>",
     "faqs": [
       [
         "Does a pipe on my land automatically belong to me?",
@@ -96,6 +201,61 @@
     "caption": "Company image illustrating this type of plumbing work.",
     "service": "/services/cctv-drain-inspections",
     "category": "Stormwater investigation and clearing",
-    "words": 634
+    "words": 702,
+    "introduction": "<p>Before repairing or altering an unfamiliar stormwater pipe, establish its route, what it serves and what permissions or ownership arrangements apply. A pipe crossing your yard is not enough information to decide that it is yours to change or that somebody else must maintain it. The practical first step is to gather the available plans and arrange an assessment of the accessible drainage. Keep the physical investigation separate from the question of legal responsibility; one helps inform the other but does not automatically settle it.</p>",
+    "takeaways": [
+      "Trace and identify the pipe before deciding how to alter it.",
+      "Separate inspection findings from ownership and approval questions.",
+      "Record uncertainty rather than filling gaps with guesses.",
+      "Agree access and reinstatement before excavation begins."
+    ],
+    "headings": [
+      {
+        "depth": 2,
+        "id": "gather-the-records-you-already-have",
+        "label": "Gather the records you already have"
+      },
+      {
+        "depth": 2,
+        "id": "describe-the-actual-problem",
+        "label": "Describe the actual problem"
+      },
+      {
+        "depth": 3,
+        "id": "is-water-failing-to-leave-your-property",
+        "label": "Is water failing to leave your property?"
+      },
+      {
+        "depth": 3,
+        "id": "is-water-entering-from-elsewhere",
+        "label": "Is water entering from elsewhere?"
+      },
+      {
+        "depth": 3,
+        "id": "is-the-pipe-damaged-during-other-work",
+        "label": "Is the pipe damaged during other work?"
+      },
+      {
+        "depth": 2,
+        "id": "what-a-drainage-inspection-can-establish",
+        "label": "What a drainage inspection can establish"
+      },
+      {
+        "depth": 2,
+        "id": "what-the-report-cannot-decide-alone",
+        "label": "What the report cannot decide alone"
+      },
+      {
+        "depth": 2,
+        "id": "book-investigation-before-pricing-an-assumed-repair",
+        "label": "Book investigation before pricing an assumed repair"
+      }
+    ],
+    "conclusion": "Identify an unknown drain before digging or changing its route. A located inspection can inform the work, while ownership, approvals and any limits in the evidence need separate attention.",
+    "ctaAnchor": "CCTV drain inspections in Hawkesbury",
+    "ctaTail": "Explain the proposed excavation and known access points so we can discuss tracing the accessible drainage.",
+    "ctaButton": "Call now for advice",
+    "updatedDate": "2026-10-22",
+    "serviceURL": "/services/cctv-drain-inspections"
   }
 ]

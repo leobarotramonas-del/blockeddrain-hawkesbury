@@ -9,19 +9,35 @@ const origin = Astro.site!.href.replace(/[/]$/,'');
 const url = new URL(post.path, origin).href;
 const related = posts.filter(p=>p.id!==post.id);
 const schema = [
- {'@type':'BlogPosting','@id':url+'#article',url,headline:post.title,description:post.description,inLanguage:'en-AU',datePublished:post.date,dateModified:post.date,wordCount:post.words,image:new URL(post.image,origin).href,author:{'@type':'Organization','@id':origin+'/#business',name:site.name},publisher:{'@id':origin+'/#business'},mainEntityOfPage:{'@id':url+'#webpage'}},
+ {'@type':'BlogPosting','@id':url+'#article',url,headline:post.title,description:post.description,inLanguage:'en-AU',datePublished:post.date,dateModified:post.updatedDate,wordCount:post.words,image:new URL(post.image,origin).href,author:{'@type':'Organization','@id':origin+'/#business',name:site.name},publisher:{'@id':origin+'/#business'},mainEntityOfPage:{'@id':url+'#webpage'}},
  {'@type':'FAQPage','@id':url+'#faq',mainEntity:post.faqs.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))}
 ];
 ---
 <BaseLayout title={post.seoTitle} description={post.description} canonicalPath={post.path} schema={schema} article={true} articleImage={post.image} articleImageAlt={post.imageAlt}>
 <article class="w1-article">
-<nav class="w1-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href={post.indexPath}>Plumbing advice</a> / <span aria-current="page">{post.title}</span></nav>
-<header><p class="w1-category">{post.category}</p><h1>{post.title}</h1><p class="w1-meta">By {site.name} · <time datetime={post.date}>22 October 2026</time></p></header>
-<div class="w1-body" set:html={post.body} />
-<section><h2>Quick check</h2><details class="w1-check"><summary>{post.check[0]}</summary><p>{post.check[1]}</p></details></section>
-<figure><img src={post.image} srcset={post.image+' '+post.width+'w'} sizes="(max-width: 800px) 92vw, 760px" width={post.width} height={post.height} alt={post.imageAlt} loading="lazy" decoding="async" /><figcaption>{post.caption}</figcaption></figure>
-<section><h2>Frequently asked questions</h2>{post.faqs.map(([q,a])=><div><h3>{q}</h3><p>{a}</p></div>)}</section>
-<section class="w1-next"><h2>Discuss your property</h2><p><a href={post.service}>Explore the relevant local service</a> or <a href="/contact">contact the team</a> with your suburb, symptoms and access details.</p><p><a href="/">{site.name}</a></p></section>
-<aside class="w1-related"><h2>Related local guides</h2><ul>{related.map(p=><li><a href={p.path}>{p.title}</a></li>)}</ul></aside>
+ <header class="w1-header">
+  <a class="w1-back" href={post.indexPath}>All plumbing guides</a>
+  <p class="w1-category">{post.category}</p><h1>{post.title}</h1>
+  <div class="w1-dates"><span>By {site.name}</span><span>Published <time datetime={post.date}>22 October 2026</time></span><span>{Math.ceil(post.words/200)} minute read</span></div>
+ </header>
+ <div class="w1-layout">
+  <div class="w1-content">
+   <div class="w1-intro" set:html={post.introduction} />
+   <section class="w1-takeaways" aria-labelledby="key-takeaways"><h2 id="key-takeaways">Key takeaways</h2><ul>{post.takeaways.map(t=><li>{t}</li>)}</ul></section>
+   <figure><img src={post.image} srcset={post.image+' '+post.width+'w'} sizes="(max-width: 760px) 90vw, 720px" width={post.width} height={post.height} alt={post.imageAlt} loading="lazy" decoding="async" /><figcaption>{post.caption}</figcaption></figure>
+   <div class="w1-body" set:html={post.body} />
+   <section><h2 id="quick-check">Quick check</h2><details class="w1-check"><summary>{post.check[0]}</summary><p>{post.check[1]}</p></details></section>
+   <section id="faqs"><h2 id="faq-heading">Frequently asked questions</h2>{post.faqs.map(([q,a])=><div class="blog-faq__item"><h3>{q}</h3><p>{a}</p></div>)}</section>
+   <section class="w1-conclusion" aria-labelledby="conclusion"><h2 id="conclusion">Conclusion</h2><p>{post.conclusion}</p>
+    <p class="w1-cta-copy">We’re <a href="/">{site.name}</a>, operated by {site.operator}. Our <a href={post.serviceURL}>{post.ctaAnchor}</a> can help you plan the next step. {post.ctaTail}</p>
+    <a class="w1-call" href={site.phoneHref}>{post.ctaButton}<span>{site.phoneDisplay}</span></a>
+   </section>
+  </div>
+  <aside class="w1-aside" aria-label="Article navigation and author"><div class="w1-sticky">
+   <nav class="w1-toc" aria-labelledby="toc-heading"><h2 id="toc-heading">On this page</h2><ol><li><a href="#key-takeaways">Key takeaways</a></li>{post.headings.map(h=><li class:list={{'w1-subitem':h.depth===3}}><a href={'#'+h.id}>{h.label}</a></li>)}<li><a href="#quick-check">Quick check</a></li><li><a href="#faq-heading">FAQs</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav>
+   <section class="w1-author"><h2>{site.name}</h2><p>Practical local plumbing advice from {site.operator}. Call with your suburb and the symptoms to discuss the right service for your property.</p></section>
+  </div></aside>
+ </div>
+ <aside class="w1-related"><h2>Related local guides</h2><div class="w1-related-grid">{related.map(p=><a href={p.path}><span>{p.category}</span><h3>{p.title}</h3></a>)}</div></aside>
 </article>
 </BaseLayout>
