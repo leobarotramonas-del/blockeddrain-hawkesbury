@@ -16,5 +16,9 @@
 @media(max-width:900px){.w1-layout{grid-template-columns:minmax(0,1fr);gap:2rem}.w1-sticky{position:static}.w1-aside{order:2}.w1-article{margin:20px auto}.w1-related-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.w1-header h1{font-size:clamp(2.5rem,10vw,3.5rem)}.w1-takeaways{padding:1rem}.w1-content .w1-call{width:100%}}
 
-.w1-guides{max-width:1180px;margin:35px auto;padding:28px 24px}.w1-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.w1-guide-grid article{padding:20px;border:1px solid #cbd3da;border-radius:7px;background:#fff;color:#15253b}.w1-guide-grid h3{font-size:1.35rem;line-height:1.35;margin:12px 0}.w1-guide-grid p{line-height:1.6}
-@media(max-width:720px){.w1-guide-grid{grid-template-columns:1fr}}
+/* One centred action row, with an unmistakable call target. */
+.w1-actions{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px}
+.w1-content .w1-actions .w1-call{display:inline-flex;flex-direction:row;flex-wrap:wrap;gap:4px 12px;align-items:center;justify-content:center;width:auto;min-height:52px;margin:0;padding:14px 24px;background:#0753be;color:#fff;border:2px solid #0753be;text-decoration:none;transition:background-color 150ms ease,transform 150ms ease}
+.w1-actions .w1-call span{white-space:nowrap;font-size:1rem}.w1-content .w1-call:active{transform:scale(.97)}
+@media(hover:hover) and (pointer:fine){.w1-content .w1-actions .w1-call:hover{background:#043e90;border-color:#043e90}}
+@media(prefers-reduced-motion:reduce){.w1-content .w1-call{transition:none}.w1-content .w1-call:active{transform:none}}

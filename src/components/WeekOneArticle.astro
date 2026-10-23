@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
+import BlogGuideCard from './BlogGuideCard.astro';
 import posts from '../data/week-one-articles.json';
 import '../styles/week-one-blog.css';
 interface Props { post: (typeof posts)[number] }
@@ -30,7 +31,7 @@ const schema = [
    <section id="faqs"><h2 id="faq-heading">Frequently asked questions</h2>{post.faqs.map(([q,a])=><div class="blog-faq__item"><h3>{q}</h3><p>{a}</p></div>)}</section>
    <section class="w1-conclusion" aria-labelledby="conclusion"><h2 id="conclusion">Conclusion</h2><p>{post.conclusion}</p>
     <p class="w1-cta-copy">We’re <a href="/">{site.name}</a>, operated by {site.operator}. Our <a href={post.serviceURL}>{post.ctaAnchor}</a> can help you plan the next step. {post.ctaTail}</p>
-    <a class="w1-call" href={site.phoneHref}>{post.ctaButton}<span>{site.phoneDisplay}</span></a>
+    <div class="w1-actions"><a class="w1-call" href={site.phoneHref}>{post.ctaButton}<span>{site.phoneDisplay}</span></a></div>
    </section>
   </div>
   <aside class="w1-aside" aria-label="Article navigation and author"><div class="w1-sticky">
@@ -38,6 +39,6 @@ const schema = [
    <section class="w1-author"><h2>{site.name}</h2><p>Practical local plumbing advice from {site.operator}. Call with your suburb and the symptoms to discuss the right service for your property.</p></section>
   </div></aside>
  </div>
- <aside class="w1-related"><h2>Related local guides</h2><div class="w1-related-grid">{related.map(p=><a href={p.path}><span>{p.category}</span><h3>{p.title}</h3></a>)}</div></aside>
+ <aside class="w1-related"><h2>Related local guides</h2><div class="guide-grid">{related.map(p=><BlogGuideCard post={p} />)}</div></aside>
 </article>
 </BaseLayout>

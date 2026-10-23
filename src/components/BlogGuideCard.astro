@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { BlogGuide } from '../data/blog-guides';
+import '../styles/blog-guides.css';
+interface Props { post: BlogGuide }
+const { post } = Astro.props;
+const sources = import.meta.glob<{default: ImageMetadata}>('../../public/images/**/*.{webp,png,jpg,jpeg}', {eager:true});
+const source = sources['../../public'+post.image]?.default;
+if (!source) throw new Error('Missing guide image: '+post.image);
+const widths = [...new Set([320,480,720].map(w=>Math.min(w,source.width)))];
+const date = post.date ? new Date(post.date) : null;
+---
+<article class="guide-card" data-guide-path={post.path}>
+ <a class="guide-card__link" href={post.path}>
+  <Image class="guide-card__image" src={source} alt={post.imageAlt} widths={widths} sizes="(max-width: 600px) 90vw, (max-width: 1050px) 45vw, 360px" format="webp" quality={64} loading="lazy" decoding="async" width={720} height={Math.round(720*source.height/source.width)} />
+  <div class="guide-card__copy"><p class="guide-card__meta">{post.category}{date && <> · <time datetime={date.toISOString()}>{new Intl.DateTimeFormat('en-AU',{day:'numeric',month:'short',year:'numeric'}).format(date)}</time></>}</p><h3>{post.title}</h3><p>{post.description}</p><span class="guide-card__read">Read the guide <span aria-hidden="true">→</span></span></div>
+ </a>
+</article>

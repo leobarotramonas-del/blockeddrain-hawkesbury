@@ -9,7 +9,14 @@ import { areas, services, site } from '../data/site';
     </div>
     <div><h2>Services</h2>{services.map((item) => <a href={`/services/${item.slug}`}>{item.name}</a>)}</div>
     <div><h2>Service Areas</h2>{areas.map((area) => <a href={`/service-areas/${area.slug}`}>{area.name}</a>)}</div>
-    <div><h2>Contact</h2><a href={site.phoneHref}>{site.phoneDisplay}</a><a href="/contact">Contact Us</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
+    <div><h2>Contact</h2><a href={site.phoneHref}>{site.phoneDisplay}</a><a href="/contact">Contact Us</a><a class="footer-blog-link" href="/blog">Blogs</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div>
   </div>
-<div class="w1-footer-guides"><a href="/blog">Plumbing advice and practical guides</a></div>
+
 </footer>
+
+<style>
+ footer a.footer-blog-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;margin-top:12px;border:1px solid #fff;border-radius:5px;color:#fff;background:#0753be;text-decoration:none;font-weight:700;line-height:1.2;transition:background-color 150ms ease,transform 150ms ease}
+ footer a.footer-blog-link:focus-visible{outline:3px solid #fff;outline-offset:4px}footer a.footer-blog-link:active{transform:scale(.97)}
+ @media(hover:hover) and (pointer:fine){footer a.footer-blog-link:hover{background:#043e90;color:#fff}}
+ @media(prefers-reduced-motion:reduce){footer a.footer-blog-link{transition:none}footer a.footer-blog-link:active{transform:none}}
+</style>
