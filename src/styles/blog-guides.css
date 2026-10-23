@@ -13,3 +13,4 @@
 @media(hover:hover) and (pointer:fine){.guide-card__link:hover h3{color:#0753be}.guide-card__link:hover .guide-card__read{text-decoration-thickness:2px}}
 @media(max-width:1050px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.guide-grid{grid-template-columns:minmax(0,1fr)}.guide-card__copy{padding:20px}}
+.w1-related .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:600px){.w1-related .guide-grid{grid-template-columns:minmax(0,1fr)}}
