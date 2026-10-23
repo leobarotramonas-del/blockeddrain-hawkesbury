@@ -31,7 +31,7 @@ export const pageFaqs = {
   ],
   about: [
     { question: 'Who provides the Hawkesbury blocked-drain service?', answer: `${site.name} is a dedicated blocked-drain service from ${site.operator}. Regulated work is performed under NSW contractor licence ${site.licence}.` },
-    { question: 'What makes the service drainage-focused?', answer: 'The website and service journey centre on blocked-drain symptoms, professional diagnosis, jetting, CCTV inspection, root problems and repair planning.' },
+    { question: 'What makes the service drainage-focused?', answer: 'Antons Blocked Drains Hawkesbury focuses on drain clearing, CCTV inspection, water jetting, root removal and pipe repairs. Our team investigates the cause and explains the work before it proceeds.' },
     { question: 'Are the photos real work?', answer: 'Yes. The site uses supplied vehicle, technician, camera, jetting, excavation and drainage-repair images from real work rather than stock tradie photography.' },
     { question: 'Can I call outside business hours?', answer: 'Yes. Urgent drain calls are taken 24 hours a day, 7 days a week.' },
   ],
