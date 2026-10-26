@@ -19,7 +19,7 @@ const schema = [
  <header class="w1-header">
   <a class="w1-back" href={post.indexPath}>All plumbing guides</a>
   <p class="w1-category">{post.category}</p><h1>{post.title}</h1>
-  <div class="w1-dates"><span>By {site.name}</span><span>Published <time datetime={post.date}>22 October 2026</time></span><span>{Math.ceil(post.words/200)} minute read</span></div>
+  <div class="w1-dates"><span>By {site.name}</span><span>Published <time datetime={post.date}>{new Intl.DateTimeFormat('en-AU', { day:'numeric', month:'long', year:'numeric', timeZone:'Australia/Sydney' }).format(new Date(post.date+'T00:00:00Z'))}</time></span><span>{Math.ceil(post.words/200)} minute read</span></div>
  </header>
  <div class="w1-layout">
   <div class="w1-content">
@@ -42,3 +42,4 @@ const schema = [
  <aside class="w1-related"><h2>Related local guides</h2><div class="guide-grid">{related.map(p=><BlogGuideCard post={p} />)}</div></aside>
 </article>
 </BaseLayout>
+
