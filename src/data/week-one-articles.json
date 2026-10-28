@@ -340,5 +340,86 @@
     "photo": 29,
     "targetKeyword": "toilet backs up washing machine drains",
     "researchStatus": "Ahrefs Australia checked 26 October 2026; unavailable metrics retained as unknown"
+  },
+  {
+    "id": "W02-05-2",
+    "title": "A Blocked Drain on a Septic Property: What to Tell the Plumber Before Booking",
+    "seoTitle": "Blocked Drain on a Septic Property? Hawkesbury Booking Guide",
+    "description": "Booking help for a blocked drain on a Hawkesbury septic property? Explain the system, symptoms and access so the right investigation can be planned.",
+    "slug": "a-blocked-drain-on-a-septic-property-what-to-tell-the-plumber-before-booking",
+    "path": "/blog/a-blocked-drain-on-a-septic-property-what-to-tell-the-plumber-before-booking",
+    "indexPath": "/blog",
+    "date": "2026-10-28",
+    "body": "<h2 id=\"describe-the-system-you-have\">Describe the system you have</h2>\n<p>“Septic” is often used for several different on-site arrangements. Tell us the system name if you know it, whether there is an alarm or pump, and who normally services it. A photo of existing paperwork is useful; there is no need to lift covers to identify equipment.</p>\n<p>If you recently bought the property, look for the service report and council approval documents. Being unsure is fine. Say what you know and what remains unknown so the booking can allow for it instead of starting from the wrong assumption.</p>\n<h2 id=\"separate-the-symptoms-around-the-property\">Separate the symptoms around the property</h2>\n<h3 id=\"one-fixture-or-several\">One fixture or several?</h3>\n<p>A single slow sink may need a local waste-pipe check. Several fixtures backing up can point towards a problem farther along the shared drainage route. Explain which fixtures are affected and whether the problem is constant or follows heavier household use.</p>\n<h3 id=\"any-alarm-overflow-or-wet-ground\">Any alarm, overflow or wet ground?</h3>\n<p>Mention an alarm, unusual odour or wastewater appearing outside. These details may require involvement from the system’s service agent as well as a drain plumber. Do not reset unfamiliar controls, add chemicals or continue flushing to see whether the system recovers.</p>\n<p>Keep people and animals away from suspected sewage. Avoid unnecessary water use while arranging advice if wastewater is backing up. Never enter a tank, lean into an opening or remove a heavy cover: a booking enquiry does not require you to inspect inside.</p>\n<h2 id=\"prepare-access-information-before-the-visit\">Prepare access information before the visit</h2>\n<p>Describe the driveway, gates, slopes and distance to the affected area. Explain where known inspection points and tanks are located without uncovering them yourself. Let us know about locked gates, animals and any ground too soft for vehicle access.</p>\n<p><a href=\"https://www.hawkesbury.nsw.gov.au/for-residents/waste-water/on-site-sewage-management-systems-and-septic-safe\">Hawkesbury City Council’s Septic Safe guidance</a> highlights safe access and securing animals when preparing for inspections. It also explains that the approval to operate contains maintenance conditions. Keep those documents available when discussing work that may affect the system.</p>\n<h2 id=\"agree-on-what-the-drain-investigation-includes\">Agree on what the drain investigation includes</h2>\n<p>Our <a href=\"/services/cctv-drain-inspections\">Hawkesbury CCTV drain inspection service</a> can help investigate accessible pipework where camera access and conditions allow. A camera cannot necessarily pass a complete obstruction, and it does not assess every component of a treatment system.</p>\n<p>Ask whether the proposed visit covers locating a blockage, clearing accessible drains, inspection footage or a written finding. If the evidence points to tank servicing, a pump fault or disposal-area performance, establish who will assess that separately. Do not assume a drain-clearing booking includes pump-out or treatment-system servicing.</p>\n<p>Previous clearing reports can save repeating an unsuccessful approach. Tell us when the drain was last cleared, how long the improvement lasted and whether a specific defect was recorded. A short history helps distinguish a new obstruction from an unresolved recurring fault.</p>",
+    "faqs": [
+      [
+        "Does a blocked toilet mean the septic tank is full?",
+        "Not necessarily. A toilet, connecting drain or another part of the on-site system may be involved. The symptom alone does not establish the need for pump-out."
+      ],
+      [
+        "Will jetting fix every septic drainage problem?",
+        "No. Clearing a pipe cannot repair a failed pump or resolve every treatment or disposal issue. The method should follow the findings and suit the connected system."
+      ]
+    ],
+    "check": [
+      "What should I have beside me when I call?",
+      "The address, system type if known, affected fixtures, alarm or overflow details, recent service records and an access description. Tell us if you need help identifying the appropriate service scope before arranging attendance."
+    ],
+    "image": "/images/blog-w02-05-2-featured.webp",
+    "imageAlt": "Technician with drain camera equipment on a lawn",
+    "width": 640,
+    "height": 854,
+    "caption": "A drain inspection investigates accessible pipework; it is not a substitute for servicing the treatment system.",
+    "service": "/services/cctv-drain-inspections",
+    "category": "Drain inspections",
+    "words": 749,
+    "introduction": "<p>For a blocked drain on a septic property, tell the plumber that the home uses an on-site sewage system before booking. Slow fixtures may involve the house drain, the tank or the treatment and disposal system. The first job is to identify which part needs investigation, rather than assume drain clearing will solve everything.</p>",
+    "takeaways": [
+      "Mention the septic or treatment system at the start of the enquiry.",
+      "Have service records, system details and an access description ready.",
+      "Drain clearing and treatment-system servicing are different scopes.",
+      "Keep clear of wastewater and never open or enter a tank yourself."
+    ],
+    "headings": [
+      {
+        "depth": 2,
+        "id": "describe-the-system-you-have",
+        "label": "Describe the system you have"
+      },
+      {
+        "depth": 2,
+        "id": "separate-the-symptoms-around-the-property",
+        "label": "Separate the symptoms around the property"
+      },
+      {
+        "depth": 3,
+        "id": "one-fixture-or-several",
+        "label": "One fixture or several?"
+      },
+      {
+        "depth": 3,
+        "id": "any-alarm-overflow-or-wet-ground",
+        "label": "Any alarm, overflow or wet ground?"
+      },
+      {
+        "depth": 2,
+        "id": "prepare-access-information-before-the-visit",
+        "label": "Prepare access information before the visit"
+      },
+      {
+        "depth": 2,
+        "id": "agree-on-what-the-drain-investigation-includes",
+        "label": "Agree on what the drain investigation includes"
+      }
+    ],
+    "conclusion": "A useful septic-property booking starts with the system, symptoms and access. Agree on the drain investigation and any separate specialist involvement before assuming one clearing method will fix the whole arrangement.",
+    "ctaAnchor": "CCTV drain inspections in the Hawkesbury",
+    "ctaTail": "Give us a call and mention your on-site sewage system so we can discuss the appropriate drainage assessment.",
+    "ctaButton": "Call now for advice",
+    "updatedDate": "2026-10-28",
+    "serviceURL": "/services/cctv-drain-inspections",
+    "site": 4,
+    "serviceSlug": "cctv-drain-inspections",
+    "photo": 39
   }
 ]
