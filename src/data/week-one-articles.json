@@ -832,5 +832,123 @@
     "image": "/images/blog-w03-05-1-featured.webp",
     "width": 640,
     "height": 800
+  },
+  {
+    "site": 4,
+    "seoTitle": "Stormwater Connected to Sewer? Hawkesbury Checks",
+    "category": "Drain inspections",
+    "serviceSlug": "cctv-drain-inspections",
+    "photo": 2,
+    "description": "Suspect roof water enters your sewer in Hawkesbury? Learn what a drain inspection can establish before planning a lawful drainage correction.",
+    "imageAlt": "External downpipe and drainage repair",
+    "caption": "The route beneath a downpipe needs tracing before its destination can be confirmed.",
+    "introduction": "<p>A drain inspection can help trace where roof water goes and investigate a suspected stormwater connection to the sewer. Rain-related overflow alone does not prove a cross-connection. Have the route and findings documented before planning a correction, and confirm the appropriate stormwater destination with the relevant authority.</p>",
+    "takeaways": [
+      "A buried downpipe route cannot be confirmed from its surface position alone.",
+      "Wet-weather sewer problems can have more than one cause.",
+      "Inspection limits and any further tracing should be recorded.",
+      "Disconnecting the wrong pipe or redirecting water blindly can create another problem."
+    ],
+    "body": "<h2 id=\"separate-the-symptom-from-the-suspected-cause\">Separate the symptom from the suspected cause</h2><p>You may notice a gully overflowing during rain, hear unusual drain noises or find that an old downpipe disappears beside a sewer access point. These are reasons to investigate, rather than proof of an illegal connection. Tell the plumber exactly what you saw and when it happened.</p><p>Do not pour water or chemicals into unknown openings to see where they emerge. Keep clear of wastewater spills and avoid lifting heavy or unfamiliar covers. If there is active overflow, describe that when booking so the immediate problem can be considered separately from a planned tracing inspection.</p><h2 id=\"why-the-systems-need-to-be-distinguished\">Why the systems need to be distinguished</h2><p>Roof runoff and household wastewater have different drainage purposes. The <a href=\"https://www.tweed.nsw.gov.au/property-rates/water-wastewater/water-wastewater-property-owners/stormwater-out-of-pipes\">Tweed Shire Council explanation of stormwater inflow</a> illustrates how a downpipe connected to sewer can contribute to sewage overflows during rain. It explains the general problem; it is not the approval authority for a Hawkesbury property.</p><p>For your address, establish which sewer or wastewater arrangement serves the property and which authority needs to be consulted about the proposed correction. Do not assume every Hawkesbury property has the same network or drainage arrangement. Provide any existing plans and previous plumbing records if available.</p><h2 id=\"what-a-camera-inspection-can-contribute\">What a camera inspection can contribute</h2><p>For a <a href=\"/services/cctv-drain-inspections\">CCTV drain inspection in Hawkesbury</a>, tell the contractor that the question is where the roof-water line connects. That is more specific than simply requesting a camera visit. Agree which accessible lines will be investigated and how findings will be tied to locations on the property.</p><p>A camera may show accessible junctions, obstructions or damaged sections. Access, bends, debris and standing water can limit what is visible. The report should identify where the inspection stopped and distinguish a confirmed route from one that remains uncertain. An unseen junction should not be described as confirmed simply because it seems likely.</p><h3 id=\"when-further-tracing-is-needed\">When further tracing is needed</h3><p>Ask whether another tracing method or additional access is required to answer the question. Any testing should be planned by the contractor with the site conditions and permissions in mind. A sensible investigation can involve more than one method; the important point is that the conclusion follows the evidence.</p><h2 id=\"ask-for-findings-you-can-use\">Ask for findings you can use</h2><p>A recording is helpful, but it should be accompanied by an explanation. Ask which downpipe or drain was traced, where a connection was identified and what could not be inspected. A simple annotated plan can make the discussion easier when several downpipes and underground routes are involved.</p><ul><li>Which line was entered and from which access point?</li><li>Was the destination confirmed or only suspected?</li><li>Were defects or obstructions also observed?</li><li>What further investigation is recommended?</li></ul><p>Keep the findings and photographs together. They can help a subsequent repair quote describe the actual work rather than leaving another contractor to guess which part of the property you mean.</p><h2 id=\"plan-the-correction-before-cutting-pipes\">Plan the correction before cutting pipes</h2><p>If a cross-connection is confirmed, ask for a proposed correction that identifies both the disconnection and the appropriate destination for the roof water. Removing one connection without resolving where the runoff will go can leave pooling, building damage or impacts on neighbouring property.</p><p>Confirm any approvals, access, excavation and surface restoration before work starts. Tell the contractor about paving, gardens and shared boundaries that may be affected. Do not direct runoff onto a neighbour’s land or into an unfamiliar drain as a temporary shortcut.</p><h2 id=\"keep-other-wet-weather-defects-in-view\">Keep other wet-weather defects in view</h2><p>A connection issue may not be the only finding. The inspection might identify a blockage or damaged pipe that needs its own scope. Ask the plumber to distinguish what is confirmed, what is suspected and which work addresses each problem. That makes it easier to understand why clearing alone may not resolve the original concern.</p>",
+    "check": [
+      "Has the roof-water destination actually been confirmed?",
+      "Ask for the traced route, observed connection and inspection limits. If the destination is still uncertain, request the next investigation step before agreeing to a correction."
+    ],
+    "faqs": [
+      [
+        "Does sewer overflow in rain prove a downpipe is connected?",
+        "No. Rain-related problems warrant investigation, but the symptom alone does not establish a particular connection."
+      ],
+      [
+        "Can a camera inspect every buried junction?",
+        "Not always. Access, bends, water and obstructions can limit the view, and those limits should be recorded."
+      ],
+      [
+        "What should I tell the inspector?",
+        "Identify the downpipes or drains of concern, the rain-related symptoms and any previous alterations or inspection records."
+      ],
+      [
+        "Are sewer and stormwater the same system?",
+        "They serve different purposes. Have the actual systems at your property identified before proposing any change."
+      ],
+      [
+        "Can I redirect the downpipe myself?",
+        "Do not alter an uncertain drainage route. Ask for a proper correction plan and confirmation of the appropriate destination and approvals."
+      ],
+      [
+        "What if my property has an onsite wastewater system?",
+        "Tell the contractor before booking. Do not assume a network sewer investigation applies unchanged to an onsite arrangement."
+      ],
+      [
+        "Should the report include a plan?",
+        "Ask for locations to be explained clearly. An annotated plan can help connect footage and findings to the correct downpipe or junction."
+      ],
+      [
+        "Will clearing the sewer fix a cross-connection?",
+        "Clearing an obstruction does not change where roof water is connected. These may be separate items of work."
+      ],
+      [
+        "Who confirms the stormwater discharge point?",
+        "Ask the contractor which relevant authority requirements apply to your address and proposed correction. Do not rely on another suburb’s arrangement."
+      ],
+      [
+        "What should a correction quote include?",
+        "Ask for the confirmed defect, proposed route, approvals, access, testing and surface reinstatement to be stated clearly."
+      ]
+    ],
+    "conclusion": "A suspected roof-water connection needs evidence before alteration. Trace the route, record any limits and plan the complete correction so the runoff has an appropriate destination.",
+    "ctaAnchor": "CCTV drain inspection service in Hawkesbury",
+    "ctaTail": "Give us a call with the downpipe location and wet-weather symptoms. We can discuss an investigation of the suspected connection.",
+    "id": "W03-05-2",
+    "title": "Roof Water Connected to the Sewer? What a Hawkesbury Drain Inspection Can Establish",
+    "slug": "roof-water-connected-to-the-sewer-what-a-hawkesbury-drain-inspection-can-establish",
+    "date": "2026-11-04",
+    "updatedDate": "2026-11-04",
+    "indexPath": "/blog",
+    "path": "/blog/roof-water-connected-to-the-sewer-what-a-hawkesbury-drain-inspection-can-establish",
+    "service": "/services/cctv-drain-inspections",
+    "serviceURL": "/services/cctv-drain-inspections",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "separate-the-symptom-from-the-suspected-cause",
+        "label": "Separate the symptom from the suspected cause"
+      },
+      {
+        "depth": 2,
+        "id": "why-the-systems-need-to-be-distinguished",
+        "label": "Why the systems need to be distinguished"
+      },
+      {
+        "depth": 2,
+        "id": "what-a-camera-inspection-can-contribute",
+        "label": "What a camera inspection can contribute"
+      },
+      {
+        "depth": 3,
+        "id": "when-further-tracing-is-needed",
+        "label": "When further tracing is needed"
+      },
+      {
+        "depth": 2,
+        "id": "ask-for-findings-you-can-use",
+        "label": "Ask for findings you can use"
+      },
+      {
+        "depth": 2,
+        "id": "plan-the-correction-before-cutting-pipes",
+        "label": "Plan the correction before cutting pipes"
+      },
+      {
+        "depth": 2,
+        "id": "keep-other-wet-weather-defects-in-view",
+        "label": "Keep other wet-weather defects in view"
+      }
+    ],
+    "words": 1082,
+    "image": "/images/blog-w03-05-2-featured.webp",
+    "width": 960,
+    "height": 541
   }
 ]
