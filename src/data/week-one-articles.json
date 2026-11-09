@@ -1068,5 +1068,118 @@
     "image": "/images/blog-w03-05-3-featured.webp",
     "width": 640,
     "height": 640
+  },
+  {
+    "site": 4,
+    "category": "Stormwater drains",
+    "serviceSlug": "blocked-stormwater-drains",
+    "photo": 58,
+    "seoTitle": "Richmond Stormwater Drain Overflow | What to Check",
+    "description": "A Richmond stormwater drain overflows at the first downpour? Note where water emerges and whether the pit or pipe needs investigation.",
+    "imageAlt": "Stormwater pit beside a property",
+    "caption": "A pit overflow can be the visible sign of a restriction farther along the line.",
+    "introduction": "<p>A Richmond stormwater drain that overflows as soon as rain starts may have a blocked inlet, silted pit or restricted pipe. Watch from a safe dry position and note where water first appears. Do not lift a heavy cover or enter floodwater. A drain inspection can establish whether clearing is enough or a damaged section needs repair.</p>",
+    "takeaways": [
+      "Record the first point where water appears.",
+      "Keep clear of deep or fast-moving water.",
+      "Do not assume the overflowing pit is the actual blockage.",
+      "Ask whether the line was checked after clearing."
+    ],
+    "faqs": [
+      [
+        "Is an overflowing pit always blocked?",
+        "No. Surface runoff or a restriction farther along may be involved."
+      ],
+      [
+        "Can I lift the pit cover?",
+        "Avoid heavy or unfamiliar covers, especially during rain."
+      ],
+      [
+        "Should I run a hose to test it?",
+        "Do not add water while the line is backing up."
+      ],
+      [
+        "Can leaves cause the problem?",
+        "They can block an inlet, but pipe deposits or damage may also matter."
+      ],
+      [
+        "Will jetting fix a collapsed pipe?",
+        "No. A structural defect needs a separate repair decision."
+      ],
+      [
+        "Are photos useful?",
+        "Yes, if taken from a safe position during or after rain."
+      ],
+      [
+        "Does the downpipe connection matter?",
+        "Yes. Tell the plumber where visible pipes enter the drainage system."
+      ],
+      [
+        "What if water reaches the house?",
+        "Report it promptly and avoid any flooded electrical area."
+      ],
+      [
+        "Can a camera inspect stormwater?",
+        "Often, where suitable access and visibility are available."
+      ],
+      [
+        "What should the report include?",
+        "Ask for the restriction location, clearing result and any repair finding."
+      ]
+    ],
+    "conclusion": "A fast stormwater overflow needs an assessment of both the inlet and the downstream line. Safe observations and access details help the plumber choose the right investigation.",
+    "ctaAnchor": "Richmond stormwater drain service",
+    "ctaTail": "Call Blocked Drains Hawkesbury with the overflow location and property access details.",
+    "body": "<h2 id=\"separate-surface-runoff-from-pipe-overflow\">Separate surface runoff from pipe overflow</h2><p>Rainwater running across a driveway may never have reached the drain, while water rising through a grate points to a different problem. Tell the plumber whether the overflow begins at a pit, downpipe connection or low part of the yard. Compare light and heavy rain if you already have observations, but do not stand in a storm to gather more evidence. Photos taken safely after the event may show silt marks and affected areas.</p><h2 id=\"look-at-visible-access-without-opening-it\">Look at visible access without opening it</h2><p>Leaves at a surface grate can be photographed and removed later when conditions are safe, but a buried restriction or structural pit fault needs inspection. Do not lift a heavy lid, put a hand into an opening or direct more hose water into a backing-up line. Keep children away from an overflowing pit. If a power source is near pooled water, avoid the area and report it.</p><h2 id=\"explain-the-richmond-property-layout\">Explain the Richmond property layout</h2><p>Long driveways, fences, landscaping and shared boundaries affect where equipment can be brought in. Point out visible pits and downpipes and have any previous plan or repair record available. Say if water is entering the building or crossing onto a neighbour's land. The person taking the booking can then discuss access, weather conditions and what the initial visit can reasonably establish.</p><h2 id=\"confirm-what-clearing-achieved\">Confirm what clearing achieved</h2><p>Jetting can remove many deposits where access and pipe condition allow. If the line blocks again quickly or the camera shows collapse, clearing alone may not solve the cause. Ask for the location and nature of any defect, whether the pipe was viewed after clearing and what repair options follow. A surface grate cleaned by hand does not prove the underground line is open.</p><h2 id=\"consider-what-happens-between-storms\">Consider what happens between storms</h2><p>A drain that appears to recover when rain stops may still contain sediment or a damaged section. Note whether standing water remains in the pit and whether the next light shower brings the same overflow. Do not assume the system is fixed simply because the visible water receded. A qualified assessment can distinguish an isolated inlet obstruction from a recurring problem deeper along the pipe.</p><h2 id=\"agree-the-outcome-of-the-visit\">Agree the outcome of the visit</h2><p>Ask which opening was used, whether flow was restored, and how far any camera could travel. If the line could not be inspected fully, the report should say so. A repair quote should locate the confirmed defect and describe access and reinstatement, especially under a driveway or garden. Keep the findings so the next storm does not start the investigation from scratch.</p>",
+    "check": [
+      "Before booking",
+      "Write down the main symptom, when it began, who can approve access and any previous repair findings. Keep people clear of water or equipment that may be unsafe."
+    ],
+    "id": "W04-05-1",
+    "title": "Richmond Stormwater Drain Overflows at the First Downpour: What to Check Before Jetting",
+    "slug": "richmond-stormwater-drain-overflows-at-the-first-downpour-what-to-check-before-jetting",
+    "date": "2026-11-09",
+    "updatedDate": "2026-11-09",
+    "indexPath": "/blog",
+    "path": "/blog/richmond-stormwater-drain-overflows-at-the-first-downpour-what-to-check-before-jetting",
+    "service": "/services/blocked-stormwater-drains",
+    "serviceURL": "/services/blocked-stormwater-drains",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "separate-surface-runoff-from-pipe-overflow",
+        "label": "Separate surface runoff from pipe overflow"
+      },
+      {
+        "depth": 2,
+        "id": "look-at-visible-access-without-opening-it",
+        "label": "Look at visible access without opening it"
+      },
+      {
+        "depth": 2,
+        "id": "explain-the-richmond-property-layout",
+        "label": "Explain the Richmond property layout"
+      },
+      {
+        "depth": 2,
+        "id": "confirm-what-clearing-achieved",
+        "label": "Confirm what clearing achieved"
+      },
+      {
+        "depth": 2,
+        "id": "consider-what-happens-between-storms",
+        "label": "Consider what happens between storms"
+      },
+      {
+        "depth": 2,
+        "id": "agree-the-outcome-of-the-visit",
+        "label": "Agree the outcome of the visit"
+      }
+    ],
+    "words": 778,
+    "image": "/images/blog-w04-05-1-featured.webp",
+    "width": 640,
+    "height": 800
   }
 ]
