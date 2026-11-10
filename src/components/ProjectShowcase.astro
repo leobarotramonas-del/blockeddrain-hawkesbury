@@ -1,0 +1,43 @@
+---
+import { projects } from '../data/projects';
+interface Props { heading?: string; items: string[]; intro?: string; id?: string; }
+const { heading = 'Drainage project footage', items, intro = 'A selection of work by the Antons Plumbing & Gas team across Sydney. These images show the work and access involved, from clearing a drain to reaching buried pipework.', id = 'projects' } = Astro.props;
+const chosen = projects.filter(project => items.includes(project.slug));
+const origin = Astro.site?.origin ?? Astro.url.origin;
+const schema = chosen.map(project => project.video ? {
+  '@context': 'https://schema.org', '@type': 'VideoObject', '@id': origin + '/projects/' + project.slug + '#video',
+  name: project.title, description: project.caption + ' Silent project excerpt.', thumbnailUrl: origin + '/projects/' + project.poster,
+  contentUrl: origin + '/projects/' + project.video, uploadDate: '2026-11-10', duration: 'PT' + project.duration + 'S',
+  publisher: { '@type': 'Organization', name: 'Antons Plumbing & Gas', url: 'https://antonsplumbingandgas.com.au/' },
+  isPartOf: { '@id': origin + Astro.url.pathname + '#webpage' }
+} : { '@context': 'https://schema.org', '@type': 'ImageObject', '@id': origin + '/projects/' + project.slug + '#image', contentUrl: origin + '/projects/' + project.image, caption: project.caption, name: project.title, width: project.width, height: project.height });
+---
+<section class="project-showcase" id={id} aria-labelledby={id + '-title'}>
+  <header><h2 id={id + '-title'}>{heading}</h2><p>{intro}</p></header>
+  <div class:list={['project-showcase__media', chosen.length === 1 && 'project-showcase__media--single']}>
+    {chosen.map(project => <figure>
+      {project.video ? <video controls playsinline preload="none" poster={'/projects/' + project.poster} width={project.width} height={project.height} aria-label={project.title} aria-describedby={id + '-' + project.slug}>
+        <track kind="captions" src={"/projects/" + project.slug + ".vtt"} srclang="en" label="Project description" />
+        <source src={'/projects/' + project.video} type="video/mp4" />
+        <p><a href={'/projects/' + project.video}>Open the project video</a></p>
+      </video> : <img src={'/projects/' + project.image} alt={project.caption} srcset={'/projects/' + project.slug + '-480.webp 480w, /projects/' + project.image + ' 900w'} sizes="(max-width:760px) calc(100vw - 3rem), 32vw" width={project.width} height={project.height} loading="lazy" decoding="async" />}
+      <figcaption id={id + '-' + project.slug}><strong>{project.title}</strong><span>{project.caption}</span>{project.video && <small>Project footage · silent excerpt · {project.duration} seconds</small>}</figcaption>
+    </figure>)}
+  </div>
+</section>
+{schema.map(item => <script type="application/ld+json" set:html={JSON.stringify(item).replace(/</g, '\u003c')} />)}
+<style>
+.project-showcase{padding-block:clamp(2rem,5vw,4rem);color:inherit}
+.project-showcase header{max-width:68ch;margin-bottom:1.75rem}
+.project-showcase h2{margin-bottom:1rem}
+.project-showcase__media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:start}
+.project-showcase figure{margin:0;min-width:0}
+.project-showcase video,.project-showcase img{display:block;width:100%;height:clamp(18rem,30vw,25rem);object-fit:cover;background:#081939}
+.project-showcase video{object-fit:contain}
+.project-showcase figcaption{padding-top:1rem;line-height:1.5}
+.project-showcase figcaption strong,.project-showcase figcaption span,.project-showcase figcaption small{display:block}
+.project-showcase figcaption strong{margin-bottom:.5rem}
+.project-showcase figcaption small{margin-top:.5rem}
+.project-showcase__media--single{grid-template-columns:minmax(0,38rem)}
+@media(max-width:760px){.project-showcase__media{grid-template-columns:1fr}.project-showcase video,.project-showcase img{height:auto;max-height:30rem;object-fit:contain}.project-showcase figure{border-bottom:1px solid #bcc5cf;padding-bottom:1.5rem}}
+</style>

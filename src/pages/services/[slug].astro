@@ -1,4 +1,5 @@
 ---
+import ProjectShowcase from "../../components/ProjectShowcase.astro";
 import WeekOneGuides from "../../components/WeekOneGuides.astro";
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
@@ -32,5 +33,7 @@ const schema = [{
   <HonestReviews intro="Customer feedback about the licensed team behind this Hawkesbury blocked-drain service." />
   <FaqSection title={`${service.name} Questions`} intro="Straight answers about diagnosis, clearing, equipment and repair decisions." items={faqs} />
   <CtaBand title={`Need ${service.name}?`} />
+{service.slug === "high-pressure-water-jetting" && <ProjectShowcase heading="Drain jetting on the job" items={["sewer-jetting", "sewer-clearing"]} intro="These silent excerpts show the team handling drainage equipment and hose access during sewer clearing. Equipment choice still depends on the pipe, obstruction and safe access." />}
+{service.slug === "drain-repairs-excavation" && <ProjectShowcase heading="Accessing and installing drainage pipework" items={["drain-pipework-installation", "restricted-access-excavation"]} intro="These project photographs show pipe installation and excavation in progress. The repair scope includes locating the fault, reaching the pipe safely and agreeing how the disturbed area will be reinstated." />}
   <WeekOneGuides service={Astro.url.pathname} title="Guides for this service" />
 </BaseLayout>
