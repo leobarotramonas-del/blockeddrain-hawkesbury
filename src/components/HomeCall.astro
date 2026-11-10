@@ -1,0 +1,13 @@
+---
+import { site } from '../data/site';
+interface Props { label: string; compact?: boolean }
+const { label, compact = false } = Astro.props;
+---
+<div class:list={['home-call', compact && 'home-call--compact']}><a href={site.phoneHref}><span>{label}</span><strong>{site.phoneDisplay}</strong></a></div>
+<style>
+.home-call{margin-top:1.75rem;min-width:0}.home-call--compact{margin-top:0}
+.home-call a{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem .8rem;max-width:100%;min-height:56px;padding:.85rem 1.15rem;background:#b51222;color:#fff;font-weight:700;line-height:1.4;text-decoration:none;text-align:center;white-space:normal;box-sizing:border-box}
+.home-call span{font-size:1rem}.home-call strong{font-size:1.05rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.home-call a:hover{background:#8f1020;color:#fff}.home-call a:focus-visible{outline:3px solid #081939;outline-offset:4px;box-shadow:0 0 0 4px #fff}
+@media(max-width:400px){.home-call a{width:100%;flex-direction:column}}
+</style>

@@ -1,4 +1,5 @@
 ---
+import HomeCall from '../components/HomeCall.astro';
 import ProjectShowcase from "../components/ProjectShowcase.astro";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleReviewBadge from '../components/GoogleReviewBadge.astro';
@@ -23,7 +24,7 @@ const schema = {
         <h1 id="hero-title">Clear the blocked drain. <em>Find the cause.</em></h1>
         <p class="drain-hero__lead">Antons Blocked Drains Hawkesbury clears sewer and stormwater blockages, overflowing toilets and tree roots. We investigate recurring faults, explain the repair options and check flow after clearing. Urgent drain calls are taken 24/7.</p>
         <div class="drain-hero__actions">
-          <a class="call-button" href={site.phoneHref}><span>Urgent calls 24/7</span><strong>{site.phoneDisplay}</strong></a>
+          <HomeCall compact label="Call a drain plumber now" />
           <a class="plain-action" href="#proof">See project footage</a>
         </div>
         <p class="operator-line">A specialist Hawkesbury blocked-drain service by {site.operator} · NSW contractor licence {site.licence}</p>
@@ -37,26 +38,38 @@ const schema = {
     <section class="decision-strip" aria-label="Blocked drain warning signs">
       <strong>Stop using the drain and call if:</strong>
       <span>Sewage is overflowing</span><span>Multiple fixtures back up</span><span>The only toilet is unusable</span><span>Water threatens the building</span>
-    </section>
+    <HomeCall label="Call now about an overflowing drain" />
+</section>
 
     <section class="drain-section service-index" aria-labelledby="services-heading">
       <header class="split-heading"><h2 id="services-heading">Blocked-drain help built around the actual fault</h2><p>Choose a service to understand the assessment, equipment and repair options.</p></header>
       <div class="service-index__list">
         {services.map((service) => <a href={`/services/${service.slug}`}><div><h3>{service.name}</h3><p>{service.summary}</p></div><span>View service</span></a>)}
       </div>
-    </section>
+    <HomeCall label="Call to discuss your drain problem" />
+</section>
 
-    <ProjectShowcase heading="Recent drainage projects in the Hawkesbury and across Sydney" items={["drain-overflow-response", "drain-pipework-installation", "restricted-access-excavation"]} id="proof" />
+    <ProjectShowcase heading="Recent drainage projects in the Hawkesbury and across Sydney" items={["drain-overflow-response", "drain-pipework-installation", "restricted-access-excavation"]} id="proof" callLabel="Call about a similar drain problem" />
 
     <section class="drain-section areas-section" aria-labelledby="areas-title">
       <header class="split-heading"><h2 id="areas-title">Blocked drain plumbers across the Hawkesbury</h2><p>Call with your full address to confirm coverage, access and the next available response.</p></header>
       <div class="area-cloud">{areas.map((area) => <a href={`/service-areas/${area.slug}`}><strong>{area.name}</strong><span>NSW {area.postcode} · {area.dispatchMinutes}</span></a>)}</div>
-    </section>
+    <HomeCall label="Call to confirm service in your area" />
+</section>
 
     <section class="drain-section faq-section" aria-labelledby="faq-title">
       <header class="split-heading"><h2 id="faq-title">What to know before you call</h2><p>Useful, direct answers for the first few minutes of a blocked-drain problem.</p></header>
       <div class="faq-lines">{faqs.slice(0, 4).map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
-    </section>
+    <HomeCall label="Call and ask a drain plumber" />
+</section>
   </div>
-  <CtaBand title="Blocked drain in the Hawkesbury?" text="Call with your suburb, the affected fixtures and whether water or sewage is overflowing." />
+  <CtaBand callLabel="Call to arrange drain help" title="Blocked drain in the Hawkesbury?" text="Call with your suburb, the affected fixtures and whether water or sewage is overflowing." />
 </BaseLayout>
+
+<style is:global>
+:global(.decision-strip > .home-call){grid-column:1/-1;margin:0;justify-content:flex-start;border:0}
+:global(.decision-strip .home-call strong){font-family:inherit;font-size:1.05rem;line-height:1.4;text-transform:none}
+:global(.decision-strip .home-call span){font-size:1rem}
+:global(.local-section > .home-call){grid-column:1/-1}
+:global(.urgent-strip .home-call a){white-space:normal;display:inline-flex;margin-top:0}
+</style>
