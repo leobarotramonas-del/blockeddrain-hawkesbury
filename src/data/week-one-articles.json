@@ -1299,5 +1299,123 @@
     "image": "/images/blog-w04-05-2-featured.webp",
     "width": 800,
     "height": 800
+  },
+  {
+    "site": 4,
+    "category": "Drain repairs",
+    "serviceSlug": "drain-repairs-excavation",
+    "photo": 53,
+    "seoTitle": "Cracked Sewer Pipe in Kurrajong | Repair Options",
+    "description": "A cracked Kurrajong sewer pipe needs a repair choice based on camera evidence, access and pipe condition. Compare local repair, relining and excavation.",
+    "imageAlt": "Damaged clay drainage pipe exposed for assessment",
+    "caption": "The visible crack and surrounding pipe condition guide the repair scope.",
+    "introduction": "<p>If camera footage shows a cracked sewer pipe in Kurrajong, ask where the crack begins and ends and whether the surrounding pipe is still sound. A local repair, relining or excavation may be suitable depending on the defect, pipe shape and access. Do not choose a method from the headline price alone; compare what each quote will fix, how flow will be tested and what ground will be restored.</p>",
+    "takeaways": [
+      "Use camera footage and a marked location to define the defect.",
+      "Check pipe shape, junctions and access before choosing a method.",
+      "Compare the included repair length and reinstatement.",
+      "Keep a post-repair test and record."
+    ],
+    "faqs": [
+      [
+        "Does every crack require excavation?",
+        "No. Suitability depends on the pipe and defect."
+      ],
+      [
+        "Can every pipe be relined?",
+        "No. Severe collapse or displacement may rule it out."
+      ],
+      [
+        "Will jetting repair a crack?",
+        "No. It can clear a blockage but not rebuild the pipe wall."
+      ],
+      [
+        "Should the defect be marked above ground?",
+        "Yes, where the location can be established reliably."
+      ],
+      [
+        "What about nearby roots?",
+        "Check the entry point and pipe condition before blaming a tree."
+      ],
+      [
+        "Can a section be replaced locally?",
+        "Often, if access and the surrounding pipe allow it."
+      ],
+      [
+        "What should the quote say about junctions?",
+        "How they remain open and connected after repair."
+      ],
+      [
+        "Will landscaping be restored?",
+        "Ask for reinstatement to be described and priced."
+      ],
+      [
+        "Who owns the sewer near the street?",
+        "Responsibility depends on the connection and pipe location."
+      ],
+      [
+        "What evidence should I retain?",
+        "Before and after footage, location, scope and testing."
+      ]
+    ],
+    "conclusion": "A confirmed crack is the start of a repair decision, not the whole specification. Match the method to the pipe condition, access and connections, then compare quotes on the same scope.",
+    "ctaAnchor": "Kurrajong drain repair service",
+    "ctaTail": "Call Blocked Drains Hawkesbury with the camera footage and fault location.",
+    "body": "<h2 id=\"confirm-the-crack-in-context\">Confirm the crack in context</h2><p>Ask for footage showing the defect, pipe immediately before and after it, distance from the inspection opening and camera direction. A close-up without context may not show whether the line is round, displaced or partly collapsed. If roots or deposits obscure the view, ask whether the pipe can be cleared safely for a better inspection. The report should distinguish a confirmed crack from a suspected one and identify any section the camera could not reach.</p><h2 id=\"consider-a-local-replacement\">Consider a local replacement</h2><p>If only a short section is damaged and access is practical, excavation and replacement may address the defect directly. The quote should specify the length, depth, access route, temporary protection and how the new section joins the existing pipe. Kurrajong properties may have long runs, sloping ground or landscaping that affects access. Do not assume the cheapest opening is the right location until the defect and other services are marked.</p><h2 id=\"test-relining-suitability\">Test relining suitability</h2><p>Relining can avoid some excavation when the pipe remains suitable, but it is not a universal answer. Ask whether the crack, pipe diameter, bends, side connections and any displacement allow a sound installation. A liner that covers a junction without reopening it would create another problem. Request a method statement and completion check. Compare the quoted length with the camera finding so you know which part of the line will actually be treated.</p><h2 id=\"ask-when-more-excavation-is-needed\">Ask when more excavation is needed</h2><p>A collapsed or badly shifted pipe may need exposure to restore alignment and structural function. Ask why the proposed excavation length is necessary and whether adjacent pipe has been assessed. A quote should include soil handling, safe access, any relevant permits and reinstatement of paving or garden. An unexpected condition may change scope, so agree how changes will be documented and approved before the job expands.</p><h2 id=\"check-responsibility-and-nearby-trees\">Check responsibility and nearby trees</h2><p>Sydney Water says <a href=\"https://www.sydneywater.com.au/plumbing-building-developing/plumbing/wastewater-blockages.html\">private wastewater pipes</a> are generally the owner’s responsibility to the network connection, with some exceptions. If tree roots are present, a crack or failed joint is the key finding; proximity to a tree alone does not prove it caused damage. Lane Cove Council’s <a href=\"https://www.lanecove.nsw.gov.au/Environment-Sustainability/Tree-Management/Trees-FAQs\">tree guidance</a> recommends exploring pipe repair options before removing a healthy tree.</p><h2 id=\"compare-the-finished-result\">Compare the finished result</h2><p>Each quote should explain how wastewater flow and the repaired pipe will be checked, whether a camera will verify completion and what warranty applies. Keep before and after footage with a surface location sketch. Ask whether any untreated defects remain outside the quoted length. A clear handover lets you compare a later blockage against the actual repair instead of assuming all old pipework was renewed.</p><h2 id=\"record-conditions-that-may-change-the-choice\">Record conditions that may change the choice</h2><p>A quote made from a single camera still may miss bends, side connections and poor pipe farther along. Ask whether the rest of the proposed repair length was inspected and whether water held in the pipe obscured the view. If the property has a steep driveway or mature garden, ask how materials and equipment will reach the site. Note any known easement or shared connection. A well-scoped quote should say what happens if the pipe proves unsuitable for relining after cleaning. That contingency makes the choices easier to compare than a simple promise that all cracks can be lined without digging.</p>",
+    "check": [
+      "Before booking",
+      "Collect camera footage, inspection point, defect distance and any earlier clearing history."
+    ],
+    "id": "W04-05-3",
+    "title": "Cracked Sewer Pipe in Kurrajong: Repair, Relining or Excavation?",
+    "slug": "cracked-sewer-pipe-in-kurrajong-repair-relining-or-excavation",
+    "date": "2026-11-13",
+    "updatedDate": "2026-11-13",
+    "indexPath": "/blog",
+    "path": "/blog/cracked-sewer-pipe-in-kurrajong-repair-relining-or-excavation",
+    "service": "/services/drain-repairs-excavation",
+    "serviceURL": "/services/drain-repairs-excavation",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "confirm-the-crack-in-context",
+        "label": "Confirm the crack in context"
+      },
+      {
+        "depth": 2,
+        "id": "consider-a-local-replacement",
+        "label": "Consider a local replacement"
+      },
+      {
+        "depth": 2,
+        "id": "test-relining-suitability",
+        "label": "Test relining suitability"
+      },
+      {
+        "depth": 2,
+        "id": "ask-when-more-excavation-is-needed",
+        "label": "Ask when more excavation is needed"
+      },
+      {
+        "depth": 2,
+        "id": "check-responsibility-and-nearby-trees",
+        "label": "Check responsibility and nearby trees"
+      },
+      {
+        "depth": 2,
+        "id": "compare-the-finished-result",
+        "label": "Compare the finished result"
+      },
+      {
+        "depth": 2,
+        "id": "record-conditions-that-may-change-the-choice",
+        "label": "Record conditions that may change the choice"
+      }
+    ],
+    "words": 879,
+    "image": "/images/blog-w04-05-3-featured.webp",
+    "width": 800,
+    "height": 800
   }
 ]
