@@ -1,28 +1,29 @@
 ---
 import HomeCall from './HomeCall.astro';
 import { projects } from '../data/projects';
-interface Props { heading?: string; items: string[]; intro?: string; id?: string; callLabel?: string; }
-const { callLabel, heading = 'Drainage project footage', items, intro = 'A selection of work by the Antons Plumbing & Gas team across Sydney. These images show the work and access involved, from clearing a drain to reaching buried pipework.', id = 'projects' } = Astro.props;
-const chosen = projects.filter(project => items.includes(project.slug));
+interface Props { heading?: string; items: string[]; intro?: string; id?: string; callLabel?: string; homepage?: boolean; }
+const { homepage = false, callLabel, heading = 'Drainage project footage', items, intro = 'A selection of work by the Antons Plumbing & Gas team across Sydney. These images show the work and access involved, from clearing a drain to reaching buried pipework.', id = 'projects' } = Astro.props;
+const homeCaptions: Record<string, string> = {"drain-overflow-response": "A walkthrough shows the outdoor route used during a blocked-drain callout. The footage makes access visible, including the space around the property that the team works through.", "drain-pipework-installation": "New drainage pipework and a pit are being installed beside a boundary wall. The open trench shows the work underway before the surrounding ground has been reinstated.", "restricted-access-excavation": "A team member digs through a narrow side passage to reach underground pipework. This photograph shows the restricted working space and excavation underway alongside the home."};
+const chosen = items.map(slug => projects.find(project => project.slug === slug)).filter((project): project is NonNullable<typeof project> => Boolean(project)).map(project => homepage && homeCaptions[project.slug] ? { ...project, caption: homeCaptions[project.slug] } : project);
 const origin = Astro.site?.origin ?? Astro.url.origin;
 const schema = chosen.map(project => project.video ? {
   '@context': 'https://schema.org', '@type': 'VideoObject', '@id': origin + '/projects/' + project.slug + '#video',
   name: project.title, description: project.caption + ' Silent project excerpt.', thumbnailUrl: origin + '/projects/' + project.poster,
-  contentUrl: origin + '/projects/' + project.video, uploadDate: '2026-11-10', duration: 'PT' + project.duration + 'S',
+  contentUrl: origin + '/projects/' + project.video, uploadDate: project.uploadDate ?? '2026-11-10', duration: 'PT' + project.duration + 'S',
   publisher: { '@type': 'Organization', name: 'Antons Plumbing & Gas', url: 'https://antonsplumbingandgas.com.au/' },
   isPartOf: { '@id': origin + Astro.url.pathname + '#webpage' }
 } : { '@context': 'https://schema.org', '@type': 'ImageObject', '@id': origin + '/projects/' + project.slug + '#image', contentUrl: origin + '/projects/' + project.image, caption: project.caption, name: project.title, width: project.width, height: project.height });
 ---
-<section class="project-showcase" id={id} aria-labelledby={id + '-title'}>
+<section class:list={['project-showcase', homepage && 'project-showcase--home']} id={id} aria-labelledby={id + '-title'}>
   <header><h2 id={id + '-title'}>{heading}</h2><p>{intro}</p></header>
   <div class:list={['project-showcase__media', chosen.length === 1 && 'project-showcase__media--single']}>
-    {chosen.map(project => <figure>
+    {chosen.map(project => <figure class:list={[project.video ? "project-video" : "project-photo", project.slug === "hot-water-replacement" && "project-wider-team"]}>
       {project.video ? <video controls playsinline preload="none" poster={'/projects/' + project.poster} width={project.width} height={project.height} aria-label={project.title} aria-describedby={id + '-' + project.slug}>
         <track kind="captions" src={"/projects/" + project.slug + ".vtt"} srclang="en" label="Project description" />
         <source src={'/projects/' + project.video} type="video/mp4" />
         <p><a href={'/projects/' + project.video}>Open the project video</a></p>
       </video> : <img src={'/projects/' + project.image} alt={project.caption} srcset={'/projects/' + project.slug + '-480.webp 480w, /projects/' + project.image + ' 900w'} sizes="(max-width:760px) calc(100vw - 3rem), 32vw" width={project.width} height={project.height} loading="lazy" decoding="async" />}
-      <figcaption id={id + '-' + project.slug}><strong>{project.title}</strong><span>{project.caption}</span>{project.video && <small>Project footage · silent excerpt · {project.duration} seconds</small>}</figcaption>
+      <figcaption id={id + '-' + project.slug}><strong>{project.title}</strong><span>{project.caption}</span>{project.video && <small>Project footage · silent excerpt · {project.duration} seconds</small>}{homepage && project.link && <a class="project-related-link" href={project.link}>Hot-water replacement from Antons Plumbing &amp; Gas</a>}</figcaption>
     </figure>)}
   </div>
   {callLabel && <HomeCall label={callLabel} />}
@@ -42,4 +43,11 @@ const schema = chosen.map(project => project.video ? {
 .project-showcase figcaption small{margin-top:.5rem}
 .project-showcase__media--single{grid-template-columns:minmax(0,38rem)}
 @media(max-width:760px){.project-showcase__media{grid-template-columns:1fr}.project-showcase video,.project-showcase img{height:auto;max-height:30rem;object-fit:contain}.project-showcase figure{border-bottom:1px solid #bcc5cf;padding-bottom:1.5rem}}
+
+.project-showcase--home .project-related-link{display:inline-flex;align-items:center;min-height:44px;margin-top:.75rem;font-weight:600;text-decoration:underline;text-underline-offset:.2em}
+.project-showcase--home figcaption{max-width:60ch}
+.project-showcase--home figcaption strong{line-height:1.3}
+.project-showcase--home .project-wider-team{border-top:1px solid #c6ced8;padding-top:1.5rem}
+
+@media(min-width:761px){.project-showcase--home .project-showcase__media{grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}.project-showcase--home figure:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:center}.project-showcase--home figure:first-child video{height:30rem}.project-showcase--home figure:first-child figcaption{padding:0}.project-showcase--home figure:not(:first-child) :is(video,img){height:22rem}}
 </style>
