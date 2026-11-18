@@ -1,6 +1,7 @@
+// Historical uploadDate uses the first asset release commit as the best available publication record.
 export interface Project { slug: string; title: string; caption: string; width: number; height: number; video?: string; poster?: string; duration?: number; image?: string; silent?: boolean; uploadDate?: string; link?: string; }
 export const projects: Project[] = [
-  { slug: 'hot-water-replacement', title: 'Hot-water replacement by the wider Antons team', caption: 'The wider Antons Plumbing & Gas team completed this hot-water replacement. The footage shows a grey storage cylinder beside a brick wall, with insulated pipework and valves visible.', width: 540, height: 960, video: 'hot-water-replacement.mp4', poster: 'hot-water-replacement.webp', duration: 8, silent: true, uploadDate: '2026-11-17', link: 'https://antonsplumbingandgas.com.au/service/hot-water-system-replacement/' },
+  { slug: 'hot-water-replacement', title: 'Hot-water replacement by the wider Antons team', caption: 'The wider Antons Plumbing & Gas team completed this hot-water replacement. The footage shows a grey storage cylinder beside a brick wall, with insulated pipework and valves visible.', width: 540, height: 960, video: 'hot-water-replacement.mp4', poster: 'hot-water-replacement.webp', duration: 8, silent: true, uploadDate: '2026-11-17T15:17:35+08:00', link: 'https://antonsplumbingandgas.com.au/service/hot-water-system-replacement/' },
   {
     "slug": "sewer-jetting",
     "title": "Sewer drain jetting",

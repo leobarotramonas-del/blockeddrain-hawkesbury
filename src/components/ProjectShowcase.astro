@@ -9,7 +9,7 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
 const schema = chosen.map(project => project.video ? {
   '@context': 'https://schema.org', '@type': 'VideoObject', '@id': origin + '/projects/' + project.slug + '#video',
   name: project.title, description: project.caption + ' Silent project excerpt.', thumbnailUrl: origin + '/projects/' + project.poster,
-  contentUrl: origin + '/projects/' + project.video, uploadDate: project.uploadDate ?? '2026-11-10', duration: 'PT' + project.duration + 'S',
+  contentUrl: origin + '/projects/' + project.video, uploadDate: project.uploadDate ?? '2026-11-10T10:33:40+08:00', duration: 'PT' + project.duration + 'S',
   publisher: { '@type': 'Organization', name: 'Antons Plumbing & Gas', url: 'https://antonsplumbingandgas.com.au/' },
   isPartOf: { '@id': origin + Astro.url.pathname + '#webpage' }
 } : { '@context': 'https://schema.org', '@type': 'ImageObject', '@id': origin + '/projects/' + project.slug + '#image', contentUrl: origin + '/projects/' + project.image, caption: project.caption, name: project.title, width: project.width, height: project.height });

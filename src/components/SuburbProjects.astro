@@ -1,0 +1,28 @@
+---
+import HomeCall from './HomeCall.astro';
+import { suburbClips, projectProfiles, suburbAssignments } from '../data/suburb-projects';
+interface Props { slug: string; name: string }
+const { slug, name } = Astro.props;
+const Tag = slug === 'kurrajong' ? 'div' : 'section';
+const key = suburbAssignments[slug];
+if (!key) throw new Error('Missing project assignment: ' + slug);
+const profile = projectProfiles[key];
+const chosen = profile.items.map(item => ({ ...suburbClips.find(clip => clip.slug === item.slug)!, caption: item.caption }));
+const origin = Astro.site?.origin ?? Astro.url.origin;
+const schema = chosen.map(clip => ({ '@context': 'https://schema.org', '@type': 'VideoObject', '@id': origin + Astro.url.pathname + '#video-' + clip.slug, name: clip.title, description: clip.caption, thumbnailUrl: origin + '/projects/suburbs/' + clip.poster, contentUrl: origin + '/projects/suburbs/' + clip.video, uploadDate: clip.uploadDate, duration: 'PT' + clip.duration + 'S', publisher: { '@type': 'Organization', name: 'Antons Plumbing & Gas', url: 'https://antonsplumbingandgas.com.au/' } }));
+// Original field reel: first asset release commit b97fd00, best available publication record.
+if (slug === 'kurrajong') schema.push({ '@context': 'https://schema.org', '@type': 'VideoObject', '@id': origin + Astro.url.pathname + '#kurrajong-field-video', name: 'Kurrajong blocked drain field video', description: 'Blocked-drain diagnosis and clearing in Kurrajong', thumbnailUrl: origin + '/images/drain-jetting-team.jpeg', contentUrl: origin + '/videos/kurrajong-field-reel.mp4', uploadDate: '2026-10-13T14:40:03+08:00', duration: 'PT42.538S', publisher: { '@type': 'Organization', name: 'Antons Plumbing & Gas', url: 'https://antonsplumbingandgas.com.au/' } });
+---
+<Tag class:list={['suburb-projects', 'suburb-projects--' + profile.layout]} aria-labelledby="suburb-projects-title" id="suburb-projects">
+<header><h2 id="suburb-projects-title">A closer look at drainage work</h2><p>{profile.intro}</p><p class="project-context">Wider-team footage from across Sydney. For a visit in {name}, tell us about the route to your drain.</p></header>
+<div class="suburb-projects__media">
+{chosen.map(clip => <figure><video controls playsinline preload="none" poster={'/projects/suburbs/' + clip.poster} width={clip.width} height={clip.height} aria-label={clip.title}><source src={'/projects/suburbs/' + clip.video} type="video/mp4" /><track kind="captions" src={'/projects/suburbs/' + clip.slug + '.vtt'} srclang="en" label="Visual description" /></video><figcaption><strong>{clip.title}</strong><span>{clip.caption}</span><small>Silent project excerpt · {clip.duration} seconds</small></figcaption></figure>)}
+</div>
+<HomeCall label="Call to discuss your drain and access" />
+</Tag>
+{schema.map(item => <script type="application/ld+json" set:html={JSON.stringify(item).replace(/</g, '\u003c')} />)}
+<style>
+.suburb-projects{padding-block:clamp(2rem,5vw,4rem);min-width:0}.suburb-projects header{max-width:70ch;margin-bottom:2rem;background:transparent;border:0}.suburb-projects h2{margin-bottom:1rem}.project-context{margin-top:1rem}.suburb-projects__media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.suburb-projects figure{margin:0;min-width:0}.suburb-projects video{display:block;width:100%;height:24rem;object-fit:contain;background:#081939}.suburb-projects figcaption{padding-top:1rem;line-height:1.6;max-width:65ch}.suburb-projects figcaption>*{display:block}.suburb-projects strong{margin-bottom:.5rem}.suburb-projects small{margin-top:.75rem}
+@media(min-width:1000px){.suburb-projects--lead .suburb-projects__media{grid-template-columns:1.3fr 1fr}.suburb-projects--lead figure:first-child video{height:30rem}.suburb-projects--notes .suburb-projects__media{grid-template-columns:1fr}.suburb-projects--notes figure{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:2rem;align-items:center}.suburb-projects--notes figcaption{padding:0}.suburb-projects--single .suburb-projects__media{grid-template-columns:1fr}.suburb-projects--single figure{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:center}.suburb-projects--single figcaption{padding:0}}
+@media(max-width:760px){.suburb-projects__media{grid-template-columns:1fr}.suburb-projects video{height:auto;max-height:30rem}.suburb-projects figure+figure{border-top:1px solid #c6ced8;padding-top:1.5rem}}
+</style>

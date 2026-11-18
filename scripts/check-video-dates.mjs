@@ -1,0 +1,7 @@
+import { readdir, readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+const errors=[]; let count=0;
+const pattern=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
+function inspect(value,file){if(!value||typeof value!=='object')return;if(value['@type']==='VideoObject'||Array.isArray(value['@type'])&&value['@type'].includes('VideoObject')){count++;const d=value.uploadDate;if(typeof d!=='string'||!pattern.test(d)||!Number.isFinite(Date.parse(d))){errors.push(file+': invalid VideoObject uploadDate '+d);}else{const [y,m,day]=d.slice(0,10).split('-').map(Number);if(m<1||m>12||day<1||day>new Date(Date.UTC(y,m,0)).getUTCDate())errors.push(file+': invalid calendar date '+d);}}for(const x of Object.values(value))if(typeof x==='object')inspect(x,file);}
+async function walk(dir){for(const ent of await readdir(dir,{withFileTypes:true})){const file=join(dir,ent.name);if(ent.isDirectory())await walk(file);else if(file.endsWith('.html')){const html=await readFile(file,'utf8');for(const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){try{inspect(JSON.parse(match[1]),file);}catch(e){errors.push(file+': invalid JSON-LD '+e.message);}}}}}
+await walk('dist');if(!count)errors.push('No VideoObjects checked');if(errors.length){console.error(errors.join('\n'));process.exit(1);}console.log('Validated timezone-qualified uploadDate on '+count+' VideoObjects across all built HTML.');
