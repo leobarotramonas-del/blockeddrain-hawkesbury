@@ -1530,5 +1530,118 @@
     "image": "/images/blog-w05-05-1-featured.webp",
     "width": 938,
     "height": 745
+  },
+  {
+    "site": 4,
+    "category": "Stormwater drains",
+    "serviceSlug": "blocked-stormwater-drains",
+    "photo": 55,
+    "seoTitle": "Silt in a Pitt Town Stormwater Pit | Clean or Inspect?",
+    "description": "When silt fills a Pitt Town stormwater pit, cleaning may restore flow, but repeated deposits can point to a pipe or surface-water issue.",
+    "imageAlt": "Stormwater pit with visible silt and sediment",
+    "caption": "The quantity and return of silt help decide whether to clean the pit or inspect upstream.",
+    "introduction": "<p>A Pitt Town stormwater pit full of silt should be cleaned if deposits are restricting the outlet, but recurring silt needs an investigation of where the material enters. Clearing the pit alone will not fix an eroding garden edge, open pipe joint or upstream sediment source. Photograph the level before and after rain, keep clear of deep water and ask a drain plumber to check the pit and connected line.</p>",
+    "takeaways": [
+      "A full pit can restrict flow and overflow during rain.",
+      "Repeated silt means the source matters as much as the cleaning.",
+      "Do not climb into or lift a heavy pit cover.",
+      "Check the pipe outlet and upstream run before planning repair."
+    ],
+    "faqs": [
+      [
+        "Should I remove the silt myself?",
+        "Only clear easily reached surface debris safely; leave deep pits and heavy covers to equipped workers."
+      ],
+      [
+        "Can leaves create silt?",
+        "Leaves and fine soil can settle together, but the source needs observation."
+      ],
+      [
+        "Why does the pit refill after cleaning?",
+        "Ongoing surface erosion or pipe entry may keep carrying sediment in."
+      ],
+      [
+        "Will jetting fix the source?",
+        "Jetting can remove deposits from a suitable pipe, not stop soil entering."
+      ],
+      [
+        "Can a camera show a broken pipe?",
+        "It may show an accessible damaged section once the line is clear enough to see."
+      ],
+      [
+        "Does a full pit always mean a blockage?",
+        "No. Its outlet, downstream conditions and recent rain must be considered."
+      ],
+      [
+        "Is stormwater the same as sewer wastewater?",
+        "No. They are separate systems and must not be assumed to connect."
+      ],
+      [
+        "What photos help?",
+        "The pit before rain, during safe observation and after water recedes."
+      ],
+      [
+        "When might excavation be needed?",
+        "When a located pipe or pit defect needs physical repair."
+      ],
+      [
+        "What should the quote separate?",
+        "Pit cleaning, pipe clearing, inspection and any repair or reinstatement."
+      ]
+    ],
+    "body": "<h2 id=\"start-with-safe-observation\">Start with safe observation</h2><p>Photograph the pit from ground level without entering it or lifting a cover you cannot handle safely. Note whether water remains long after rain, whether it overflows at the grate and whether sediment arrives from a particular surface direction. Keep people away from an open or damaged pit. The same pit can behave differently in a light shower and a heavy downpour, so record dates and conditions rather than assuming one wet inspection tells the whole story.</p><h2 id=\"clean-the-collection-point-when-it-is-obstructed\">Clean the collection point when it is obstructed</h2><p>Leaves, grit and soil can reduce the space in a pit and cover its outlet. Removing the accumulated material can restore a path for water, but the worker should also check whether the outlet is open. Do not wash a heap of silt down the pipe; it can settle at the next bend or junction. Ask where removed sediment will be disposed of and whether the pit wall, grate and outlet are sound after cleaning.</p><h2 id=\"trace-the-material-upstream\">Trace the material upstream</h2><p>Look for bare garden soil, a new driveway edge, recent excavation or an eroding slope that feeds the catchment. An open pipe joint can also admit surrounding material. A drain plumber can compare surface flow with what the pit and connected pipe show. If the pit refills soon after a clean, the repeating pattern is a reason for a camera or targeted investigation, not simply a standing order to scoop it out forever.</p><h2 id=\"check-the-connected-pipe-carefully\">Check the connected pipe carefully</h2><p>The pipe downstream may be silted, root affected, flattened or poorly graded. Jetting may remove deposits from a suitable line, but a damaged section can keep catching them. CCTV inspection is most useful once enough water and debris are removed to see the pipe wall. Ask for the entry point, direction, distance to any fault and limits of visibility. NSW requires appropriate licensing for <a href=\"https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations/plumbing-draining-and-gasfitting\">draining work</a>.</p><h2 id=\"keep-stormwater-and-wastewater-separate\">Keep stormwater and wastewater separate</h2><p>A stormwater pit carries rainwater runoff; it should not be treated as a sewer access point. Sydney Water’s <a href=\"https://www.sydneywater.com.au/residential/services/responsibility-for-your-services/typical-system-connections.html\">system-connection guidance</a> says rainwater and stormwater must not enter the wastewater system. If water has an unusual smell or contamination is suspected, avoid contact and tell the plumber. Do not assume the pipe route or outlet without checking plans and inspection evidence.</p><h2 id=\"ask-whether-cleaning-solved-the-decision\">Ask whether cleaning solved the decision</h2><p>After work, ask whether the pit outlet and downstream run were checked, what silt was removed and whether a source was identified. A repair quote should locate the defect, show access and describe how the surface will be reinstated. If the finding is simply surface soil washing in, drainage or landscaping work may be more appropriate than replacing a sound pipe. Keep photos from the next rainfall to confirm whether the problem was actually resolved.</p>",
+    "conclusion": "Cleaning a silted pit can restore capacity, but it is not a complete answer when the same material keeps returning. Trace the source and check the outlet before paying for repeated clearing.",
+    "ctaAnchor": "Pitt Town stormwater drain service",
+    "ctaTail": "Call Blocked Drains Hawkesbury with pit photos and the dates it overflowed or refilled.",
+    "check": [
+      "Quick decision",
+      "Was this the first silt build-up, or did it return soon after a previous clean?"
+    ],
+    "id": "W05-05-2",
+    "title": "Silt Fills a Pitt Town Stormwater Pit: Clean the Pit or Investigate the Pipe?",
+    "slug": "silt-fills-a-pitt-town-stormwater-pit-clean-the-pit-or-investigate-the-pipe",
+    "date": "2026-11-18",
+    "updatedDate": "2026-11-18",
+    "indexPath": "/blog",
+    "path": "/blog/silt-fills-a-pitt-town-stormwater-pit-clean-the-pit-or-investigate-the-pipe",
+    "service": "/services/blocked-stormwater-drains",
+    "serviceURL": "/services/blocked-stormwater-drains",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "start-with-safe-observation",
+        "label": "Start with safe observation"
+      },
+      {
+        "depth": 2,
+        "id": "clean-the-collection-point-when-it-is-obstructed",
+        "label": "Clean the collection point when it is obstructed"
+      },
+      {
+        "depth": 2,
+        "id": "trace-the-material-upstream",
+        "label": "Trace the material upstream"
+      },
+      {
+        "depth": 2,
+        "id": "check-the-connected-pipe-carefully",
+        "label": "Check the connected pipe carefully"
+      },
+      {
+        "depth": 2,
+        "id": "keep-stormwater-and-wastewater-separate",
+        "label": "Keep stormwater and wastewater separate"
+      },
+      {
+        "depth": 2,
+        "id": "ask-whether-cleaning-solved-the-decision",
+        "label": "Ask whether cleaning solved the decision"
+      }
+    ],
+    "words": 850,
+    "image": "/images/blog-w05-05-2-featured.webp",
+    "width": 640,
+    "height": 640
   }
 ]
