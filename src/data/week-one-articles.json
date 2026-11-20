@@ -1643,5 +1643,118 @@
     "image": "/images/blog-w05-05-2-featured.webp",
     "width": 640,
     "height": 640
+  },
+  {
+    "site": 4,
+    "category": "CCTV drain inspections",
+    "serviceSlug": "cctv-drain-inspections",
+    "photo": 41,
+    "seoTitle": "North Richmond Sewer Backs Up After Rain: What CCTV Can Confirm",
+    "description": "A sewer backup after rain in North Richmond calls for careful inspection. Learn what CCTV can show and what it cannot prove about stormwater entry.",
+    "imageAlt": "Plumber inspecting a drainage line with a CCTV camera",
+    "caption": "Camera footage can locate defects, but rainfall timing also needs investigation.",
+    "introduction": "<p>If a North Richmond sewer backs up after rain, stop using affected fixtures and keep clear of wastewater. A CCTV inspection can locate a blockage, damaged joint, roots or standing water in an accessible pipe. It cannot, on its own, prove exactly where rainwater enters. Tell the plumber when the backup occurs, whether the overflow relief gully rises and whether it happens in dry weather too.</p>",
+    "takeaways": [
+      "A rain-linked backup does not prove a stormwater connection.",
+      "Camera footage should show the pipe wall and defect location.",
+      "The plumber may need clearing before CCTV gives a useful view.",
+      "Report suspected public-network issues with clear evidence."
+    ],
+    "faqs": [
+      [
+        "Can rain cause a sewer backup?",
+        "Rain can coincide with inflow or a stressed system, but the cause needs investigation."
+      ],
+      [
+        "Can CCTV see a cracked pipe?",
+        "It may show a visible crack when the wall is clean and in view."
+      ],
+      [
+        "Will CCTV prove where rain enters?",
+        "Not always; tracing and other tests may be needed."
+      ],
+      [
+        "Should I use the toilet during a backup?",
+        "Avoid affected fixtures until the line is safe to use."
+      ],
+      [
+        "What is an overflow relief gully?",
+        "It is an outdoor relief point that may show wastewater rising during a blockage."
+      ],
+      [
+        "Must the drain be cleared first?",
+        "Often enough to let the camera pass and see the wall."
+      ],
+      [
+        "Who owns a blockage near the main?",
+        "Responsibility depends on the fault location and service connection."
+      ],
+      [
+        "Can roots enter at an old joint?",
+        "Yes, visible root entry can identify a vulnerable point."
+      ],
+      [
+        "Should the report include a distance?",
+        "Yes, with the access point and travel direction."
+      ],
+      [
+        "What if the camera cannot see through water?",
+        "The report should state the visibility limit rather than guess."
+      ]
+    ],
+    "body": "<h2 id=\"record-the-pattern-before-the-visit\">Record the pattern before the visit</h2><p>Write down the rain timing, affected fixtures, gully level and whether the same problem happens in dry weather. Photograph an overflow without touching it. The pattern helps the plumber choose an inspection point, but rainfall alone cannot identify a wrong connection. Sydney Water explains that <a href=\"https://www.sydneywater.com.au/residential/services/responsibility-for-your-services/typical-system-connections.html\">stormwater must not enter wastewater pipes</a>; the actual site still needs checking.</p><h2 id=\"clear-only-what-is-needed-for-a-view\">Clear only what is needed for a view</h2><p>Heavy wastewater, grease or roots can stop a camera or hide the pipe wall. A plumber may need to clear an accessible section before filming. The method depends on pipe condition; an old or fragile line should be assessed before aggressive cleaning. Ask the operator to state whether the blockage was removed and which section could actually be inspected. A video of murky water is limited evidence.</p><h2 id=\"look-for-defects-the-camera-can-show\">Look for defects the camera can show</h2><p>Useful footage may reveal a broken or open joint, roots entering a pipe, a collapse, a displaced section or deposits that explain repeated obstruction. The operator should identify the access point, direction and measured distance, and use a locator where possible. Ask for images of the relevant section and the adjoining pipe. A small mark on a screen should not be treated as proof of a major failure without context.</p><h2 id=\"know-what-footage-cannot-prove\">Know what footage cannot prove</h2><p>A camera sees inside the line, not every rainwater source above it. It may not show a hidden roof-water connection, groundwater entry or the condition of a section it could not reach. Additional tracing, inspection during wet conditions or other tests may be needed. The report should separate observed defects from possible explanations for the rain pattern. That distinction protects you from paying for the wrong repair.</p><h2 id=\"check-the-service-boundary\">Check the service boundary</h2><p>The blockage may sit in private drainage or Sydney Water’s wastewater network. The <a href=\"https://www.sydneywater.com.au/build-develop/plumbing/wastewater-investigation-guide.html\">wastewater investigation guide</a> describes the plumber’s investigation and reporting steps when a network fault is suspected. Ask the plumber to record the finding and notify the right authority where applicable. Do not assume the network is responsible simply because the backup happens in wet weather.</p><h2 id=\"turn-the-evidence-into-a-repair-plan\">Turn the evidence into a repair plan</h2><p>Request the video, fault distance, location notes, visibility limits and recommended next step. Clearing a one-off obstruction, repairing a broken section and investigating unwanted inflow are different jobs. A quote should match the recorded problem and include access and reinstatement if digging is proposed. Keep the rain and backup log with the report so the repair can be judged against future wet weather.</p>",
+    "conclusion": "CCTV can show a North Richmond sewer defect and locate an obstruction. Pair the footage with the rain pattern and any needed tracing before deciding why the backup occurs or which repair to book.",
+    "ctaAnchor": "North Richmond CCTV drain inspection service",
+    "ctaTail": "Call Blocked Drains Hawkesbury with the rainfall and overflow history so we can plan a useful inspection.",
+    "check": [
+      "Useful evidence",
+      "Record the rain timing, gully level, affected fixtures and any dry-weather backup."
+    ],
+    "id": "W05-05-3",
+    "title": "Sewer Backs Up in North Richmond After Rain: What Can a Camera Confirm?",
+    "slug": "sewer-backs-up-in-north-richmond-after-rain-what-can-a-camera-confirm",
+    "date": "2026-11-20",
+    "updatedDate": "2026-11-20",
+    "indexPath": "/blog",
+    "path": "/blog/sewer-backs-up-in-north-richmond-after-rain-what-can-a-camera-confirm",
+    "service": "/services/cctv-drain-inspections",
+    "serviceURL": "/services/cctv-drain-inspections",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "record-the-pattern-before-the-visit",
+        "label": "Record the pattern before the visit"
+      },
+      {
+        "depth": 2,
+        "id": "clear-only-what-is-needed-for-a-view",
+        "label": "Clear only what is needed for a view"
+      },
+      {
+        "depth": 2,
+        "id": "look-for-defects-the-camera-can-show",
+        "label": "Look for defects the camera can show"
+      },
+      {
+        "depth": 2,
+        "id": "know-what-footage-cannot-prove",
+        "label": "Know what footage cannot prove"
+      },
+      {
+        "depth": 2,
+        "id": "check-the-service-boundary",
+        "label": "Check the service boundary"
+      },
+      {
+        "depth": 2,
+        "id": "turn-the-evidence-into-a-repair-plan",
+        "label": "Turn the evidence into a repair plan"
+      }
+    ],
+    "words": 798,
+    "image": "/images/blog-w05-05-3-featured.webp",
+    "width": 800,
+    "height": 450
   }
 ]
