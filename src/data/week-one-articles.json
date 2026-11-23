@@ -1756,5 +1756,118 @@
     "image": "/images/blog-w05-05-3-featured.webp",
     "width": 800,
     "height": 450
+  },
+  {
+    "site": 4,
+    "category": "Stormwater drains",
+    "serviceSlug": "blocked-stormwater-drains",
+    "photo": 45,
+    "seoTitle": "Wilberforce Yard Gully Holds Water | Pit or Pipe?",
+    "description": "A Wilberforce yard gully stays full after rain? Compare the pit, outlet and nearby drainage before deciding whether it needs clearing or pipe repair.",
+    "imageAlt": "Finished outdoor stormwater gully beside a residential building",
+    "caption": "Standing water can be a pit problem, a downstream blockage or a drainage-level issue.",
+    "introduction": "<p>A Wilberforce yard gully that holds water for days may have a blocked outlet, a downstream stormwater pipe issue or a pit set too low to drain fully. Remove loose leaves from the surface and note how high the water sits, but do not climb into the pit or assume jetting will fix poor pipe fall. A drain specialist can inspect the outlet and trace where water stops moving.</p>",
+    "takeaways": [
+      "Clear only loose surface debris you can reach safely.",
+      "Check whether water falls after dry weather or stays at the same level.",
+      "A camera can distinguish an obstruction from a damaged or sagging line.",
+      "Ask where the water is meant to discharge before approving repair."
+    ],
+    "faqs": [
+      [
+        "Is some water in a gully normal?",
+        "Some pits retain a little water below the outlet; persistent high water needs checking."
+      ],
+      [
+        "Can leaves block the pit outlet?",
+        "Yes. Surface debris can cover an outlet and slow drainage."
+      ],
+      [
+        "Will jetting fix a pipe with poor fall?",
+        "It can remove debris, but it cannot correct the pipe gradient."
+      ],
+      [
+        "Can tree roots reach a stormwater line?",
+        "They can enter damaged joints or cracks."
+      ],
+      [
+        "Should I put chemicals in the gully?",
+        "No. They do not identify a pipe fault and can create handling risks."
+      ],
+      [
+        "When is a camera useful?",
+        "When clearing fails, the outlet is hidden or the blockage recurs."
+      ],
+      [
+        "Could the discharge point be blocked?",
+        "Yes. A downstream outlet or connection can affect the pit upstream."
+      ],
+      [
+        "What if water reaches the house?",
+        "Keep people clear of affected electrics and arrange prompt drainage help."
+      ],
+      [
+        "Who repairs the pipe?",
+        "Responsibility depends on its location and connection; trace the line first."
+      ],
+      [
+        "What should a quote explain?",
+        "The affected section, evidence, clearing method and any repair or excavation."
+      ]
+    ],
+    "body": "<h2 id=\"observe-the-water-level-over-time\">Observe the water level over time</h2><p>Photograph the gully soon after rain and again after one or two dry days. Note whether the level drops to the outlet or stays near the grate. Water below an outlet is different from a pit full to the top. If there are several pits, see whether they behave alike. A single full gully can point to its local outlet, while a chain of affected pits suggests a problem farther along the line. Record observations without removing a heavy grate.</p><h2 id=\"remove-only-safe-surface-debris\">Remove only safe surface debris</h2><p>Leaves, soil and grass clippings can form a mat over a grate or visible outlet. Clear what you can reach from above with suitable gloves, then dispose of it rather than pushing it into the pipe. Do not enter a pit, reach into deep water or use a chemical drain cleaner. If the gully takes roof water, check whether a downpipe runs into it and whether overflow follows a particular roof area. This gives the specialist a starting point.</p><h2 id=\"find-out-where-the-line-goes\">Find out where the line goes</h2><p>A yard gully may connect to other pits, a legal point of discharge or a separate on-site arrangement. The route matters before anyone decides whether the fault is a local pit or a pipe run. Ask the specialist to identify accessible upstream and downstream points and explain what each test shows. If a neighbour’s property or public infrastructure might be involved, do not dig across a boundary on an assumption. A traced line makes responsibility and repair scope clearer.</p><h2 id=\"use-inspection-to-separate-blockage-from-damage\">Use inspection to separate blockage from damage</h2><p>Jetting can clear silt and loose debris. A camera inspection after clearing may show a crack, root entry, displaced joint or standing water along the pipe. Standing water can suggest a sag or poor fall, but camera footage needs careful interpretation with the pipe route and conditions in mind. The NSW Government requires the right authorisation for <a href=\"https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations/plumbing-draining-and-gasfitting\">draining work</a>. Ask for the footage and the location of any proposed excavation.</p><h2 id=\"consider-ground-and-access\">Consider ground and access</h2><p>A long, flat yard can make stormwater design and access more important than a quick clean. Paving, garden beds, trees and buried services affect how a repair could be done. Tell the contractor if the gully has always held water or if the problem began after landscaping. That history may indicate whether the issue is recent debris or an older layout. A proper plan should say what is being changed and how the finished drain will be tested during flow.</p><h2 id=\"agree-the-next-step-before-digging\">Agree the next step before digging</h2><p>Ask what the inspection found, whether a clean-out solves the immediate problem and what evidence supports a pipe repair. Get the affected length, access method and reinstatement included in the quote. If the gully still sits below its outlet after the line is clear, discuss whether the pit itself needs alteration. A clear distinction between maintenance and construction keeps a small blocked outlet from becoming an unexplained excavation.</p>",
+    "conclusion": "A full gully is a symptom. The pit outlet, downstream line and intended discharge all need checking before choosing clearing or reconstruction.",
+    "ctaAnchor": "Wilberforce stormwater drain service",
+    "ctaTail": "Call Blocked Drains Hawkesbury with photos of the gully after rain and during dry weather to plan the inspection.",
+    "check": [
+      "Two-photo comparison",
+      "Take one photo after rain and one after a dry spell. Is water still near the grate, or only below the outlet?"
+    ],
+    "id": "W06-05-1",
+    "title": "A Wilberforce Yard Gully Holds Water for Days: Pit Blockage or Pipe Fall?",
+    "slug": "a-wilberforce-yard-gully-holds-water-for-days-pit-blockage-or-pipe-fall",
+    "date": "2026-11-23",
+    "updatedDate": "2026-11-23",
+    "indexPath": "/blog",
+    "path": "/blog/a-wilberforce-yard-gully-holds-water-for-days-pit-blockage-or-pipe-fall",
+    "service": "/services/blocked-stormwater-drains",
+    "serviceURL": "/services/blocked-stormwater-drains",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "observe-the-water-level-over-time",
+        "label": "Observe the water level over time"
+      },
+      {
+        "depth": 2,
+        "id": "remove-only-safe-surface-debris",
+        "label": "Remove only safe surface debris"
+      },
+      {
+        "depth": 2,
+        "id": "find-out-where-the-line-goes",
+        "label": "Find out where the line goes"
+      },
+      {
+        "depth": 2,
+        "id": "use-inspection-to-separate-blockage-from-damage",
+        "label": "Use inspection to separate blockage from damage"
+      },
+      {
+        "depth": 2,
+        "id": "consider-ground-and-access",
+        "label": "Consider ground and access"
+      },
+      {
+        "depth": 2,
+        "id": "agree-the-next-step-before-digging",
+        "label": "Agree the next step before digging"
+      }
+    ],
+    "words": 878,
+    "image": "/images/blog-w06-05-1-featured.webp",
+    "width": 640,
+    "height": 854
   }
 ]
