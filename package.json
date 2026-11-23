@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node scripts/generate-canonical-redirects.mjs && npm run check:site && npm run check:performance && npm run check:links && npm run check:blog-images && npm run check:video-dates",
+    "build": "astro check && astro build && node scripts/generate-canonical-redirects.mjs && npm run check:site && npm run check:performance && npm run check:links && npm run check:blog-images && npm run check:video-dates && npm run check:organization",
     "images": "node scripts/optimize-images.mjs",
     "capture": "node scripts/capture.mjs",
     "preview": "astro preview",
@@ -15,7 +15,8 @@
     "check:links": "node scripts/check-internal-links.mjs",
     "check:live": "node scripts/check-live-seo.mjs",
     "check:blog-images": "node scripts/check-blog-images.mjs",
-    "check:video-dates": "node scripts/check-video-dates.mjs"
+    "check:video-dates": "node scripts/check-video-dates.mjs",
+    "check:organization": "node scripts/check-organization-schema.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

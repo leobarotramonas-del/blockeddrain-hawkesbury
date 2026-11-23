@@ -1,4 +1,6 @@
 ---
+import { organizationSchema } from '../data/organization-schema';
+import seoOverrides from '../data/seo-overrides.json';
 import '@fontsource/barlow/latin-400.css';
 import '@fontsource/barlow/latin-600.css';
 import '@fontsource/barlow/latin-700.css';
@@ -27,13 +29,16 @@ interface Props {
   noindex?: boolean;
 }
 
-const { article = false, articleImage, articleImageAlt, title, description, canonicalPath = Astro.url.pathname, schema, showFooter = true, noindex = false } = Astro.props;
+const { article = false, articleImage, articleImageAlt, title: suppliedTitle, description: suppliedDescription, canonicalPath = Astro.url.pathname, schema, showFooter = true, noindex = false } = Astro.props;
+const seo = (seoOverrides as Record<string, { title?: string; description?: string }>)[Astro.url.pathname.replace(/\/$/, '') || '/'] ?? {};
+const title = seo.title ?? suppliedTitle;
+const description = seo.description ?? suppliedDescription;
 const baseUrl = Astro.site!.href;
 const allowIndexing = import.meta.env.PROD && import.meta.env.PUBLIC_ALLOW_INDEXING !== 'false' && !noindex;
 const enableAnalytics = import.meta.env.PROD && Boolean(site.analyticsId);
 const canonical = new URL(canonicalPath, baseUrl).toString();
 const socialImage = articleImage ? new URL(articleImage, Astro.site).href : new URL('/images/antons-drain-service-og.webp', baseUrl).href;
-const pageTitle = article ? title : title.includes(site.shortName) ? title : `${title} | ${site.shortName}`;
+const pageTitle = seo.title ?? (article ? title : title.includes(site.shortName) ? title : `${title} | ${site.shortName}`);
 const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description, schema);
 ---
 <!doctype html>
@@ -75,7 +80,7 @@ const structuredData = pageSchema(baseUrl, canonicalPath, pageTitle, description
         </script>
       </>
     )}
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema(structuredData, canonical, site.name, '/favicon-antons.png')).replace(/</g, '\\u003c')} />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to Main Content</a>

@@ -1,0 +1,68 @@
+{
+  "/services/cctv-drain-inspections": {
+    "description": "CCTV drain inspections across Hawkesbury to locate roots, damage and recurring blockages. Call Antons to discuss access and the next repair step.",
+    "title": "CCTV Drain Inspections Hawkesbury | Antons"
+  },
+  "/service-areas": {
+    "description": "Blocked-drain help across Richmond, Windsor, Kurrajong and nearby Hawkesbury suburbs. Find local service information and call to confirm coverage.",
+    "title": "Hawkesbury Drain Service Areas | Antons"
+  },
+  "/services/blocked-sewer-drains": {
+    "description": "Gurgling toilets, sewage smells or wastewater backing up? Book a sewer drain assessment and clearing across Hawkesbury with Antons."
+  },
+  "/services/high-pressure-water-jetting": {
+    "description": "Water jetting for suitable Hawkesbury drain blockages, with pressure and nozzles selected for the pipe and obstruction. Call to arrange assessment.",
+    "title": "High-Pressure Water Jetting Hawkesbury | Antons"
+  },
+  "/services/drain-repairs-excavation": {
+    "description": "Hawkesbury drain repairs and targeted excavation for cracked, displaced or collapsed pipes. Discuss inspection findings, access and repair options.",
+    "title": "Drain Repairs & Excavation Hawkesbury | Antons"
+  },
+  "/about": {
+    "description": "Meet the licensed Antons drainage team serving Hawkesbury homes and properties. Learn how we investigate blockages and explain repair options.",
+    "title": "About Our Hawkesbury Drain Plumbers | Antons"
+  },
+  "/services/blocked-stormwater-drains": {
+    "description": "Overflowing pits or downpipes in Hawkesbury? Antons assesses stormwater blockages, clears suitable lines and explains any pipe repair needed.",
+    "title": "Blocked Stormwater Drains Hawkesbury | Antons"
+  },
+  "/services/emergency-blocked-drains": {
+    "description": "Urgent Hawkesbury drain calls answered 24/7 for sewage overflows and unusable toilets. Call Antons with the symptoms and property access details.",
+    "title": "Emergency Blocked Drains Hawkesbury | Antons"
+  },
+  "/terms": {
+    "description": "Read our Hawkesbury website terms, including the licensed operator, general drainage advice, pricing, urgent enquiries and service availability."
+  },
+  "/services/tree-root-drain-blockages": {
+    "description": "Tree roots blocking a Hawkesbury drain? Arrange clearing and CCTV assessment to find the entry point and discuss repairs for recurring problems.",
+    "title": "Tree Root Drain Blockages Hawkesbury | Antons"
+  },
+  "/services/blocked-toilets-sinks-showers": {
+    "description": "Slow, gurgling or overflowing fixtures in Hawkesbury? Call Antons to assess blocked toilets, sinks and showers and explain the clearing options.",
+    "title": "Blocked Toilets, Sinks & Showers Hawkesbury | Antons"
+  },
+  "/": {
+    "title": "Blocked Drains Hawkesbury | Antons"
+  },
+  "/service-areas/south-windsor": {
+    "title": "Blocked Drains South Windsor | Antons"
+  },
+  "/contact": {
+    "title": "Contact a Hawkesbury Drain Plumber | Antons"
+  },
+  "/service-areas/freemans-reach": {
+    "title": "Blocked Drains Freemans Reach | Antons"
+  },
+  "/service-areas/north-richmond": {
+    "title": "Blocked Drains North Richmond | Antons"
+  },
+  "/blog": {
+    "title": "Hawkesbury Drainage Advice | Antons"
+  },
+  "/service-areas/bowen-mountain": {
+    "title": "Blocked Drains Bowen Mountain | Antons"
+  },
+  "/service-areas/mcgraths-hill": {
+    "title": "Blocked Drains McGraths Hill | Antons"
+  }
+}

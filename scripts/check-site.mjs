@@ -57,12 +57,12 @@ for (const file of htmlFiles) {
   try {
     const nodes = scripts.flatMap((match) => { const data = JSON.parse(match[1]); return data['@graph'] ?? [data]; });
     const typed = (type) => nodes.filter((node) => [node['@type']].flat().includes(type));
-    for (const type of ['WebPage', 'WebSite', 'Plumber']) {
+    for (const type of ['WebPage', 'WebSite', 'Organization']) {
       if (typed(type).length !== 1) errors.push(`${relative}: expected one ${type} schema node`);
     }
     const ids = nodes.map((node) => node['@id']);
     if (ids.some((id) => !id || !/^https:\/\//.test(id)) || new Set(ids).size !== ids.length) errors.push(`${relative}: schema IDs must be unique absolute URLs`);
-    const business = typed('Plumber')[0];
+    const business = typed('Organization')[0];
     const webPage = typed('WebPage')[0];
     if (business?.['@id'] !== `${origin}/#business` || typed('WebSite')[0]?.url !== `${origin}/` || webPage?.url !== expectedUrl) errors.push(`${relative}: incorrect production schema URLs`);
     const pageSignature = JSON.stringify({ name: webPage?.name, description: webPage?.description, url: webPage?.url });
