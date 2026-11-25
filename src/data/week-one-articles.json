@@ -1869,5 +1869,118 @@
     "image": "/images/blog-w06-05-1-featured.webp",
     "width": 640,
     "height": 854
+  },
+  {
+    "site": 4,
+    "category": "CCTV drain inspections",
+    "serviceSlug": "cctv-drain-inspections",
+    "photo": 54,
+    "seoTitle": "McGraths Hill Drain Roots | Clear or Repair?",
+    "description": "Roots have appeared in a McGraths Hill drain? Learn what clearing can restore and what camera evidence helps decide whether a joint needs repair.",
+    "imageAlt": "Tree roots removed from a drainage line",
+    "caption": "Removing roots restores flow, but the entry point may need separate assessment.",
+    "introduction": "<p>Roots in a McGraths Hill drain can often be cut and cleared to restore flow, but that does not close the joint, crack or opening where they entered. Ask for camera footage after clearing so the pipe wall, joint position and remaining damage are visible. A repair decision should depend on the defect and access, not merely on seeing roots in the blockage.</p>",
+    "takeaways": [
+      "Clearing deals with the obstruction but may not seal the entry point.",
+      "Post-clear camera footage is more useful than footage through a solid blockage.",
+      "Record the defect location and pipe condition before choosing a repair.",
+      "Repeated root entry can change the economics of repeated clearing."
+    ],
+    "faqs": [
+      [
+        "Will jetting kill the tree?",
+        "Clearing a drain does not identify or treat the tree outside it."
+      ],
+      [
+        "Do roots prove a pipe is broken?",
+        "They show an entry path, but the defect needs camera inspection."
+      ],
+      [
+        "Can clearing be enough for now?",
+        "It may restore flow; ask what defect remains and how soon to review it."
+      ],
+      [
+        "Should a camera be used before clearing?",
+        "It can locate the blockage, but post-clear images show the pipe better."
+      ],
+      [
+        "Can one joint be repaired?",
+        "Possibly, depending on location, condition and access."
+      ],
+      [
+        "Is relining always suitable?",
+        "No. Pipe shape, structure and preparation can rule it out."
+      ],
+      [
+        "What should the report locate?",
+        "The measured distance, surface position, pipe material and defect."
+      ],
+      [
+        "Why do roots return?",
+        "An unsealed opening can admit new growth after clearing."
+      ],
+      [
+        "Should the tree be removed?",
+        "Do not decide that from drain footage alone."
+      ],
+      [
+        "What should a quote compare?",
+        "Further monitoring, local repair and broader replacement where justified."
+      ]
+    ],
+    "body": "<h2 id=\"what-clearing-actually-achieves\">What clearing actually achieves</h2><p>Jetting or mechanical root cutting can remove material that restricts the drain and help restore flow. The method depends on the pipe material and condition; forcing tools through a fragile line can do more harm. Clearing is a useful first step when sewage is backing up, but the opening that admitted roots may remain. Ask whether the pipe is flowing freely at the end and what the operator could see of the surrounding joint. A restored flush is not a structural repair certificate.</p><h2 id=\"request-a-camera-view-after-the-obstruction-is-gone\">Request a camera view after the obstruction is gone</h2><p>Heavy root mass can hide a crack, displaced joint or collapsed section on the first camera pass. A post-clear inspection should show the inside wall and the precise point where roots enter, with a distance reading and surface location where possible. Ask for stills or a video clip that identifies the defect, rather than only a photo of roots removed from the cable. This evidence helps distinguish one local joint issue from several damaged sections.</p><h2 id=\"look-for-pipe-condition-around-the-entry\">Look for pipe condition around the entry</h2><p>The repair decision depends on more than root size. A sound pipe with one accessible faulty joint may allow a targeted repair. Several offset joints, distortion, missing wall or poor fall can change the scope. The camera may reveal standing water that makes a lining proposal less straightforward. Ask the drainage contractor to describe pipe material, diameter, shape, grade clues and any limits to visibility. No camera image can identify which tree owns the roots with certainty.</p><h2 id=\"compare-monitoring-local-repair-and-larger-work\">Compare monitoring, local repair and larger work</h2><p>If flow is restored and the defect is minor, monitoring with a documented review interval may be discussed. Repeated blockages, sewage overflow or clear structural damage make a permanent repair more important. Local excavation can expose a single defect; relining may be considered where the pipe can be prepared and holds its shape. Replacement becomes more plausible where a long run is unsound. Ask for each option’s access, disruption and warranty terms without assuming the cheapest first visit is the lowest total cost.</p><h2 id=\"keep-records-useful-to-the-property-owner\">Keep records useful to the property owner</h2><p>For a McGraths Hill property, mark where the defect sits relative to buildings, paths and large trees. Save the footage, measured distance, cleaning method and date so the next inspection can compare change. If the line is shared or crosses a boundary, identify the responsible asset before approving major work. NSW requires an appropriate <a href=\"https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations/plumbing-draining-and-gasfitting\">licence or certificate for drainage work</a>. A clear report allows a property manager to explain the choice between repeat clearing and repair.</p><h2 id=\"book-the-next-step-from-evidence\">Book the next step from evidence</h2><p>Tell the drain specialist how often the line has blocked, which fixtures back up and whether a previous camera found roots at the same point. Ask for a post-clear camera assessment with the defect located and repair options tied to what the video actually shows. If sewage is rising inside the property, stop using affected fixtures and seek prompt help. If the flow is stable, use the footage to plan a measured repair rather than ordering a whole-run replacement from a single root photograph.</p>",
+    "conclusion": "Clearing can reopen the drain, but the lasting decision comes from the visible entry defect and condition of the pipe around it.",
+    "ctaAnchor": "McGraths Hill CCTV drain inspection",
+    "ctaTail": "Give Drains Hawkesbury the blockage history and any earlier footage so we can discuss clearing and a camera-based repair decision.",
+    "check": [
+      "Root-defect evidence",
+      "Can the post-clear footage show one located entry point, the pipe on both sides and the distance from an access point?"
+    ],
+    "id": "W06-05-2",
+    "title": "Roots Show Up in a McGraths Hill Drain: What Can Clearing Fix, and What Needs Repair?",
+    "slug": "roots-show-up-in-a-mcgraths-hill-drain-what-can-clearing-fix-and-what-needs-repair",
+    "date": "2026-11-25",
+    "updatedDate": "2026-11-25",
+    "indexPath": "/blog",
+    "path": "/blog/roots-show-up-in-a-mcgraths-hill-drain-what-can-clearing-fix-and-what-needs-repair",
+    "service": "/services/cctv-drain-inspections",
+    "serviceURL": "/services/cctv-drain-inspections",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "what-clearing-actually-achieves",
+        "label": "What clearing actually achieves"
+      },
+      {
+        "depth": 2,
+        "id": "request-a-camera-view-after-the-obstruction-is-gone",
+        "label": "Request a camera view after the obstruction is gone"
+      },
+      {
+        "depth": 2,
+        "id": "look-for-pipe-condition-around-the-entry",
+        "label": "Look for pipe condition around the entry"
+      },
+      {
+        "depth": 2,
+        "id": "compare-monitoring-local-repair-and-larger-work",
+        "label": "Compare monitoring, local repair and larger work"
+      },
+      {
+        "depth": 2,
+        "id": "keep-records-useful-to-the-property-owner",
+        "label": "Keep records useful to the property owner"
+      },
+      {
+        "depth": 2,
+        "id": "book-the-next-step-from-evidence",
+        "label": "Book the next step from evidence"
+      }
+    ],
+    "words": 882,
+    "image": "/images/blog-w06-05-2-featured.webp",
+    "width": 640,
+    "height": 854
   }
 ]
