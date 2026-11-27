@@ -1982,5 +1982,118 @@
     "image": "/images/blog-w06-05-2-featured.webp",
     "width": 640,
     "height": 854
+  },
+  {
+    "site": 4,
+    "category": "Blocked drains",
+    "serviceSlug": "blocked-toilets-sinks-showers",
+    "photo": 56,
+    "seoTitle": "Bligh Park Kitchen Drain Backs Up at Night | Trace Cause",
+    "description": "A Bligh Park kitchen drain backs up only at night? Trace fixture use, shared branches and downstream restrictions before choosing a clearing method.",
+    "imageAlt": "Kitchen sink trap and waste connection ready for inspection",
+    "caption": "The time of a backup may reflect evening use rather than a fault that appears only at night.",
+    "introduction": "<p>A Bligh Park kitchen drain that backs up only at night may be reacting to heavier evening use, a partly blocked shared branch or another connected appliance. Record which fixture runs just before the water rises, then stop using that line if it overflows. A drain specialist can trace the branch, clear the restriction and inspect it if the symptom returns.</p>",
+    "takeaways": [
+      "Timing may match use, not a blockage that moves by the clock.",
+      "Compare sink, dishwasher and nearby fixtures.",
+      "Stop using the line if wastewater rises or spills.",
+      "Ask where the restriction was found after clearing."
+    ],
+    "faqs": [
+      [
+        "Can a blockage appear only at night?",
+        "A partial restriction may become noticeable during heavier evening use."
+      ],
+      [
+        "Could the dishwasher trigger it?",
+        "Yes, if it discharges into a restricted sink waste."
+      ],
+      [
+        "What if the sink drains normally in the morning?",
+        "That does not rule out a partial downstream restriction."
+      ],
+      [
+        "Should I pour boiling water down the sink?",
+        "Avoid risky heat or chemical treatments when pipe condition is unknown."
+      ],
+      [
+        "Can food scraps cause the backup?",
+        "They can contribute, but the blockage location still needs checking."
+      ],
+      [
+        "What if another sink also rises?",
+        "A shared line may be affected; stop connected fixtures."
+      ],
+      [
+        "When is a camera useful?",
+        "After clearing when the problem recurs or a pipe fault is suspected."
+      ],
+      [
+        "Will clearing grease repair a broken pipe?",
+        "No. Clearing and structural repair are different tasks."
+      ],
+      [
+        "What details help locate the branch?",
+        "Fixture order, discharge timing and which outlets back up."
+      ],
+      [
+        "What should the report say?",
+        "Access point, restriction location, method, result and any unseen section."
+      ]
+    ],
+    "conclusion": "The nighttime pattern is most useful when paired with the fixture sequence. Trace and clear the affected line, then inspect it if the backup returns.",
+    "ctaAnchor": "Bligh Park blocked drain service",
+    "ctaTail": "Tell Drains Hawkesbury which fixtures run before the backup so we can plan the right drain investigation.",
+    "check": [
+      "Evening fixture sequence",
+      "Which discharge comes immediately before the sink rises: sink, dishwasher, laundry or another fixture? Stop testing if it overflows."
+    ],
+    "body": "<h2 id=\"map-the-evening-sequence\">Map the evening sequence</h2><p>The useful question is what happens before the backup. Note whether dinner washing, a dishwasher cycle, laundry discharge or another nearby fixture precedes water rising in the kitchen sink. A partially narrowed pipe may cope with small daytime flows and fail when several outlets discharge together. Time is a clue to use patterns, not proof of a nightly external event. Do one careful observation during normal use, then stop if water climbs towards the rim or spills. Keep contaminated water away from food-preparation surfaces.</p><h2 id=\"separate-trap-appliance-and-shared-line\">Separate trap, appliance and shared line</h2><p>A blocked sink trap may affect only the kitchen sink. If the dishwasher drains into the same waste, its pumped discharge can make a restriction more obvious. If another sink or floor waste reacts at the same time, the problem may be farther along a shared branch. The layout behind cupboards does not always show where the pipe joins. A specialist can assess accessible connections and test the flow path without assuming the loudest or highest fixture contains the obstruction.</p><h2 id=\"clear-the-restriction-without-hiding-the-cause\">Clear the restriction without hiding the cause</h2><p>Cleaning an accessible strainer is different from dismantling a trap or pouring chemicals into a backed-up line. Avoid mixing cleaners; residue can make later work hazardous. A specialist may clear from a suitable access point with equipment matched to the pipe. Ask where resistance was met and whether normal discharge returned. A single successful sink fill is helpful, but it does not prove an old pipe is structurally sound. If the same evening pattern returns, the line deserves a more detailed look.</p><h2 id=\"decide-when-inspection-follows-clearing\">Decide when inspection follows clearing</h2><p>A camera can be useful after the line is open enough to see, especially when recurrent backing up suggests an offset joint, grease accumulation or a damaged section. The footage should locate any finding in relation to an access point and distinguish deposits from the actual pipe wall. Ask if the camera reached beyond the suspected restriction. Repair choices should be tied to a located defect; repeated clearing alone may be reasonable for a one-off blockage but costly if a damaged section keeps catching waste.</p><h2 id=\"keep-the-work-within-the-right-scope\">Keep the work within the right scope</h2><p>NSW requires an appropriate <a href=\"https://www.nsw.gov.au/business-and-economy/licences-and-credentials/building-and-trade-licences-and-registrations/plumbing-draining-and-gasfitting\">licence or certificate for draining work</a>. Ask the person assessing the fault to distinguish what has been observed from what still needs testing. A description such as “blocked”, “leaking” or “broken” is a symptom, not a priced repair scope. Before work starts, ask what will be inspected, what can be repaired at the first visit, what might need separate access or parts, and how the completed work will be checked. Keep any report, photographs and invoice with the property records.</p><h2 id=\"make-a-useful-booking-and-compare-proposals\">Make a useful booking and compare proposals</h2><p>For a Bligh Park booking, list the sink and appliance use before each backup, whether any other outlet reacts and how long relief lasted after previous clearing. Photograph visible connections without dismantling them. Ask the contractor to describe the access point, clearing result and whether camera inspection is justified. If wastewater is overflowing, stop connected use and say so when booking. The goal is to trace the branch that carries the evening flow, not merely to empty the sink once.</p>",
+    "id": "W06-05-3",
+    "title": "A Bligh Park Kitchen Drain Backs Up Only at Night: What Should Be Traced?",
+    "slug": "a-bligh-park-kitchen-drain-backs-up-only-at-night-what-should-be-traced",
+    "date": "2026-11-27",
+    "updatedDate": "2026-11-27",
+    "indexPath": "/blog",
+    "path": "/blog/a-bligh-park-kitchen-drain-backs-up-only-at-night-what-should-be-traced",
+    "service": "/services/blocked-toilets-sinks-showers",
+    "serviceURL": "/services/blocked-toilets-sinks-showers",
+    "ctaButton": "Call now for advice",
+    "headings": [
+      {
+        "depth": 2,
+        "id": "map-the-evening-sequence",
+        "label": "Map the evening sequence"
+      },
+      {
+        "depth": 2,
+        "id": "separate-trap-appliance-and-shared-line",
+        "label": "Separate trap, appliance and shared line"
+      },
+      {
+        "depth": 2,
+        "id": "clear-the-restriction-without-hiding-the-cause",
+        "label": "Clear the restriction without hiding the cause"
+      },
+      {
+        "depth": 2,
+        "id": "decide-when-inspection-follows-clearing",
+        "label": "Decide when inspection follows clearing"
+      },
+      {
+        "depth": 2,
+        "id": "keep-the-work-within-the-right-scope",
+        "label": "Keep the work within the right scope"
+      },
+      {
+        "depth": 2,
+        "id": "make-a-useful-booking-and-compare-proposals",
+        "label": "Make a useful booking and compare proposals"
+      }
+    ],
+    "words": 895,
+    "image": "/images/blog-w06-05-3-featured.webp",
+    "width": 800,
+    "height": 800
   }
 ]
